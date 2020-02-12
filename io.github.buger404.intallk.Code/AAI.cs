@@ -72,7 +72,6 @@ namespace ArtificalA.Intelligence
             Log("Connect:" + repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
             web.Navigate(repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
             do { Application.DoEvents(); } while (!URLLoading);
-            for (int i = 1; i <= 100; i++) { Thread.Sleep(10); Application.DoEvents(); }
             Log("Pull");
             ArrayList link = new ArrayList();
             string url = ""; bool permiss = false;
@@ -107,7 +106,6 @@ namespace ArtificalA.Intelligence
             Log("Connect:" + link[num].ToString());
             web.Navigate(link[num].ToString());
             do { Application.DoEvents(); } while (!URLLoading);
-            for (int i = 1; i <= 100; i++) { Thread.Sleep(10); Application.DoEvents(); }
             Log("Pull");
             if (engine == "baidu")
             {
