@@ -21,9 +21,10 @@ namespace ArtificalA.Intelligence
         public static bool DebugLog = false;
 
         [STAThread]
-        private static void Log(string log)
+        private static void Log(string log,ConsoleColor color = ConsoleColor.White)
         {
             if (DebugLog == false) { return; }
+            Console.ForegroundColor = color;
             Console.WriteLine(log);
         }
 
@@ -60,6 +61,7 @@ namespace ArtificalA.Intelligence
             }
             return ret;
         }
+
         [STAThread]
         private static string Search(string Question, string engine, string repStr, string linktag, string linkattrt, string linkattr, string linkattrs, string contag, string conattrt, string conattr, string conattrs, string failstr = "不听不听王八念经")
         {
@@ -68,11 +70,11 @@ namespace ArtificalA.Intelligence
             web.DocumentCompleted += web_DocumentCompleted;
             web.Stop();
             URLLoading = false;
-            Log("Engine:" + engine);
+            Log("Engine:" + engine, ConsoleColor.Green);
             Log("Connect:" + repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
             web.Navigate(repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
             do { Application.DoEvents(); } while (!URLLoading);
-            Log("Pull");
+            Log("Pull", ConsoleColor.Green);
             ArrayList link = new ArrayList();
             string url = ""; bool permiss = false;
             foreach (HtmlElement b in web.Document.GetElementsByTagName(linktag))
@@ -99,14 +101,14 @@ namespace ArtificalA.Intelligence
                     }
                 }
             }
-            if (link.Count == 0) { web.Dispose(); return failstr; }
+            if (link.Count == 0) { Log("NULL", ConsoleColor.Red); web.Dispose(); return failstr; }
             Random r = new Random();
             int num = r.Next(0, link.Count);
             URLLoading = false;
             Log("Connect:" + link[num].ToString());
             web.Navigate(link[num].ToString());
             do { Application.DoEvents(); } while (!URLLoading);
-            Log("Pull");
+            Log("Pull", ConsoleColor.Green);
             if (engine == "baidu")
             {
                 foreach (HtmlElement b in web.Document.GetElementsByTagName("div"))
@@ -121,11 +123,13 @@ namespace ArtificalA.Intelligence
 
             ArrayList ans = new ArrayList();
             string str;
-            string[] temp;
+            string[] temp; int gfail = 0;
+            tryagain:
             foreach (HtmlElement b in web.Document.GetElementsByTagName(contag))
             {
                 str = b.GetAttribute(conattr);
                 if (str == null) { str = ""; }
+                
                 if ((str.IndexOf(conattrt) >= 0) || (str == conattrs))
                 {
                     if (b.InnerText != null)
@@ -143,8 +147,14 @@ namespace ArtificalA.Intelligence
                     }
                 }
             }
-            if (ans.Count == 0) { web.Dispose(); return failstr; }
-            string[] ra = ans[r.Next(0, ans.Count)].ToString().Split('。');
+            if ((ans.Count == 0) && (gfail <= 50)) 
+            {
+                gfail++;
+                goto tryagain; 
+            }
+            //web.Dispose(); return rest;
+            if (ans.Count == 0) { Log("NULL", ConsoleColor.Red); web.Dispose(); return failstr; }
+            string[] ra = ans[r.Next(0, ans.Count)].ToString().Split('\n');
             string tts = ""; int fail = 0;
             if (engine == "csdn") { tts = ans[r.Next(0, ans.Count)].ToString(); goto donechoose; }
         rechoose:
