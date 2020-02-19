@@ -3,6 +3,7 @@
 // 作者：Buger404
 
 using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,172 +13,116 @@ using System.Web;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Threading;
+using System.IO;
+using MSXML2;
 
 namespace ArtificalA.Intelligence
 {
     public class ArtificalAI
     {
-        public static bool URLLoading = false;
         public static bool DebugLog = false;
 
-        [STAThread]
-        private static void Log(string log,ConsoleColor color = ConsoleColor.White)
+        private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
             if (DebugLog == false) { return; }
             Console.ForegroundColor = color;
             Console.WriteLine(log);
         }
 
-        [STAThread]
         public static string Talk(string Question, string engine)
         {
-            string ret = "";
+            string ret = ""; string url = ""; string q = WebUtility.UrlEncode(Question);
             switch (engine)
             {
                 case ("baidu"):
-                    ret = Search(Question, engine,
-                        "https://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word={q}",
-                        "a", "ti", "classname", "href",
-                        "div", "content-", "id", "!@*`,.*/.");
+                    url = "https://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word=" + q;
+                    ret = Search(url, @"<a[^>]*?href=[^>]*?class=""ti""[^>]*?>", @"<div[^>]*?id=""[^>]*?-content-[^>]*?>[^>]*?<div[^>]*?>[^>]*?<div[^>]*?>[^>]*?[^>]*?<span[^>]*?>[^>]*?</span>[^>]*?</div>[^>]*?</div>[^>]*?.*?[^>]*?</div>", engine);
                     break;
                 case ("tieba"):
-                    ret = Search(Question, engine,
-                        "http://tieba.baidu.com/f/search/res?ie=utf-8&qw={q}&red_tag=e0313206225",
-                        "a", "bluelink", "classname", "href",
-                        "div", "post_content_", "id", "!@*`,.*/.");
+                    url = "http://tieba.baidu.com/f/search/res?ie=utf-8&qw=" + q + "&red_tag=e0313206225";
+                    ret = Search(url, @"<a[^>]*?class=""bluelink""[^>]*?target=""_blank""[^>]*?>", @"div[^>]*id=""post_[^>]*>.*?</div>", engine);
                     break;
                 case ("csdn"):
-                    ret = Search(Question, engine,
-                        "https://so.csdn.net/so/search/s.do?q={q}&t=&u=",
-                        "a", "_blank", "target", "href",
-                        "div", "content_views", "id", "content_views", "CSDN无相关结果");
+                    url = "https://so.csdn.net/so/search/s.do?q=" + q + "&t=&u=";
+                    ret = Search(url, @"<a[^>]*?href=""[^>]*?target=""_blank""[^>]*?>", @"div[^>]*id=""post_[^>]*>.*?</div>", engine);
                     break;
+
                 case ("msdn"):
-                    ret = Search(Question, engine,
-                        "https://docs.microsoft.com/zh-cn/search/?search={q}&category=All&scope=Desktop",
-                        "a", "searchItem.0", "data-bi-name", "href",
-                        "main", "main", "id", "main", "MSDN无相关结果");
+                    //ret = Search(Question, engine,
+                    //   "https://docs.microsoft.com/zh-cn/search/?search={q}&category=All&scope=Desktop",
+                    //    "a", "searchItem.0", "data-bi-name", "href",
+                    //    "main", "main", "id", "main", "MSDN无相关结果");
                     break;
             }
             return ret;
         }
 
-        [STAThread]
-        private static string Search(string Question, string engine, string repStr, string linktag, string linkattrt, string linkattr, string linkattrs, string contag, string conattrt, string conattr, string conattrs, string failstr = "不听不听王八念经")
+        private static string GetHTML(string url)
         {
-            WebBrowser web = new WebBrowser();
-            web.ScriptErrorsSuppressed = true;
-            web.DocumentCompleted += web_DocumentCompleted;
-            web.Stop();
-            URLLoading = false;
-            Log("Engine:" + engine, ConsoleColor.Green);
-            Log("Connect:" + repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
-            web.Navigate(repStr.Replace("{q}", HttpUtility.UrlEncode(Question)));
-            do { Application.DoEvents(); } while (!URLLoading);
-            Log("Pull", ConsoleColor.Green);
-            ArrayList link = new ArrayList();
-            string url = ""; bool permiss = false;
-            foreach (HtmlElement b in web.Document.GetElementsByTagName(linktag))
-            {
-                if (b.GetAttribute(linkattr) == linkattrt)
-                {
-                    url = b.GetAttribute(linkattrs);
-                    switch (engine)
-                    {
-                        case ("csdn"):
-                            permiss = ((url.IndexOf("blog.csdn.net") >= 0) && (url.IndexOf("article/details") >= 0));
-                            break;
-                        case ("tieba"):
-                            permiss = (url.IndexOf("tieba.baidu.com/p/") >= 0);
-                            break;
-                        default:
-                            permiss = true;
-                            break;
-                    }
-                    if (permiss)
-                    {
-                        Log("Link:" + url);
-                        link.Add(url);
-                    }
-                }
-            }
-            if (link.Count == 0) { Log("NULL", ConsoleColor.Red); web.Dispose(); return failstr; }
-            Random r = new Random();
-            int num = r.Next(0, link.Count);
-            URLLoading = false;
-            Log("Connect:" + link[num].ToString());
-            web.Navigate(link[num].ToString());
-            do { Application.DoEvents(); } while (!URLLoading);
-            Log("Pull", ConsoleColor.Green);
-            if (engine == "baidu")
-            {
-                foreach (HtmlElement b in web.Document.GetElementsByTagName("div"))
-                {
-                    if (b.GetAttribute("classname") == "showbtn")
-                    {
-                        Log("Click:ShowBtn");
-                        b.InvokeMember("click");
-                    }
-                }
-            }
-
-            ArrayList ans = new ArrayList();
-            string str;
-            string[] temp; int gfail = 0;
-            tryagain:
-            foreach (HtmlElement b in web.Document.GetElementsByTagName(contag))
-            {
-                str = b.GetAttribute(conattr);
-                if (str == null) { str = ""; }
-                
-                if ((str.IndexOf(conattrt) >= 0) || (str == conattrs))
-                {
-                    if (b.InnerText != null)
-                    {
-                        str = b.InnerText.Replace("展开全部", "").Replace("采纳", "夸奖").Replace("向左转|向右转", "").Replace("贴吧", "群").Replace("贴", "群");
-                        temp = str.Split('\n');
-                        str = "";
-                        for (int i = 0; i < temp.Length - 1; i++)
-                        {
-                            if (temp[i].Trim() != "") { str = str + temp[i] + "\n"; }
-                        }
-                        str = str + temp[temp.Length - 1];
-                        Log("Pull:" + str);
-                        ans.Add(str);
-                    }
-                }
-            }
-            if ((ans.Count == 0) && (gfail <= 50)) 
-            {
-                gfail++;
-                goto tryagain; 
-            }
-            //web.Dispose(); return rest;
-            if (ans.Count == 0) { Log("NULL", ConsoleColor.Red); web.Dispose(); return failstr; }
-            string[] ra = ans[r.Next(0, ans.Count)].ToString().Split('\n');
-            string tts = ""; int fail = 0;
-            if (engine == "csdn") { tts = ans[r.Next(0, ans.Count)].ToString(); goto donechoose; }
-        rechoose:
-            tts = ra[r.Next(0, ra.Length)];
-            if (tts.StartsWith("\n"))
-            {
-                tts.Replace("\n", "");
-            }
-            if (tts.Replace(" ", "") == "")
-            {
-                fail++;
-                if (fail > 100) { return failstr; }
-                goto rechoose;
-            }
-        donechoose:
-            web.Stop();
-            web.Dispose();
-            return tts;
+            Log("Connect:" + url, ConsoleColor.Yellow);
+            XMLHTTP x = new XMLHTTP();
+            x.open("GET", url, false);
+            x.send();
+            Log("Web data received !", ConsoleColor.Yellow);
+            Byte[] b = (Byte[])x.responseBody;
+            string s = System.Text.ASCIIEncoding.UTF8.GetString(b, 0, b.Length);
+            return s;
         }
 
-        static void web_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private static string GetInner(string code, int buff = 0)
         {
-            URLLoading = true;
+            string[] t = code.Replace('<', '>').Split('>'); string r = "";
+
+            //过滤除br外的所有标签
+            for (int i = 1; i < t.Length; i++)
+            {
+                if (i % 2 == buff)
+                {
+                    if (t[i] == "\br") { r += "\n"; }
+                }
+                else
+                {
+                    r += t[i];
+                }
+            }
+            return r;
+        }
+
+        private static string GetAttr(string code, string name)
+        {
+            return code.ToLower().Split(new[] { name + "=\"" }, StringSplitOptions.None)[1].Split('\"')[0];
+        }
+
+        private static string Search(string url, string linkexp, string conexp, string engine)
+        {
+            string code = GetHTML(url); Random r = new Random(); bool choice = false;
+            List<string> links = new List<string>(); string l = "";
+
+            foreach (Match m in Regex.Matches(code, linkexp))
+            {
+                l = GetAttr(m.Value, "href"); choice = true;
+                if (engine == "baidu") { l = l.Replace("http:", "https:"); }
+                if (engine == "tieba") { choice = (l.IndexOf("http") != 0); }
+                if (choice) { Log("Link:" + l); links.Add(l); }
+            }
+            if (links.Count == 0) { Log("Faile to get links !", ConsoleColor.Red); return ""; }
+            string link = links[r.Next(0, links.Count)];
+            if (engine == "tieba") { link = "https://tieba.baidu.com/" + link; }
+            List<string> rs = new List<string>();
+            code = GetHTML(link);
+            if (engine == "baidu") { code = code.Replace("\n", ""); }
+
+            foreach (Match m in Regex.Matches(code, conexp))
+            {
+                if (engine == "baidu") { l = GetInner(m.Value, 1).Trim(); }
+                if (engine == "tieba") { l = GetInner(m.Value).Trim(); }
+                Log("Content:" + l.Length + " words");
+                if (l.Length > 0) { rs.Add(l); }
+            }
+            if (rs.Count == 0) { Log("Faile to get contents !", ConsoleColor.Red); return ""; }
+            string tts = rs[r.Next(0, rs.Count)];
+
+            return tts;
         }
 
     }

@@ -23,6 +23,7 @@ namespace Native.Csharp.App
 		public static void Register(IUnityContainer container)
 		{
             container.RegisterType<ICQStartup, Event_Startup>("酷Q启动事件");
+            container.RegisterType<IFriendAddRequest, Event_FriendAddRequest>("好友添加请求事件");
             container.RegisterType<IGroupMessage,Event_GroupMessage>("群消息处理");
 		}
 	}

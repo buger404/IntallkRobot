@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AAI.cs" />
     <Compile Include="DataArrange.cs" />
+    <Compile Include="Event_FriendAddRequest.cs" />
     <Compile Include="Event_GroupMessage.cs" />
     <Compile Include="Event_Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
