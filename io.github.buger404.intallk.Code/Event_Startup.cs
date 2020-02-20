@@ -28,6 +28,7 @@ namespace io.github.buger404.intallk.Code
             Manager.CPms = new DataArrange("consolepermissions");
             Manager.mHot = new DataArrange("mosthotmessages");
             Manager.Hots = new DataArrange("messagehots");
+            Manager.scrBan = new DataArrange("screenmsgbanners");
             Thread thread = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
             thread.Start();
             Console.WriteLine("Message poster thread works properly .");

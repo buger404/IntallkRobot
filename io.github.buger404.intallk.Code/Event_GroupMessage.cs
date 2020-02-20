@@ -66,6 +66,15 @@ namespace io.github.buger404.intallk.Code
             }
             return "Unknown";
         }
+        private static bool CanMatch(string target,params string[] matches)
+        {
+            bool b = false;
+            for (int i = 0; i < matches.Length; i++)
+            {
+                b = (b || (target.IndexOf(matches[i]) >= 0));
+            }
+            return b;
+        }
         private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
             Console.ForegroundColor = color;
@@ -290,22 +299,25 @@ namespace io.github.buger404.intallk.Code
                     string[] p = e.Message.Text.Split(' ');
                     if (p.Length < 2) 
                     {
+                        string cmdstr = "";
+                        if (CanMatch(e.Message.Text,"msdn","搜索","资料","文档","国外","微软","巨硬","microsoft")) { cmdstr += "*msdn [content]] 检索msdn并返回页面内容（容易失败）\n"; }
+                        if (CanMatch(e.Message.Text, "csdn", "搜索", "资料", "文档", "国内")) { cmdstr += "csdn [content] 检索csdn并返回页面内容（阅读效果不佳）\n"; }
+                        if (CanMatch(e.Message.Text, "壁纸", "桌面", "背景", "图片", "风景")) { cmdstr += "wallpaper 获取一张随机桌面壁纸\n" ; }
+                        if (CanMatch(e.Message.Text, "404", "睡觉", "晚安", "关机", "强制")) { cmdstr += "#forcesleep 强制设定404的电脑在2分钟后关机\n"; }
+                        if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit")) { cmdstr += "*ban [qq] [time] 设定群成员禁言（分钟）\n" ; }
+                        if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit","全员","所有人")) { cmdstr += "*allban [bool] 开关全体禁言\n"; }
+                        if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人")) { cmdstr += "#supergoodnight [content] 将所有成员艾特一遍发送指定消息\n"; }
+                        if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人")) { cmdstr += "#supergoodnightfancy♂ [content] 将所有成员私聊一遍发送指定消息\n"; }
+                        if (CanMatch(e.Message.Text, "管理", "新", "任命", "我要", "提权", "权限", "地位")) { cmdstr += "#manager [qq] 设置新的管理员\n"; }
+                        if (CanMatch(e.Message.Text, "管理", "撤", "罢免", "我要", "降权", "权限", "地位")) { cmdstr += "#unmanager [qq] 解除管理员\n"; }
+                        if (CanMatch(e.Message.Text, "permission", "令牌", "修改", "系统", "更改", "权限", "地位")) { cmdstr += "!permission [qq] [pid] 设置权限\n"; }
+                        if (CanMatch(e.Message.Text, "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "talk [content] 无逻辑谈话（百度贴吧）\n"; }
+                        if (CanMatch(e.Message.Text, "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "talk_old [content] 无逻辑谈话（百度知道）\n"; }
+
+
                         e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "关于黑嘴Intallk稽气人（1.4.6），垃圾臭狗机器人的同义词。\n制作：Error 404（QQ1361778219）\nGithub地址：https://github.com/buger404\nPowered by CoolQ\n\n支持的指令：\n" +
                             "（无标注的指令至少需要User权限，*至少需要Superman权限，#至少需要Master权限，!至少需要Heaven权限）\n" +
                             "***您当前所持权限：" + pename + "(级别：" + Convert.ToInt64(pe) + "）***\n" +
-                            "*msdn [content]] 检索msdn并返回页面内容（容易失败）\n" +
-                            "csdn [content] 检索csdn并返回页面内容（阅读效果不佳）\n" +
-                            "wallpaper 获取一张随机桌面壁纸\n" +
-                            "#forcesleep 强制设定404的电脑在2分钟后关机\n" +
-                            "*ban [qq] [time] 设定群成员禁言（分钟）\n" +
-                            "*allban [bool] 开关全体禁言\n" +
-                            "#supergoodnight [content] 将所有成员艾特一遍发送指定消息\n" +
-                            "#supergoodnightfancy♂ [content] 将所有成员私聊一遍发送指定消息\n" +
-                            "#manager [qq] 设置新的管理员\n" +
-                            "#unmanager [qq] 解除管理员\n" +
-                            "!permission [qq] [pid] 设置权限\n" +
-                            "talk [content] 无逻辑谈话（百度贴吧）\n" +
-                            "talk_old [content] 无逻辑谈话（百度知道）\n" +
                             "*honor [content] 给予自己永久头衔\n" +
                             "*praise 为自己发送10个赞\n" +
                             "*lockcard [qq] [name] 检测到指定全员名片与设定不符时自动修改\n" +

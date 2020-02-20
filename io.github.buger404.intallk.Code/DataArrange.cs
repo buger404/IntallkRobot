@@ -118,6 +118,7 @@ namespace RestoreData.Manager
         public static DataArrange CPms;
         public static DataArrange Hots;
         public static DataArrange mHot;
+        public static DataArrange scrBan;
     }
 }
 
