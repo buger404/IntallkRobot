@@ -45,6 +45,9 @@ namespace io.github.buger404.intallk.Code
             string lpParameters,
             string lpDirectory,
             ShowCommands nShowCmd);
+        [DllImport("kernel32.dll",
+            CallingConvention = CallingConvention.Winapi)]
+        extern static int GetTickCount();
         private bool FailAI = false;
         private enum PermissionName
         {
@@ -53,6 +56,12 @@ namespace io.github.buger404.intallk.Code
             SupermanPermission = 2, //可以访问有关群管理的内容
             MasterPermission = 3, //可以访问直接关系到我自己的内容
             HeavenPermission = 4 //可以访问我自己的计算机
+        }
+        private struct personmsg
+        {
+            public long tick;
+            public long anger;
+            public long qq;
         }
         private static string GetPermissionName(PermissionName pe)
         {
@@ -160,16 +169,6 @@ namespace io.github.buger404.intallk.Code
                             hmsg.banqq = hmsg.banqq + e.FromQQ.Id.ToString() + ";";
                             int bancount = GotCount(hmsg.banqq,e.FromQQ.Id.ToString());
                             Log("(" + e.FromGroup.Id + ")(" + i + ")Boring-repeat:" + e.FromQQ.Id + " x " + bancount, ConsoleColor.Red);
-                            if (bancount > 2)
-                            {
-                                if (e.FromGroup.Id != 490623220)
-                                {
-                                    TimeSpan bantime = new TimeSpan(0, 2, 33);
-                                    e.FromGroup.SetGroupMemberBanSpeak(Convert.ToInt64(e.FromQQ.Id), bantime);
-                                }
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),"不许刷屏");
-                                Log("(" + e.FromGroup.Id + ")(" + i + ")This human is too too boring:" + e.FromQQ.Id, ConsoleColor.Red);
-                            }
                         }
                     }
                     //如果发言冷却，移除
@@ -222,6 +221,58 @@ namespace io.github.buger404.intallk.Code
                 }
             }
 
+            //Screen Checker
+            int ssid = -1; personmsg pem = new personmsg();
+            for (int i = 0; i < Manager.scrBan.data.Count; i++)
+            {
+                pem = (personmsg)Manager.scrBan.data[i];
+                if (pem.qq == e.FromQQ.Id) 
+                {
+                    ssid = i;
+                    if (GetTickCount() - pem.tick <= 2000)
+                    {
+                        pem.anger++;
+                        switch (pem.anger)
+                        {
+                            case (2):
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "不许刷屏");
+                                break;
+                            case (3):
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "不要刷屏了啦");
+                                break;
+                            case (4):
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "为什么你不愿意听我的警告呢");
+                                break;
+                            case (5):
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "别再刷屏了，好吗？");
+                                break;
+                            case (6):
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "不理你了！欺负人家不是管理员！");
+                                break;
+                            default:
+                                break;
+                        }
+                        if (e.FromGroup.Id != 490623220)
+                        {
+                            TimeSpan bantime = new TimeSpan(0, 10, 0);
+                            e.FromGroup.SetGroupMemberBanSpeak(Convert.ToInt64(e.FromQQ.Id), bantime);
+                        }
+                        Log("(" + e.FromGroup.Id + ")(" + i + ")This human is too too boring:" + e.FromQQ.Id + "x" + pem.anger, ConsoleColor.Red);
+                    }
+                    else
+                    {
+                        pem.anger = 0;
+                    }
+                    pem.tick = GetTickCount();
+                    Manager.scrBan.data[i] = pem;
+                }
+            }
+            if (ssid == -1)
+            {
+                pem.qq = e.FromQQ.Id; pem.anger = 0; pem.tick = GetTickCount();
+                Manager.scrBan.data.Add(pem);
+            }
+
             //Random Topic
             string tsay = "";
             if (e.Message.Text.IndexOf("[CQ:") < 0)
@@ -238,7 +289,16 @@ namespace io.github.buger404.intallk.Code
                         else
                         {
                             string[] tsa = tsay.Split('。');
-                            FailAI = false; e.FromGroup.SendGroupMessage(tsa[r.Next(0,tsa.Length)]);
+                            tsay = tsa[r.Next(0, tsa.Length)];
+                            if (tsay.Length <= 350)
+                            {
+                                FailAI = false; e.FromGroup.SendGroupMessage(tsay);
+                            }
+                            else
+                            {
+                                FailAI = true;
+                            }
+                            
                         }
                     }
                     catch
@@ -509,6 +569,26 @@ namespace io.github.buger404.intallk.Code
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "怀疑超出人类认知范围。");
                             }
                             break;
+                        case ("info"):
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "黑嘴酱用户人数：" + (int)(Manager.CPms.data.Count / 2) + "\n消息受理人数：" + Manager.scrBan.data.Count + "\n活跃的复读个数：" + Manager.Hots.data.Count);
+                            break;
+                        case ("permissioninfo"):
+                            if (pe < PermissionName.HeavenPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            string omsg = "";
+                            for (int i = 0; i < Manager.CPms.data.Count; i+=2)
+                            {
+                                try
+                                {
+                                    omsg = omsg + "用户" + (i / 2 + 1) + " " + Manager.CPms.data[i] + " " + "权限 " + (PermissionName)Convert.ToInt64(Manager.CPms.data[i + 1].ToString()) + "\n";
+                                }
+                                catch
+                                {
+                                    omsg = omsg + "用户" + (i / 2 + 1) + " " + Manager.CPms.data[i] + " " + "权限 <取得权限失败>\n";
+                                }
+                            }
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "黑嘴酱用户人数：" + Manager.CPms.data.Count + "\n" + omsg);
+                            break;
                         case ("lockcard"):
                             if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
                             if (p.Length < 3) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
@@ -554,7 +634,10 @@ namespace io.github.buger404.intallk.Code
                             if (CanMatch(e.Message.Text, "管理", "头衔", "名片", "永久")) { cmdstr += "*honor [content] 给予自己永久头衔\n"; }
                             if (CanMatch(e.Message.Text, "赞", "资料卡", "名片", "个人","prise","prase")) { cmdstr += "*praise 为自己发送10个赞\n"; }
                             if (CanMatch(e.Message.Text, "管理", "头衔", "名片", "锁定", "昵称","lock")) { cmdstr += "*lockcard [qq] [name] 检测到指定成员名片与设定不符时自动修改\n"; }
-                            if (CanMatch(e.Message.Text, "复读", "最热", "今日", "发言", "热词","poplular")) { cmdstr += "pop 输出今日本群最热发言\n"; }
+                            if (CanMatch(e.Message.Text, "复读", "信息", "统计", "数据", "最热", "今日", "发言", "热词", "poplular")) { cmdstr += "pop 输出今日本群最热发言\n"; }
+                            if (CanMatch(e.Message.Text, "信息", "统计", "用户", "数据","人数")) { cmdstr += "info 输出用户信息\n"; }
+                            if (CanMatch(e.Message.Text, "信息", "统计", "用户", "数据", "权限")) { cmdstr += "#permissioninfo 输出所有用户的权限信息\n"; }
+
                             if (cmdstr == "")
                             {
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
