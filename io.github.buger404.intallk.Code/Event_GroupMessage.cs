@@ -540,21 +540,21 @@ namespace io.github.buger404.intallk.Code
                             string cmdstr = "";
                             if (CanMatch(e.Message.Text,"msdn","搜索","资料","文档","国外","微软","巨硬","microsoft")) { cmdstr += "*msdn [content]] 检索msdn并返回页面内容（容易失败）\n"; }
                             if (CanMatch(e.Message.Text, "csdn", "搜索", "资料", "文档", "国内")) { cmdstr += "csdn [content] 检索csdn并返回页面内容（阅读效果不佳）\n"; }
-                            if (CanMatch(e.Message.Text, "壁纸", "桌面", "背景", "图片", "风景")) { cmdstr += "wallpaper 获取一张随机桌面壁纸\n" ; }
-                            if (CanMatch(e.Message.Text, "404", "睡觉", "晚安", "关机", "强制")) { cmdstr += "#forcesleep 强制设定404的电脑在2分钟后关机\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit")) { cmdstr += "*ban [qq] [time] 设定群成员禁言（分钟）\n" ; }
-                            if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit","全员","所有人")) { cmdstr += "*allban [bool] 开关全体禁言\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人")) { cmdstr += "#supergoodnight [content] 将所有成员艾特一遍发送指定消息\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人")) { cmdstr += "#supergoodnightfancy♂ [content] 将所有成员私聊一遍发送指定消息\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "新", "任命", "我要", "提权", "权限", "地位")) { cmdstr += "#manager [qq] 设置新的管理员\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "撤", "罢免", "我要", "降权", "权限", "地位")) { cmdstr += "#unmanager [qq] 解除管理员\n"; }
-                            if (CanMatch(e.Message.Text, "permission", "令牌", "修改", "系统", "更改", "权限", "地位")) { cmdstr += "!permission [qq] [pid] 设置权限\n"; }
+                            if (CanMatch(e.Message.Text, "壁纸", "桌面", "背景", "图片", "风景","wall","param")) { cmdstr += "wallpaper 获取一张随机桌面壁纸\n" ; }
+                            if (CanMatch(e.Message.Text, "404", "睡觉", "晚安", "关机", "强制", "force", "sleep")) { cmdstr += "#forcesleep 强制设定404的电脑在2分钟后关机\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit","bun")) { cmdstr += "*ban [qq] [time] 设定群成员禁言（分钟）\n" ; }
+                            if (CanMatch(e.Message.Text, "管理", "禁言", "违规", "刷屏", "shit","全员","所有人","bun")) { cmdstr += "*allban [bool] 开关全体禁言\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人","super","goodnight")) { cmdstr += "#supergoodnight [content] 将所有成员艾特一遍发送指定消息\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) { cmdstr += "#supergoodnightfancy♂ [content] 将所有成员私聊一遍发送指定消息\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "新", "任命", "我要", "提权", "权限", "地位","manger")) { cmdstr += "#manager [qq] 设置新的管理员\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "撤", "罢免", "我要", "降权", "权限", "地位", "manger")) { cmdstr += "#unmanager [qq] 解除管理员\n"; }
+                            if (CanMatch(e.Message.Text, "permission", "令牌", "修改", "系统", "更改", "权限", "地位","permiss","pemission","permision")) { cmdstr += "!permission [qq] [pid] 设置权限\n"; }
                             if (CanMatch(e.Message.Text, "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "talk [content] 无逻辑谈话（百度贴吧）\n"; }
                             if (CanMatch(e.Message.Text, "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "talk_old [content] 无逻辑谈话（百度知道）\n"; }
                             if (CanMatch(e.Message.Text, "管理", "头衔", "名片", "永久")) { cmdstr += "*honor [content] 给予自己永久头衔\n"; }
-                            if (CanMatch(e.Message.Text, "赞", "资料卡", "名片", "个人")) { cmdstr += "*praise 为自己发送10个赞\n"; }
-                            if (CanMatch(e.Message.Text, "管理", "头衔", "名片", "锁定", "昵称")) { cmdstr += "*lockcard [qq] [name] 检测到指定成员名片与设定不符时自动修改\n"; }
-                            if (CanMatch(e.Message.Text, "复读", "最热", "今日", "发言", "热词")) { cmdstr += "pop 输出今日本群最热发言\n"; }
+                            if (CanMatch(e.Message.Text, "赞", "资料卡", "名片", "个人","prise","prase")) { cmdstr += "*praise 为自己发送10个赞\n"; }
+                            if (CanMatch(e.Message.Text, "管理", "头衔", "名片", "锁定", "昵称","lock")) { cmdstr += "*lockcard [qq] [name] 检测到指定成员名片与设定不符时自动修改\n"; }
+                            if (CanMatch(e.Message.Text, "复读", "最热", "今日", "发言", "热词","poplular")) { cmdstr += "pop 输出今日本群最热发言\n"; }
                             if (cmdstr == "")
                             {
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
