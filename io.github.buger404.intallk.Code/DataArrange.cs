@@ -13,11 +13,16 @@ using Native.Csharp.Sdk.Cqp;
 using Native.Csharp.Sdk.Cqp.EventArgs;
 using Native.Csharp.Sdk.Cqp.Interface;
 using RestoreData.Manager;
+using System.Runtime.InteropServices;
+using Undertale.Dialogs;
 
 namespace MainThread
 {
     public static class MessagePoster
     {
+        [DllImport("kernel32.dll",
+            CallingConvention = CallingConvention.Winapi)]
+        extern static int GetTickCount();
         public static CQApi pCQ;
         public struct HotMsg
         {
@@ -39,9 +44,43 @@ namespace MainThread
         public static void Poster()
         {
             posthead:
+            Native.Csharp.Sdk.Cqp.Model.Group g;
+
+            //Undertale
+            if (UT.targetg != 0)
+            {
+                if (GetTickCount() - UT.tick >= 20000)
+                {
+                    g = new Native.Csharp.Sdk.Cqp.Model.Group(pCQ, UT.targetg);
+                    if (UT.winstr == "")
+                    {
+                        g.SendGroupMessage("无人能解答第" + UT.round + "轮！答案是：" + UT.role);
+                    }
+                    else
+                    {
+                        g.SendGroupMessage("答案是：" + UT.role + "，本轮信息：\n" + UT.winstr);
+                    }
+                    
+                    if (UT.round == 5)
+                    {
+                        string playstr = "";
+                        for (int i = 0; i < UT.ps.Count; i++)
+                        {
+                            playstr = playstr + CQApi.CQCode_At(UT.ps[i].qq) + " " + (int)(UT.ps[i].score * 10) / 10 + " points\n";
+                        }
+                        UT.targetg = 0;
+                        g.SendGroupMessage("游戏结束，本次游戏结果\n" + playstr);
+                    }
+                    else
+                    {
+                        UT.nextRound(); UT.tick = GetTickCount();
+                        g.SendGroupMessage("第" + UT.round + "轮（20s后公布本轮结果）：" + UT.dialog);
+                    }
+                }
+            }
+
             //Hot Poster
             string fstr = ""; string estr = ""; string[] qtemp;
-            Native.Csharp.Sdk.Cqp.Model.Group g;
             HotMsg hhmsg = new HotMsg();
             for (int s = 0; s < Manager.mHot.data.Count; s++)
             {

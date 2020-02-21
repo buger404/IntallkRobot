@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using RestoreData.Manager;
 using System.Runtime.InteropServices;
 using MainThread;
+using Undertale.Dialogs;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -29,6 +30,7 @@ namespace io.github.buger404.intallk.Code
             Manager.mHot = new DataArrange("mosthotmessages");
             Manager.Hots = new DataArrange("messagehots");
             Manager.scrBan = new DataArrange("screenmsgbanners");
+            UT.inits();
             Thread thread = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
             thread.Start();
             Console.WriteLine("Message poster thread works properly .");
