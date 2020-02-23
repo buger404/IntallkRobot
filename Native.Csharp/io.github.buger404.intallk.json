@@ -6,8 +6,8 @@
 	"ret": 1,
 	"apiver": 9,
 	"name": "黑嘴群聊机器人",
-	"version": "1.7.0",
-	"version_id": 88,
+	"version": "1.8.7",
+	"version_id": 101,
 	"author": "Buger404",
 	"description": "专属黑嘴群聊机器人，活跃气氛，助推吹水",
 	"event": [
@@ -153,7 +153,7 @@
 		127, //[敏感]置群退出     setGroupLeave
 		128, //置群成员专属头衔   setGroupSpecialTitle
 		130, //取群成员信息       getGroupMemberInfo
-		//131, //取陌生人信息       getStrangerInfo
+		131, //取陌生人信息       getStrangerInfo
 		132, //取群信息           getGroupInfo
 		140, //置讨论组退出       setDiscussLeave
 		150, //置好友添加请求     setFriendAddRequest

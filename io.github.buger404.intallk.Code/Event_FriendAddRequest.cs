@@ -13,7 +13,18 @@ namespace io.github.buger404.intallk.Code
     {
         public void FriendAddRequest(object sender, CQFriendAddRequestEventArgs e)
         {
-            e.CQApi.SetFriendAddRequest(e.ResponseFlag, Native.Csharp.Sdk.Cqp.Enum.CQResponseType.FAIL, "本机拒绝所有好友申请");
+            Console.WriteLine("Accepted a new friend.");
+            e.CQApi.SetFriendAddRequest(e.ResponseFlag, Native.Csharp.Sdk.Cqp.Enum.CQResponseType.PASS,"机器人用户");
+            e.FromQQ.SendPrivateMessage("thanks for making friends with me, my dear.");
+        }
+    }
+    public class Event_FriendAdd : IFriendAdd
+    {
+        public void FriendAdd(object sender, CQFriendAddEventArgs e)
+        {
+            Console.WriteLine("Accepted a new friend.");
+            //e.CQApi.SetFriendAddRequest(e., Native.Csharp.Sdk.Cqp.Enum.CQResponseType.PASS, "机器人用户");
+            e.FromQQ.SendPrivateMessage("thanks for making friends with me, my dear.");
         }
     }
 }

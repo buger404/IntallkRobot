@@ -1,6 +1,7 @@
 ﻿using Native.Csharp.Sdk.Cqp;
 using Native.Csharp.Sdk.Cqp.EventArgs;
 using Native.Csharp.Sdk.Cqp.Interface;
+using VoidLife.Simulator;
 using RestoreData.Manager;
 using System;
 using System.Collections.Generic;
@@ -332,7 +333,7 @@ namespace io.github.buger404.intallk.Code
             string tsay = "";
             if (e.Message.Text.IndexOf("[CQ:") < 0)
             {
-                if ((r.Next(0, 100) == 50) || (FailAI == true))
+                if ((r.Next(0, 200) == 88) || (FailAI == true))
                 {
                     try
                     {
@@ -373,11 +374,11 @@ namespace io.github.buger404.intallk.Code
                 {
                     if (e.FromGroup.SetGroupMemberVisitingCard(e.FromQQ.Id, tname))
                     {
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "检测到您的群名片与主人设定的群名片不相符，已强制修正为：", tname);
+                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "unmatced card , changed:", tname);
                     }
                     else
                     {
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1361778219), "强制修正目标群员的群名片失败，可能本机没有权限操作。");
+                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1361778219), "unable to change unmatched card");
                     }
 
                 }
@@ -387,7 +388,7 @@ namespace io.github.buger404.intallk.Code
             //Console Processing
             PermissionName pe = PermissionName.AirPermission; string pename = "";
 
-            if (e.Message.Text.StartsWith("ik"))
+            if (e.Message.Text.StartsWith("ik "))
             {
                 sid = Manager.CPms.SearchFor(e.FromQQ.Id);
                 if (e.FromGroup == 490623220) 
@@ -397,13 +398,13 @@ namespace io.github.buger404.intallk.Code
                         Manager.CPms.data.Add(e.FromQQ.Id);
                         Manager.CPms.data.Add(PermissionName.UserPermission);
                         Manager.CPms.SaveData();
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您已通过此群的特殊地位拿到访问权限：User");
+                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "you've got the permission：User");
                         sid = Manager.CPms.SearchFor(e.FromQQ.Id);
                     }
                 }
                 if(sid == -1)
                 {
-                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您没有任何权限，禁止访问Intallk QQ机器人控制台。");
+                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation denied , you have not any permission");
                     return;
                 }
 
@@ -414,9 +415,7 @@ namespace io.github.buger404.intallk.Code
                     string[] p = e.Message.Text.Replace("[CQ:at,qq=", "").Replace("]", "").Split(' ');
                     if (p.Length < 2) 
                     {
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "关于黑嘴Intallk稽气人（1.7.0），垃圾臭狗机器人的同义词。\n制作：Error 404（QQ1361778219）\nGithub地址：https://github.com/buger404\nPowered by CoolQ\n" +
-                            "您当前所持权限：" + pename + "(级别：" + Convert.ToInt64(pe) + "）\n" +
-                            "拥有智能复读，刷屏处理，自主发言，激怒他人，引战（划掉）等功能。");
+                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "Intallk Robot（1.7.0）, powered by CoolQ");
                         return;
                     }
                     switch (p[1])
@@ -424,44 +423,44 @@ namespace io.github.buger404.intallk.Code
                         case ("utf"):
                             if (UT.targetg == 0)
                             {
-                                e.FromGroup.SendGroupMessage("Undertale空句填词游戏开始啦！");
+                                e.FromGroup.SendGroupMessage("a new game : 'undertale guessing' has been on");
                                 UT.mode = 1;
                                 UT.targetg = e.FromGroup.Id; UT.round = 0; UT.ps.Clear();
                                 UT.tick = GetTickCount();
                                 UT.nextRound();
-                                e.FromGroup.SendGroupMessage("第" + UT.round + "轮（20s后公布本轮结果）：" + UT.dialog);
+                                e.FromGroup.SendGroupMessage("round " + UT.round + "(result:20s later)" + UT.dialog);
                             }
                             else
                             {
                                 if (UT.targetg == e.FromGroup.Id)
                                 {
-                                    e.FromGroup.SendGroupMessage("游戏已经开始了。");
+                                    e.FromGroup.SendGroupMessage("the game has been on");
                                 }
                                 else
                                 {
-                                    e.FromGroup.SendGroupMessage("游戏正在别的群进行哦。");
+                                    e.FromGroup.SendGroupMessage("another game has been on");
                                 }
                             }
                             break;
                         case("ut"):
                             if (UT.targetg == 0)
                             {
-                                e.FromGroup.SendGroupMessage("Undertale台词猜角色游戏开始啦！");
+                                e.FromGroup.SendGroupMessage("a new game : 'undertale guessing characters' has been on");
                                 UT.mode = 0;
                                 UT.targetg = e.FromGroup.Id;UT.round = 0; UT.ps.Clear();
                                 UT.tick = GetTickCount();
                                 UT.nextRound();
-                                e.FromGroup.SendGroupMessage("第" + UT.round + "轮（20s后公布本轮结果）：" + UT.dialog);
+                                e.FromGroup.SendGroupMessage("round " + UT.round + "(result:20s later)" + UT.dialog);
                             }
                             else
                             {
                                 if (UT.targetg == e.FromGroup.Id)
                                 {
-                                    e.FromGroup.SendGroupMessage("游戏已经开始了。");
+                                    e.FromGroup.SendGroupMessage("the game has been on");
                                 }
                                 else
                                 {
-                                    e.FromGroup.SendGroupMessage("游戏正在别的群进行哦。");
+                                    e.FromGroup.SendGroupMessage("another game has been on");
                                 }
                             }
                             break;
@@ -478,17 +477,129 @@ namespace io.github.buger404.intallk.Code
                                 {
                                     fstr = fstr + CQApi.CQCode_At(Convert.ToInt64(qtemp[i]));
                                 }
-                                e.FromGroup.SendGroupMessage("截止刚才，本群今日最热发言：\n" + hhmsg.msg + "\n复读发起人：" + CQApi.CQCode_At(Convert.ToInt64(qtemp[0])) + "\n复读热度：" + hhmsg.hot + "\n该热度发言被这些成员复读过：" + fstr + "\n在该热度发言发起时，这些成员太过激动试图刷屏：" + estr);
+                                e.FromGroup.SendGroupMessage(hhmsg.msg);
                             }
                             else
                             {
-                                e.FromGroup.SendGroupMessage("截止刚才我群今日暂无最热发言。");
+                                e.FromGroup.SendGroupMessage("none");
+                            }
+                            break;
+                        case ("bvoid"):
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (VoidLifes.IsStart())
+                            {
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " the game has been on");
+                            }
+                            else
+                            {
+                                if (p.Length < 3) { throw new Exception("please name for the character:ink bvoid [name]"); }
+                                VoidLifes.BeginGame(p[2]); VoidLifes.TargetGroup = e.FromGroup.Id;
+                                VoidLifes.JoinGame(e.FromQQ.Id); VoidLifes.OwnerQQ = e.FromQQ.Id;
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " game begins");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " you've joined the game");
+                            }
+                            break;
+                        case ("jvoid"):
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (e.FromGroup.Id != VoidLifes.TargetGroup)
+                            {
+                                if (VoidLifes.TargetGroup == 0)
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " not game is playing");
+                                }
+                                else
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " the game has been on in other group");
+                                }
+                                
+                            }
+                            else
+                            {
+                                if (VoidLifes.IsJoined(e.FromQQ.Id))
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " repeative operation");
+                                }
+                                else
+                                {
+                                    VoidLifes.JoinGame(e.FromQQ.Id);
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " you've joined the game");
+                                }
+                            }
+                            break;
+                        case ("svoid"):
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (e.FromGroup.Id != VoidLifes.TargetGroup)
+                            {
+                                if (VoidLifes.TargetGroup == 0)
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " not game is playing");
+                                }
+                                else
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " the game has been on in other group");
+                                }
+
+                            }
+                            else
+                            {
+                                if (VoidLifes.OwnerQQ != e.FromQQ.Id)
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " you are not the game's leader");
+                                }
+                                else
+                                {
+                                    if (VoidLifes.IsPlaying())
+                                    {
+                                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " the game has been on");
+                                    }
+                                    else
+                                    {
+                                        Log("game starts", ConsoleColor.Green);
+                                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " game starts");
+                                        VoidLifes.StartRound();
+                                    }
+                                }
+                            }
+                            break;
+                        case ("cvoid"):
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (e.FromGroup.Id != VoidLifes.TargetGroup)
+                            {
+                                if (VoidLifes.TargetGroup == 0)
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " not game is playing");
+                                }
+                                else
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " the game has been on in other group");
+                                }
+
+                            }
+                            else
+                            {
+                                if (VoidLifes.OwnerQQ != e.FromQQ.Id)
+                                {
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " you are not the game's leader");
+                                }
+                                else
+                                {
+                                    if (!VoidLifes.IsPlaying())
+                                    {
+                                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " not game is playing");
+                                    }
+                                    else
+                                    {
+                                        Log("game closed", ConsoleColor.Green);
+                                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + " game closed");
+                                        VoidLifes.EndGame();
+                                    }
+                                }
                             }
                             break;
                         case ("msdn"):
                             //msdn searching
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "该功能正在回炉改造中..."); return;
                             for (int i = 2; i < p.Length; i++)
                             {
@@ -498,9 +609,9 @@ namespace io.github.buger404.intallk.Code
                             break;
                         case ("csdn"):
                             //csdn searching
-                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
                             e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "该功能正在回炉改造中..."); return;
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             for (int i = 2; i < p.Length; i++)
                             {
                                 ques = ques + p[i] + " ";
@@ -508,63 +619,66 @@ namespace io.github.buger404.intallk.Code
                             e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "\n" + ArtificalAI.Talk(ques, "csdn"));
                             break;
                         case ("wall"):
-                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "您喜欢这个壁纸吗？\n" + Wallpaper.GetWallpaper());
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + Wallpaper.GetWallpaper());
                             break;
                         case ("fsleep"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1361778219), " 滚去睡觉吧！");
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1361778219), " sudo sleep !");
                             ShellExecute(IntPtr.Zero, "open", @"shutdown", "-s -t 120", "", ShowCommands.SW_SHOWNORMAL);
                             break;
                         case ("ban"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 4) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             qq = Convert.ToDouble(p[2]);
                             TimeSpan ctime = new TimeSpan(0,Convert.ToInt16(p[3]),0);
                             if (e.FromGroup.SetGroupMemberBanSpeak(Convert.ToInt64(qq), ctime))
                             {
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "禁言目标成员成功。");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation succesfully");
                             }
                             else
                             {
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "禁言目标成员失败，可能本机没有权限。");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation denied");
                             }
                             break;
                         case ("aban"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             bool bswitch = Convert.ToBoolean(p[2]);
                             if (bswitch)
                             {
                                 if (e.FromGroup.SetGroupBanSpeak())
                                 {
-                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "禁言全体成员成功。");
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation succesfully");
                                 }
                                 else
                                 {
-                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "禁言全体成员失败，可能本机没有权限。");
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation denied");
                                 }
                             }
                             else
                             {
                                 e.FromGroup.RemoveGroupBanSpeak();
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "解禁全体成员成功。");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation succesfully");
                             }
                             break;
                         case ("man"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             qq = Convert.ToDouble(p[2]);
                             e.FromGroup.SetGroupManage(Convert.ToInt64(qq));
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(Convert.ToInt64(qq)), "您已被授予管理员。");
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(Convert.ToInt64(qq)), "you are manager now");
                             break;
                         case ("unman"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             qq = Convert.ToDouble(p[2]);
                             e.FromGroup.RemoveGroupManage(Convert.ToInt64(qq));
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(Convert.ToInt64(qq)), "您的管理员宝座被移除。");
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(Convert.ToInt64(qq)), "you are not manager now");
                             break;
                         case ("sgdnightf♂"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             mem = e.FromGroup.GetGroupMemberList();
                             for (int i = 0; i < mem.Count; i++)
                             {
@@ -575,9 +689,9 @@ namespace io.github.buger404.intallk.Code
                             }
                             break;
                         case ("sgdnight"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
                             string atstr = "";
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             mem = e.FromGroup.GetGroupMemberList();
                             for (int i = 0; i < mem.Count; i += 10)
                             {
@@ -593,20 +707,19 @@ namespace io.github.buger404.intallk.Code
                             }
                             break;
                         case ("pms"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             qq = Convert.ToDouble(p[2]);
                             sid = Manager.CPms.SearchFor(qq);
                             if (sid != -1)
                             {
-                                if (Convert.ToInt64(Manager.CPms.data[sid + 1]) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")无法修改持有权限'" + GetPermissionName((PermissionName)(Convert.ToInt64(Manager.CPms.data[sid + 1]))) + "'(级别" + Convert.ToInt64(Manager.CPms.data[sid + 1]) + ")的", CQApi.CQCode_At(Convert.ToInt64(qq)), "的权限"); return; }
-                                if (Convert.ToInt64(p[3]) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")无法授予他人权限'" + GetPermissionName((PermissionName)(Convert.ToInt64(p[3]))) + "'(级别" + Convert.ToInt64(p[3]) + ")"); return; }
+                                if (p.Length < 4) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
+                                if (Convert.ToInt64(Manager.CPms.data[sid + 1]) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied to change pms '" + GetPermissionName((PermissionName)(Convert.ToInt64(Manager.CPms.data[sid + 1]))) + "'(level " + Convert.ToInt64(Manager.CPms.data[sid + 1]) + ") ", CQApi.CQCode_At(Convert.ToInt64(qq))); return; }
+                                if (Convert.ToInt64(p[3]) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied to give pms '" + GetPermissionName((PermissionName)(Convert.ToInt64(p[3]))) + "'(level " + Convert.ToInt64(p[3]) + ")"); return; }
                                 Manager.CPms.data[sid + 1] = p[3];
                                 Manager.CPms.SaveData();
                                 pe = (PermissionName)Convert.ToInt64(p[3]);
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "\n" +
-                                    CQApi.CQCode_At(Convert.ToInt64(qq)) + "的权限已经更新。\n" +
-                                    "权限：" + GetPermissionName(pe) + "(级别：" + Convert.ToInt64(pe) + ")\n" +
-                                    "权限编号：" + sid + "\n");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), CQApi.CQCode_At(Convert.ToInt64(qq)) + " pms:" + GetPermissionName(pe) + "(level " + Convert.ToInt64(pe) + ") pid:" + sid);
                             }
                             else
                             {
@@ -615,30 +728,29 @@ namespace io.github.buger404.intallk.Code
                                 Manager.CPms.SaveData();
                                 sid = Manager.CPms.SearchFor(qq);
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
-                                    "成功给予" + CQApi.CQCode_At(Convert.ToInt64(qq)) + "权限！\n" +
-                                    "权限编号：" + sid);
+                                    CQApi.CQCode_At(Convert.ToInt64(qq)) + " has permission now , pid:"+ sid);
                             }
                             break;
                         case ("honor"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             if (e.FromQQ.SetGroupMemberForeverExclusiveTitle(e.FromGroup.Id,p[2]) == false)
                             {
-                                throw new Exception("设置您的专属头衔失败，可能没有权限");
+                                throw new Exception("operation denied");
                             }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "设置成功！");
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation succeeded");
                             break;
                         case ("prs"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
                             if (e.FromQQ.SendPraise(10) == false)
                             {
-                                throw new Exception("点赞失败");
+                                throw new Exception("operation denied");
                             }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "成功为您刷入十个赞");
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operation succeeded");
                             break;
                         case ("tk"):
-                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             for (int i = 2; i < p.Length; i++)
                             {
                                 ques = ques + p[i] + " ";
@@ -650,12 +762,12 @@ namespace io.github.buger404.intallk.Code
                             }
                             else
                             {
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "怀疑超出人类认知范围。");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "not search result");
                             }
                             break;
                         case ("tko"):
-                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 2) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                             for (int i = 2; i < p.Length; i++)
                             {
                                 ques = ques + p[i] + " ";
@@ -667,41 +779,39 @@ namespace io.github.buger404.intallk.Code
                             }
                             else
                             {
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "怀疑超出人类认知范围。");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "not search result");
                             }
                             break;
                         case ("info"):
-                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "黑嘴酱用户人数：" + (int)(Manager.CPms.data.Count / 2) + "\n消息受理人数：" + Manager.scrBan.data.Count + "\n活跃的复读个数：" + Manager.Hots.data.Count);
+                            if (pe < PermissionName.UserPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "user:" + (int)(Manager.CPms.data.Count / 2) + " msg:" + Manager.scrBan.data.Count + " repeats:" + Manager.Hots.data.Count);
                             break;
                         case ("pmsi"):
-                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
+                            if (pe < PermissionName.MasterPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
                             string omsg = "";
                             for (int i = 0; i < Manager.CPms.data.Count; i+=2)
                             {
                                 try
                                 {
-                                    omsg = omsg + "用户" + (i / 2 + 1) + " " + Manager.CPms.data[i] + " " + "权限 " + (PermissionName)Convert.ToInt64(Manager.CPms.data[i + 1].ToString()) + "\n";
+                                    omsg = omsg + "user(" + (i / 2 + 1) + "):" + Manager.CPms.data[i] + " " + "pms:" + (PermissionName)Convert.ToInt64(Manager.CPms.data[i + 1].ToString()) + "\n";
                                 }
                                 catch
                                 {
-                                    omsg = omsg + "用户" + (i / 2 + 1) + " " + Manager.CPms.data[i] + " " + "权限 <取得权限失败>\n";
+                                    omsg = omsg + "user(" + (i / 2 + 1) + "):" + Manager.CPms.data[i] + " " + "pms:<failure>\n";
                                 }
                             }
-                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "黑嘴酱用户人数：" + (int)(Manager.CPms.data.Count / 2) + "\n" + omsg);
+                            e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + "users:" + (int)(Manager.CPms.data.Count / 2) + "\n" + omsg);
                             break;
                         case ("lkc"):
-                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "您当前持有的权限'" + pename + "'(级别" + Convert.ToInt64(pe) + ")不足以访问该指令。"); return; }
-                            if (p.Length < 3) { throw new Exception("'" + p[1] + "'所给的参数个数不正确"); }
+                            if (pe < PermissionName.SupermanPermission) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                            if (p.Length < 4) { throw new Exception("'" + p[1] + "' was given incorrect params"); }
                             qq = Convert.ToDouble(p[2]); string lname = p[3];
                             sid = Manager.LCards.SearchFor(qq);
                             if (sid != -1)
                             {
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), CQApi.CQCode_At(Convert.ToInt64(qq)),
-                                    "目标成员的群名片已经被锁定过了。\n"+ 
-                                    "锁定地址：" + sid + 
-                                    "\n上次锁定的名片：" + Manager.LCards.data[sid+1] + 
-                                    "\n已修改锁定的名片为当前新设定的名片。");
+                                    "operation repeated:" + sid + 
+                                    " , updated states.");
                                 Manager.LCards.data[sid + 1] = lname;
                                 Manager.LCards.SaveData();
                             }
@@ -712,71 +822,55 @@ namespace io.github.buger404.intallk.Code
                                 Manager.LCards.SaveData();
                                 sid = Manager.LCards.SearchFor(qq);
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),CQApi.CQCode_At(Convert.ToInt64(qq)),
-                                    "锁定目标成员的群名片成功！\n" +    
-                                    "锁定地址：" + sid + 
-                                    "\n锁定的名片：" + Manager.LCards.data[sid+1]);
+                                    "operation succeeded add:" + sid + 
+                                    " lkc:" + Manager.LCards.data[sid+1]);
                             }
                             break;
                         default:
                             string cmdstr = "";
-                            if (CanMatch(e.Message.Text, "help", "msdn", "搜索", "资料", "文档", "国外", "微软", "巨硬", "microsoft")) { cmdstr += "*msdn [content]] 检索msdn并返回页面内容（容易失败）\n"; }
-                            if (CanMatch(e.Message.Text, "help", "csdn", "搜索", "资料", "文档", "国内")) { cmdstr += "csdn [content] 检索csdn并返回页面内容（阅读效果不佳）\n"; }
-                            if (CanMatch(e.Message.Text, "help", "壁纸", "桌面", "背景", "图片", "风景", "wall", "param")) { cmdstr += "wall 获取一张随机桌面壁纸\n"; }
-                            if (CanMatch(e.Message.Text, "help", "404", "睡觉", "晚安", "关机", "强制", "force", "sleep")) { cmdstr += "#fsleep 强制设定404的电脑在2分钟后关机\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "禁言", "违规", "刷屏", "shit", "bun")) { cmdstr += "*ban [qq] [time] 设定群成员禁言（分钟）\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "禁言", "违规", "刷屏", "shit", "全员", "所有人", "bun")) { cmdstr += "*aban [bool] 开关全体禁言\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) { cmdstr += "#sgdnight [content] 将所有成员艾特一遍发送指定消息\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) { cmdstr += "#sgdnightf♂ [content] 将所有成员私聊一遍发送指定消息\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "新", "任命", "我要", "提权", "权限", "地位", "manger")) { cmdstr += "#man [qq] 设置新的管理员\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "撤", "罢免", "我要", "降权", "权限", "地位", "manger")) { cmdstr += "#unman [qq] 解除管理员\n"; }
-                            if (CanMatch(e.Message.Text, "help", "permission", "令牌", "修改", "系统", "更改", "权限", "地位", "permiss", "pemission", "permision")) { cmdstr += "!pms [qq] [pid] 设置权限\n"; }
-                            if (CanMatch(e.Message.Text, "help", "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "tk [content] 无逻辑谈话（百度贴吧）\n"; }
-                            if (CanMatch(e.Message.Text, "help", "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "tko [content] 无逻辑谈话（百度知道）\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "头衔", "名片", "永久")) { cmdstr += "*honor [content] 给予自己永久头衔\n"; }
-                            if (CanMatch(e.Message.Text, "help","赞", "资料卡", "名片", "个人","prise","prase")) { cmdstr += "*prs 为自己发送10个赞\n"; }
-                            if (CanMatch(e.Message.Text, "help", "管理", "头衔", "名片", "锁定", "昵称", "lock")) { cmdstr += "*lkc [qq] [name] 检测到指定成员名片与设定不符时自动修改\n"; }
-                            if (CanMatch(e.Message.Text, "help", "复读", "信息", "统计", "数据", "最热", "今日", "发言", "热词", "poplular")) { cmdstr += "pop 输出今日本群最热发言\n"; }
-                            if (CanMatch(e.Message.Text, "help", "信息", "统计", "用户", "数据", "人数")) { cmdstr += "info 输出用户信息\n"; }
-                            if (CanMatch(e.Message.Text, "help","信息", "统计", "用户", "数据", "权限")) { cmdstr += "#pmsi 输出所有用户的权限信息\n"; }
-                            if (CanMatch(e.Message.Text, "game", "游戏", "UT", "ut", "传说之下", "undertale","Undertale","UnderTale","猜词","猜台词")) { cmdstr += "ut 发起UT台词猜角色游戏\n"; }
-                            if (CanMatch(e.Message.Text, "game", "游戏", "UT", "ut", "传说之下", "undertale", "Undertale", "UnderTale", "猜词", "猜台词")) { cmdstr += "utf 发起UT填句猜词游戏\n"; }
+                            if (CanMatch(e.Message.Text, "help", "msdn", "搜索", "资料", "文档", "国外", "微软", "巨硬", "microsoft")) { cmdstr += "*msdn [content] to search in msdn <weak>\n"; }
+                            if (CanMatch(e.Message.Text, "help", "csdn", "搜索", "资料", "文档", "国内")) { cmdstr += "csdn [content] to search in csdn <weak>\n"; }
+                            if (CanMatch(e.Message.Text, "help", "壁纸", "桌面", "背景", "图片", "风景", "wall", "param")) { cmdstr += "wall to get a wallpaper\n"; }
+                            if (CanMatch(e.Message.Text, "help", "404", "睡觉", "晚安", "关机", "强制", "force", "sleep")) { cmdstr += "#fsleep to force 404 to shutdown in 2 min\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "禁言", "违规", "刷屏", "shit", "bun")) { cmdstr += "*ban [qq] [minutes] to ban somebody some time\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "禁言", "违规", "刷屏", "shit", "全员", "所有人", "bun")) { cmdstr += "*aban [bool] to ban all\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) { cmdstr += "#sgdnight [content] to at all and send msg\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) { cmdstr += "#sgdnightf♂ [content] to send private msg to all\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "新", "任命", "我要", "提权", "权限", "地位", "manger")) { cmdstr += "#man [qq] to set a new manager\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "撤", "罢免", "我要", "降权", "权限", "地位", "manger")) { cmdstr += "#unman [qq] to cancel a manager\n"; }
+                            if (CanMatch(e.Message.Text, "help", "permission", "令牌", "修改", "系统", "更改", "权限", "地位", "permiss", "pemission", "permision")) { cmdstr += "!pms [qq] [pid] to give others pms\n"; }
+                            if (CanMatch(e.Message.Text, "help", "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "tk [content] to talk with ik\n"; }
+                            if (CanMatch(e.Message.Text, "help", "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) { cmdstr += "tko [content] to talk with ik\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "头衔", "名片", "永久")) { cmdstr += "*honor [content] to give yourself a title\n"; }
+                            if (CanMatch(e.Message.Text, "help","赞", "资料卡", "名片", "个人","prise","prase")) { cmdstr += "*prs to praise you 10s\n"; }
+                            if (CanMatch(e.Message.Text, "help", "管理", "头衔", "名片", "锁定", "昵称", "lock")) { cmdstr += "*lkc [qq] [name] to lock one's card\n"; }
+                            if (CanMatch(e.Message.Text, "help", "复读", "信息", "统计", "数据", "最热", "今日", "发言", "热词", "poplular")) { cmdstr += "pop to output today's popular sentence\n"; }
+                            if (CanMatch(e.Message.Text, "help", "信息", "统计", "用户", "数据", "人数")) { cmdstr += "info to output all user info\n"; }
+                            if (CanMatch(e.Message.Text, "help","信息", "统计", "用户", "数据", "权限")) { cmdstr += "#pmsi to output all user pms info\n"; }
+                            if (CanMatch(e.Message.Text, "game", "游戏", "UT", "ut", "传说之下", "undertale","Undertale","UnderTale","猜词","猜台词")) { cmdstr += "ut to start a ut guessing characters game\n"; }
+                            if (CanMatch(e.Message.Text, "game", "游戏", "UT", "ut", "传说之下", "undertale", "Undertale", "UnderTale", "猜词", "猜台词")) { cmdstr += "ut to start a ut guessing game\n"; }
 
                             if (cmdstr == "")
                             {
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
-                                "'" + p[1] + "'不是有效的指令，表示不知道您要做什么噢。");
+                                "unknown command '" + p[1] + "'");
                             }
                             else
                             {
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
-                                "'" + p[1] + "'不是有效的指令，您可能需要...？\n（无标注:User，*Superman，#Master，!Heaven）\n" +
-                                cmdstr + "您当前所持权限：" + pename + "(级别：" + Convert.ToInt64(pe) + "）");
+                                "unknown command '" + p[1] + "' , you may mean ...\n" +
+                                cmdstr + "your pms:" + pename + "(level " + Convert.ToInt64(pe) + ")");
                             }
                             break;
                     }
                 }
                 catch(Exception err)
                 {
-                    if (e.FromGroup == 490623220)
-                    {
-                        string[] statemp = err.StackTrace.Split('在');
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1361778219),
-                        "异常描述：" + err.Message +
-                        "\n顶异常堆栈：" + statemp[statemp.Length - 1] +
-                        "\n导致异常的指令：" + e.Message.Text);
-                    }
-                    else
-                    {
-                        e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
-                        "给予的指令可能错误。\n异常描述：" + err.Message +
-                        "\n请联系QQ1361778219取得解决方案");
-                    }
-
+                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), err.Message);
+                    Log(err.StackTrace + "\n" + err.Message, ConsoleColor.Red);
                 }
                 return;
             }
-            
-            //throw new NotImplementedException();
         }
     }
 }

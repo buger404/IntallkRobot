@@ -23,6 +23,7 @@ namespace MainThread
         [DllImport("kernel32.dll",
             CallingConvention = CallingConvention.Winapi)]
         extern static int GetTickCount();
+        public static bool TenClockLock = false;
         public static CQApi pCQ;
         public struct HotMsg
         {
@@ -54,11 +55,11 @@ namespace MainThread
                     g = new Native.Csharp.Sdk.Cqp.Model.Group(pCQ, UT.targetg);
                     if (UT.winstr == "")
                     {
-                        g.SendGroupMessage("无人能解答第" + UT.round + "轮！答案是：" + UT.role);
+                        g.SendGroupMessage("nobody past round" + UT.round + ",answer:" + UT.role);
                     }
                     else
                     {
-                        g.SendGroupMessage("答案是：" + UT.role + "，本轮信息：\n" + UT.winstr);
+                        g.SendGroupMessage("answer:" + UT.role + "\n" + UT.winstr);
                     }
                     
                     if (UT.round == 5)
@@ -69,12 +70,12 @@ namespace MainThread
                             playstr = playstr + CQApi.CQCode_At(UT.ps[i].qq) + " " + (int)(UT.ps[i].score * 10) / 10 + " points\n";
                         }
                         UT.targetg = 0;
-                        g.SendGroupMessage("游戏结束，本次游戏结果\n" + playstr);
+                        g.SendGroupMessage("game closed\n" + playstr);
                     }
                     else
                     {
                         UT.nextRound(); UT.tick = GetTickCount();
-                        g.SendGroupMessage("第" + UT.round + "轮（20s后公布本轮结果）：" + UT.dialog);
+                        g.SendGroupMessage("round " + UT.round + "（result:20s laters）：" + UT.dialog);
                     }
                 }
             }
@@ -85,8 +86,9 @@ namespace MainThread
             for (int s = 0; s < Manager.mHot.data.Count; s++)
             {
                 hhmsg = (HotMsg)Manager.mHot.data[s];
-                if (DateTime.Now.Hour >= 22 && hhmsg.hasup == false)
+                if (DateTime.Now.Hour >= 22 && hhmsg.hasup == false && TenClockLock==false)
                 {
+                    TenClockLock = true;
                     Log("Annouce:" + hhmsg.group, ConsoleColor.Green);
                     qtemp = hhmsg.banqq.Split(';');
                     for (int i = 0; i < qtemp.Length - 1; i++)

@@ -12,6 +12,7 @@ using RestoreData.Manager;
 using System.Runtime.InteropServices;
 using MainThread;
 using Undertale.Dialogs;
+using VoidLife.Simulator;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -23,6 +24,8 @@ namespace io.github.buger404.intallk.Code
         public void CQStartup(object sender, CQStartupEventArgs e)
         {
             MessagePoster.pCQ = e.CQApi;
+            MessagePoster.TenClockLock = (DateTime.Now.Hour >= 22);
+            VoidLifes.pCQ = e.CQApi;
             ArtificalA.Intelligence.ArtificalAI.DebugLog = true;
             AllocConsole();
             Manager.LCards = new DataArrange("lockcards");
@@ -33,6 +36,7 @@ namespace io.github.buger404.intallk.Code
             UT.inits();
             Thread thread = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
             thread.Start();
+            VoidLifes.LoadGame();
             Console.WriteLine("Message poster thread works properly .");
         }
     }
