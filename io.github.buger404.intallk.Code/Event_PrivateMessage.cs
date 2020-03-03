@@ -12,11 +12,15 @@ using System.IO;
 using DataArrange.Storages;
 using ArtificalA.Intelligence;
 using MainThread;
+using System.Runtime.InteropServices;
 
 namespace io.github.buger404.intallk.Code
 {
     public class Event_PrivateMessage:IPrivateMessage 
     {
+        [DllImport("kernel32.dll",
+            CallingConvention = CallingConvention.Winapi)]
+        extern static int GetTickCount();
         public static int recordtime = 0;
         private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
@@ -65,11 +69,24 @@ namespace io.github.buger404.intallk.Code
                     return;
                 }
 
-                string tsay = ArtificalAI.Talk(e.Message.Text, "tieba");
-                if (tsay != "")
+                long lstime = 0;
+                for(int i = 0;i < MessagePoster.delays.Count; i++)
                 {
-                    MessagePoster.LetSay(tsay, e.FromQQ.Id,1);
+                    MessagePoster.delaymsg d = MessagePoster.delays[i];
+                    if(d.group == e.FromQQ.Id)
+                    {
+                        lstime = d.time;return;
+                    }
                 }
+                if(GetTickCount() - lstime > 3000)
+                {
+                    string tsay = ArtificalAI.Talk(e.Message.Text, "tieba");
+                    if (tsay != "")
+                    {
+                        MessagePoster.LetSay(tsay, e.FromQQ.Id, 1);
+                    }
+                }
+
 
             }
 
