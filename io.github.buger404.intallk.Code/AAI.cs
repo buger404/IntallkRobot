@@ -21,10 +21,12 @@ namespace ArtificalA.Intelligence
     public class ArtificalAI
     {
         public static bool DebugLog = false;
-
+        public static int recordtime = 0;
         private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
             if (DebugLog == false) { return; }
+            if (recordtime < DateTime.Now.Hour) { recordtime = DateTime.Now.Hour; log = "##TIMELINE(" + recordtime + ")####################################################\r\n" + log; }
+            File.AppendAllText(@"C:\DataArrange\Log\[AAI]-" + MainThread.MessagePoster.logid + ".txt", log + "\r\n");
             Console.ForegroundColor = color;
             Console.WriteLine(log);
         }
@@ -116,11 +118,17 @@ namespace ArtificalA.Intelligence
             {
                 if (engine == "baidu") { l = GetInner(m.Value, 1).Trim(); }
                 if (engine == "tieba") { l = GetInner(m.Value).Trim(); }
-                Log("Content:" + l.Length + " words");
+                //Log("Content:" + l.Length + " words");
                 if (l.Length > 0) { rs.Add(l); }
             }
             if (rs.Count == 0) { Log("Faile to get contents !", ConsoleColor.Red); return ""; }
             string tts = rs[r.Next(0, rs.Count)];
+            if(tts.ToLower().IndexOf("http:") >= 0 || tts.ToLower().IndexOf("https:") >= 0 || tts.ToLower().IndexOf("#") >= 0 || tts.ToLower().IndexOf("qq") >= 0)
+            {
+                Log("AD:" + tts, ConsoleColor.Red); tts = "";
+            }
+                
+            Log("Reply:" + tts, ConsoleColor.Green);
 
             return tts;
         }

@@ -15,6 +15,8 @@ using Native.Csharp.Sdk.Cqp.Interface;
 using RestoreData.Manager;
 using System.Runtime.InteropServices;
 using Undertale.Dialogs;
+using DataArrange.Storages;
+using Native.Csharp.Sdk.Cqp.Model;
 
 namespace MainThread
 {
@@ -25,6 +27,7 @@ namespace MainThread
         extern static int GetTickCount();
         public static bool TenClockLock = false;
         public static CQApi pCQ;
+        public static string logid = "";
         public struct HotMsg
         {
             public long id;
@@ -36,6 +39,43 @@ namespace MainThread
             public bool delaymsg;
             public bool hasup;
             public bool hasre;
+            public bool canre;
+        }
+        public static int recordtime = 0;
+        public static string workpath;
+        public struct delaymsg
+        {
+            public string msg;
+            public long time;
+            public long group;
+            public int kind;
+        }
+        public static List<delaymsg> delays = new List<delaymsg>();
+        public static void LetSay(string Comments, long Group,int k = 0)
+        {
+
+            string[] w = Comments.Replace(',', '，').Replace('.', '，').Replace('。', '，')
+                                     .Replace('！', '，').Replace('!', '，')
+                                     .Replace('\"', ' ').Replace('“', ' ').Replace('”', ' ')
+                                     .Replace('？', '，').Replace('?', '，').Split('，');
+
+            Random r = new Random(Guid.NewGuid().GetHashCode());
+            long now = GetTickCount();
+            for (int j = 0; j < w.Length; j++)
+            {
+                w[j] = w[j].Trim();
+                if (w[j].Length > 0 && w[j].Length < 40)
+                {
+                    delaymsg d = new delaymsg();
+                    d.msg = w[j]; d.kind = k;
+                    d.time = now + (w[j].Length * (long)(300 * (Convert.ToDouble(r.Next(70, 120)) / 100f)));
+                    d.group = Group;
+                    delays.Add(d);
+                    now = d.time;
+                    now += 1000;
+                }
+            }
+            Log("delay msg sheet added successfully", ConsoleColor.Green);
         }
         private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
@@ -44,8 +84,59 @@ namespace MainThread
         }
         public static void Poster()
         {
-            posthead:
-            Native.Csharp.Sdk.Cqp.Model.Group g;
+        posthead:
+            //Moring Protection
+            Storage sys = new Storage("system");
+            if (DateTime.Now.Hour >= 3 && DateTime.Now.Hour <= 5)
+            {
+                if (sys.getkey("root", "sleep") != "zzz")
+                {
+                    sys.putkey("root", "sleep", "zzz");
+                    QQ master = new QQ(pCQ, 1361778219);
+                    master.SendPrivateMessage("主人晚安~");
+                    Console.Clear();
+                    Log("[SLEEP] zzzzzzz");
+                    logid = Guid.NewGuid().ToString();
+                    //Application.Restart();
+                    //System.Diagnostics.Process.Start(workpath + "\\CQA.exe", "/account 3529296290");
+                    //System.Environment.Exit(0);
+                }
+                return;
+            }
+            if (sys.getkey("root", "sleep") == "zzz")
+            {
+                Log("[WAKE UP] ouch");
+                QQ master = new QQ(pCQ, 1361778219);
+                master.SendPrivateMessage("主人早上好~");
+                sys.putkey("root", "sleep", "！！");
+            }
+
+            Group g;
+            //Say
+            try
+            {
+                for (int i = 0; i < delays.Count; i++)
+                {
+                resay:
+                    delaymsg dm = delays[i];
+                    if (GetTickCount() >= dm.time)
+                    {
+                        if(dm.kind == 0)
+                        {
+                            new Group(pCQ, dm.group).SendGroupMessage(dm.msg);
+                        }
+                        else
+                        {
+                            new QQ(pCQ, dm.group).SendPrivateMessage(dm.msg);
+                        }
+                        delays.Remove(dm); goto resay;
+                    }
+                }
+            }
+            catch
+            {
+                
+            }
 
             //Undertale
             if (UT.targetg != 0)
@@ -102,23 +193,23 @@ namespace MainThread
                     }
                     hhmsg.hasup = true;
                     g = new Native.Csharp.Sdk.Cqp.Model.Group(pCQ, Convert.ToInt64(hhmsg.group));
-                    g.SendGroupMessage("截止刚才，本群今日最热发言：\n" + hhmsg.msg + "\n复读发起人：" + CQApi.CQCode_At(Convert.ToInt64(qtemp[0])) + "\n复读热度：" + hhmsg.hot + "\n该热度发言被这些成员复读过：" + fstr + "\n在该热度发言发起时，这些成员太过激动试图刷屏：" + estr);
+                    g.SendGroupMessage(hhmsg.msg);
                     Manager.mHot.data[s] = hhmsg;
                 }
             }
             //Homework network
             string f = "0";
-            if (File.Exists("D:\\DataArrange\\homeworklock.bin")) { f = File.ReadAllText("D:\\DataArrange\\homeworklock.bin", Encoding.UTF8); }
+            if (File.Exists("C:\\DataArrange\\homeworklock.bin")) { f = File.ReadAllText("C:\\DataArrange\\homeworklock.bin", Encoding.UTF8); }
             if (Convert.ToInt64(f) == 1)
             {
                 Log("New homework recevied !", ConsoleColor.Green);
-                f = File.ReadAllText("D:\\DataArrange\\homework.bin", Encoding.UTF8);
+                f = File.ReadAllText("C:\\DataArrange\\homework.bin", Encoding.UTF8);
                 g = new Native.Csharp.Sdk.Cqp.Model.Group(pCQ, 817755769);
                 g.SendGroupMessage("[今日作业推送消息]\n" + f + "\n————来自黑嘴稽气人的自动推送");
-                File.WriteAllText("D:\\DataArrange\\homeworklock.bin", "0");
+                File.WriteAllText("C:\\DataArrange\\homeworklock.bin", "0");
             }
             f = "";
-            if (File.Exists("D:\\DataArrange\\announcer.bin")) { f = File.ReadAllText("D:\\DataArrange\\announcer.bin", Encoding.UTF8); }
+            if (File.Exists("C:\\DataArrange\\announcer.bin")) { f = File.ReadAllText("C:\\DataArrange\\announcer.bin", Encoding.UTF8); }
             if (f != "")
             {
                 Log("Announce:" + f, ConsoleColor.Green);
@@ -142,7 +233,7 @@ namespace MainThread
                         return;
                 }
                 g.SendGroupMessage("[通知]\n" + f + "\n————来自黑嘴稽气人的自动推送");
-                File.WriteAllText("D:\\DataArrange\\announcer.bin", "");
+                File.WriteAllText("C:\\DataArrange\\announcer.bin", "");
             }
             Thread.Sleep(1000);
             goto posthead;
@@ -155,8 +246,8 @@ namespace RestoreData.Manager
     using io.github.buger404.intallk.Code;
     public class Manager
     {
+        public static Storage wordcollect;
         public static DataArrange LCards;
-        public static DataArrange CPms;
         public static DataArrange Hots;
         public static DataArrange mHot;
         public static DataArrange scrBan;
@@ -178,8 +269,8 @@ namespace io.github.buger404.intallk.Code
         public DataArrange(string dataname)
         {
             this.name = dataname;
-            if (Directory.Exists(@"D:\DataArrange\") == false) { Directory.CreateDirectory(@"D:\DataArrange\"); }
-            if (Directory.Exists(@"D:\DataArrange\Debug\") == false) { Directory.CreateDirectory(@"D:\DataArrange\Debug\"); }
+            if (Directory.Exists(@"C:\DataArrange\") == false) { Directory.CreateDirectory(@"C:\DataArrange\"); }
+            if (Directory.Exists(@"C:\DataArrange\Debug\") == false) { Directory.CreateDirectory(@"C:\DataArrange\Debug\"); }
             this.ReadData();
         }
 
@@ -201,13 +292,13 @@ namespace io.github.buger404.intallk.Code
                 content = content + this.data[i].ToString() + "`";
             }
             
-            File.WriteAllText("D:\\DataArrange\\" + this.name + ".bin", content);
+            File.WriteAllText("C:\\DataArrange\\" + this.name + ".bin", content);
         }
 
         public void ReadData()
         {
-            if (File.Exists("D:\\DataArrange\\" + this.name + ".bin") == false) { return; }
-            string[] item = File.ReadAllText("D:\\DataArrange\\" + this.name + ".bin", Encoding.UTF8).Split('`');
+            if (File.Exists("C:\\DataArrange\\" + this.name + ".bin") == false) { return; }
+            string[] item = File.ReadAllText("C:\\DataArrange\\" + this.name + ".bin", Encoding.UTF8).Split('`');
             for (int i = 0; i < item.Length; i++)
             {
                 if (item[i] != "")

@@ -35,7 +35,8 @@ namespace VoidLife.Simulator
         public static List<LifeEvent> Events = new List<LifeEvent>(); 
 
         //角色参数
-        public static Random ran = new Random();        //随机数
+        //随机数
+        public static Random ran = new Random(Guid.NewGuid().GetHashCode());        
         public static string VoidName = "";             //角色名称
         public static int WinState = 0;                 //输赢指示
         public static long VoidLive = 100;              //角色寿命
@@ -72,7 +73,7 @@ namespace VoidLife.Simulator
 
         //所有玩家
         public static List<Player> Players = new List<Player>();
-
+        public static int recordtime = 0;
         private static void Log(string log, ConsoleColor color = ConsoleColor.White)
         {
             Console.ForegroundColor = color;
@@ -98,8 +99,8 @@ namespace VoidLife.Simulator
             if (VoidSpirit > 200) { VoidSpirit = 200; }
             if (VoidSpirit < -100) { VoidSpirit = -100; }
 
-            TimeZone += 10;
             WinState = (TimeZone > VoidLive ? (VoidLive >= 70 ? 1 : 2) : 0);
+            if (WinState == 0) { TimeZone += 10; }
             bool MakerWin = (WinState == 1);
             if (WinState > 0)
             {
@@ -112,7 +113,7 @@ namespace VoidLife.Simulator
                                     (Players[i].IsMaker == MakerWin ? "胜利了！" : "失败了"));
                     winner = winner + (Players[i].IsMaker == MakerWin ? CQApi.CQCode_At(Players[i].QQ).ToString() : "");
                 }
-                GruMsg(TargetGroup, "the character died at the age of " + VoidLive + ".\nthis game , " + (MakerWin ? "'制造者'" : "'破坏者'") + " won! so winner(s) are " + winner + "! congratulations!\nthe game closed automatically.");
+                GruMsg(TargetGroup, "the character died at the age of " + TimeZone + ".\nthis game , " + (MakerWin ? "'制造者'" : "'破坏者'") + " won! so winner(s) are " + winner + "! congratulations!\nthe game closed automatically.");
                 GruMsg(TargetGroup, "WELCOME to post new EVENTS , please send 'post help' to me privatly for details.");
                 EndGame(); return;
             }
@@ -131,14 +132,14 @@ namespace VoidLife.Simulator
                 {
                     if (msg.ToUpper() == (new string(new char[] { (char)('A' + i) }))) { c = i; break; }
                 }
-                if (c == -1) { PriMsg(TargetQQ, "请回复指定的选项序号，例如“A”。"); return; }
+                if (c == -1) { PriMsg(TargetQQ, "游戏还在进行。\n请回复指定的选项序号，例如“A”。"); return; }
 
                 VoidLive += CurrentEvent.Choices[c].Live;
                 VoidMoney += CurrentEvent.Choices[c].Money;
                 VoidSpirit += CurrentEvent.Choices[c].Spirit;
                 Log(CurrentEvent.Choices[c].Description);
                 PriMsg(TargetQQ, CurrentEvent.Choices[c].Description.Replace("<void>","'" + VoidName + "'"));
-                GruMsg(TargetGroup, CurrentEvent.Choices[c].Description.Replace("<void>", "'" + VoidName + "'") + "\n" + "\n正在等待目标玩家选取新标签...");
+                GruMsg(TargetGroup, "目标玩家选择了'" + CurrentEvent.Choices[c].Name + "'\n" + CurrentEvent.Choices[c].Description.Replace("<void>", "'" + VoidName + "'") + "\n" + "\n正在等待目标玩家选取新标签...");
                 JudgeWin();
                 if (WinState != 0) { return; }
                 WriteTagQues(); string DataC = "";
@@ -154,7 +155,7 @@ namespace VoidLife.Simulator
                 {
                     if (msg.ToUpper() == (new string(new char[] { (char)('A' + i) }))) { c = i; break; }
                 }
-                if (c == -1) { PriMsg(TargetQQ, "请回复指定的选项序号，例如“A”。"); return; }
+                if (c == -1) { PriMsg(TargetQQ, "游戏还在进行。\n请回复指定的选项序号，例如“A”。"); return; }
 
                 NewTag(TagQues[c]);
                 PriMsg(TargetQQ, "谢谢，请继续关注群内消息。");
@@ -214,7 +215,7 @@ namespace VoidLife.Simulator
                                                 s[j] = s[j].Remove(0, 1);
                                                 lc.Money = Convert.ToInt64(s[j]);
                                                 break;
-                                            case ('❥'):
+                                            case ('@'):
                                                 s[j] = s[j].Remove(0, 1);
                                                 lc.Live = Convert.ToInt64(s[j]);
                                                 break;
@@ -262,7 +263,7 @@ namespace VoidLife.Simulator
 
         public static void LoadGame()
         {
-            foreach (string file in Directory.GetFiles(@"D:\DataArrange\VoidLife\"))
+            foreach (string file in Directory.GetFiles(@"C:\DataArrange\VoidLife\"))
                 LoadEvent(File.ReadAllText(file));
         }
 
@@ -334,14 +335,14 @@ namespace VoidLife.Simulator
                 if (Players[i].IsMaker) { goto rechoose; }
                 Player p = Players[i]; p.IsMaker = true; Players[i] = p;
                 Log(p.QQ + " was choosen to be the maker.", ConsoleColor.Green);
-                PriMsg(p.QQ, "恭喜，您被选中成为了该轮虚拟角色'" + VoidName + "'的制造者，请照顾好您的角色，让他活过平均寿命。");
+                PriMsg(p.QQ, "**恭喜，您被选中成为了该轮虚拟角色'" + VoidName + "'的制造者，请照顾好您的角色，让他活过平均寿命。");
                 nC++;
             } while (nC < neC);
             for (int i = 0; i < Players.Count; i++)
             {
                 if (Players[i].IsMaker == false)
                 {
-                    PriMsg(Players[i].QQ, "您被选中成为了该轮虚拟角色'" + VoidName + "'的破坏者，您需要想方设法让他不能活过平均寿命。");
+                    PriMsg(Players[i].QQ, "**您被选中成为了该轮虚拟角色'" + VoidName + "'的破坏者，您需要想方设法让他不能活过平均寿命。");
                 }
             }
             NextRound();
@@ -370,7 +371,7 @@ namespace VoidLife.Simulator
                 chostr = chostr + (new string(new char[] { (char)('A' + i) })) + ". " + CurrentEvent.Choices[i].Name + "\n";
 
             PriMsg(TargetQQ, chostr + "您得到了机会！请为本次的虚拟角色'" + VoidName + "'做出决定。\n您需要添加我的QQ，本机才能受到您的回复噢。");
-            GruMsg(TargetGroup, CurrentEvent.Description.Replace("<void>", VoidName) + "\n\n" + "正在等待目标玩家做出选择...");
+            GruMsg(TargetGroup, CurrentEvent.Description.Replace("<void>", "'" + VoidName + "'") + "\n\n" + "正在等待目标玩家做出选择...");
         }
 
         public static void PriMsg(long qq,string msg)

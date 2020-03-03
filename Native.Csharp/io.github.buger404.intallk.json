@@ -6,8 +6,8 @@
 	"ret": 1,
 	"apiver": 9,
 	"name": "黑嘴群聊机器人",
-	"version": "1.8.7",
-	"version_id": 101,
+	"version": "2.1.4",
+	"version_id": 130,
 	"author": "Buger404",
 	"description": "专属黑嘴群聊机器人，活跃气氛，助推吹水",
 	"event": [

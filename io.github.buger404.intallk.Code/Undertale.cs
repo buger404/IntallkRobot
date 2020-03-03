@@ -39,7 +39,7 @@ namespace Undertale.Dialogs
         {
             //加载UT对话库
             Console.WriteLine("Undertale:Loading...");
-            says = File.ReadAllText("D:\\DataArrange\\undertale.bin", Encoding.UTF8).Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            says = File.ReadAllText("C:\\DataArrange\\undertale.bin", Encoding.UTF8).Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < says.Length; i++)
             {
                 if (says[i].StartsWith("#"))

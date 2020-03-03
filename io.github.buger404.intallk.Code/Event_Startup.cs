@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 using MainThread;
 using Undertale.Dialogs;
 using VoidLife.Simulator;
+using DataArrange.Storages;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -23,13 +24,16 @@ namespace io.github.buger404.intallk.Code
         // 接收事件
         public void CQStartup(object sender, CQStartupEventArgs e)
         {
+            MessagePoster.workpath = Application.StartupPath;
+            MessagePoster.logid = Guid.NewGuid().ToString();
             MessagePoster.pCQ = e.CQApi;
             MessagePoster.TenClockLock = (DateTime.Now.Hour >= 22);
             VoidLifes.pCQ = e.CQApi;
             ArtificalA.Intelligence.ArtificalAI.DebugLog = true;
             AllocConsole();
+            Console.WriteLine("Startup:" + MessagePoster.workpath);
+            Manager.wordcollect = new Storage("wordcollections");
             Manager.LCards = new DataArrange("lockcards");
-            Manager.CPms = new DataArrange("consolepermissions");
             Manager.mHot = new DataArrange("mosthotmessages");
             Manager.Hots = new DataArrange("messagehots");
             Manager.scrBan = new DataArrange("screenmsgbanners");
