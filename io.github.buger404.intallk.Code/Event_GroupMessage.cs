@@ -137,9 +137,10 @@ namespace io.github.buger404.intallk.Code
                 hmsg = (MainThread.MessagePoster.HotMsg)Manager.Hots.data[i];
                 long qq = Convert.ToInt64(hmsg.qq.Split(';')[0]);
                 GroupMemberInfo g = e.FromGroup.GetGroupMemberInfo(qq);
-                string QQName = g.Card; string Nick = "";
+                string QQName = ""; string Nick = "";
                 try
                 {
+                    QQName = g.Card;
                     Nick = g.Nick;
                 }
                 catch
