@@ -69,6 +69,7 @@ namespace io.github.buger404.intallk.Code
                     return;
                 }
 
+                MessagePoster.CheckProcessMsg(e.Message.Text, e.FromQQ.Id, 1);
                 long lstime = 0;
                 for(int i = 0;i < MessagePoster.delays.Count; i++)
                 {

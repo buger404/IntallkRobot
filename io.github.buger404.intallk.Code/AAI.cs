@@ -26,7 +26,14 @@ namespace ArtificalA.Intelligence
         {
             if (DebugLog == false) { return; }
             if (recordtime < DateTime.Now.Hour) { recordtime = DateTime.Now.Hour; log = "##TIMELINE(" + recordtime + ")####################################################\r\n" + log; }
-            File.AppendAllText(@"C:\DataArrange\Log\[AAI]-" + MainThread.MessagePoster.logid + ".txt", log + "\r\n");
+            try
+            {
+                File.AppendAllText(@"C:\DataArrange\Log\[AAI]-" + MainThread.MessagePoster.logid + ".txt", log + "\r\n");
+            }
+            catch
+            {
+
+            }
             Console.ForegroundColor = color;
             Console.WriteLine(log);
         }

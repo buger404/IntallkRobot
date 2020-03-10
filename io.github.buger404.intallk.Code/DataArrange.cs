@@ -49,6 +49,10 @@ namespace MainThread
             public long time;
             public long group;
             public int kind;
+            public void SetTime(long ntime)
+            {
+                time = ntime;
+            }
         }
         public static List<delaymsg> delays = new List<delaymsg>();
         public static void LetSay(string Comments, long Group,int k = 0)
@@ -81,6 +85,78 @@ namespace MainThread
         {
             Console.ForegroundColor = color;
             Console.WriteLine(log);
+        }
+        private static bool CanMatch(string target, params string[] matches)
+        {
+            bool b = false;
+            for (int i = 0; i < matches.Length; i++)
+            {
+                b = (b || (target.IndexOf(matches[i]) == 0));
+            }
+            return b;
+        }
+        public static void CheckProcessMsg(string msg,long number,int k)
+        {
+            int action = 0;
+            //催促
+            if (CanMatch(msg.ToLower(),
+                "quick", "quickly", "fast", "more quickly","faster",
+                "快", "快点", "加速", "快一点"))
+            { action = 1; }
+            //停止
+            if (CanMatch(msg.ToLower(),
+                "stop", "shut up", "shut it", "shut that", 
+                "闭嘴", "别说了", "不要说了","停","停下"))
+            { action = 2; }
+            //暂停
+            if (CanMatch(msg.ToLower(),
+                "pause", "wait",  
+                "暂停", "等等", "等一等","等一下",
+                "等下","停一下","停一会儿","等一会儿"))
+            { action = 3; }
+            //减慢
+            if (CanMatch(msg.ToLower(),
+                "slow", "slowly", "slower", 
+                "慢", "慢点", "减速", "慢一点"))
+            { action = 4; }
+
+            if (action == 0) { return; } //爬
+
+            Random r = new Random(Guid.NewGuid().GetHashCode());
+            delaymsg fd = new delaymsg();fd.group = 0;
+            List<delaymsg> t = delays.FindAll(m => m.group == number && m.kind == k);
+            if (t.Count == 0) { return; }
+
+            foreach (delaymsg d in t)
+            {
+                if (action == 1) { d.SetTime(Convert.ToInt64(d.time * 0.9)); }
+                if (action == 2) { delays.Remove(d); }
+                if (action == 3) { d.SetTime(Convert.ToInt64(d.time + 20000 * r.Next(85,115) / 100)); }
+                if (action == 4) { d.SetTime(Convert.ToInt64(d.time * 1.1)); }
+                if (fd.group == 0) { fd = d; }
+            }
+
+            if (action == 3)
+            {
+                fd.time = fd.time - 2000 * r.Next(85, 115) / 100;
+                fd.msg = "对了，我们刚才说到 " + fd.msg;
+                delays.Add(fd);
+            }
+
+            string tmsg = "";
+            if (action == 1) { tmsg = "好吧，那我说快点。"; }
+            if (action == 2) { tmsg = "好吧，那就不说了。"; }
+            if (action == 3) { tmsg = "好吧，那你想和我说什么呢。"; }
+            if (action == 4) { tmsg = "好吧，那我说慢点。"; }
+
+            if(k == 0)
+            {
+                new Group(pCQ, number).SendGroupMessage(tmsg);
+            }
+            else
+            {
+                new QQ(pCQ, number).SendPrivateMessage(tmsg);
+            }
         }
         public static void Poster()
         {
