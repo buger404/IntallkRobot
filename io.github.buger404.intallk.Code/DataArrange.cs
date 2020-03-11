@@ -51,10 +51,21 @@ namespace MainThread
             public int kind;
             public void SetTime(long ntime)
             {
-                time = ntime;
+                this.time = ntime;
             }
         }
         public static List<delaymsg> delays = new List<delaymsg>();
+        public static void SimSay(string Comments, long Group, long delay)
+        {
+
+            Random r = new Random(Guid.NewGuid().GetHashCode());
+            long now = GetTickCount();
+            delaymsg d = new delaymsg();
+            d.msg = Comments; d.kind = 0;
+            d.time = now + delay;
+            d.group = Group;
+            delays.Add(d);
+        }
         public static void LetSay(string Comments, long Group,int k = 0)
         {
 
@@ -129,10 +140,10 @@ namespace MainThread
 
             foreach (delaymsg d in t)
             {
-                if (action == 1) { d.SetTime(Convert.ToInt64(d.time * 0.9)); }
+                if (action == 1) { d.SetTime(Convert.ToInt64(d.time * 0.75)); }
                 if (action == 2) { delays.Remove(d); }
-                if (action == 3) { d.SetTime(Convert.ToInt64(d.time + 20000 * r.Next(85,115) / 100)); }
-                if (action == 4) { d.SetTime(Convert.ToInt64(d.time * 1.1)); }
+                if (action == 3) { d.SetTime(Convert.ToInt64(d.time + 30000 * r.Next(85,115) / 100)); }
+                if (action == 4) { d.SetTime(Convert.ToInt64(d.time * 1.25)); }
                 if (fd.group == 0) { fd = d; }
             }
 

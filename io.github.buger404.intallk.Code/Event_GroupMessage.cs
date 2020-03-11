@@ -135,26 +135,29 @@ namespace io.github.buger404.intallk.Code
             for (int i = 0; i < Manager.Hots.data.Count; i++)
             {
                 hmsg = (MainThread.MessagePoster.HotMsg)Manager.Hots.data[i];
-                long qq = Convert.ToInt64(hmsg.qq.Split(';')[0]);
-                GroupMemberInfo g = e.FromGroup.GetGroupMemberInfo(qq);
-                string QQName = ""; string Nick = "";
-                try
+                if(e.FromGroup.Id == hmsg.group)
                 {
-                    QQName = g.Card;
-                    Nick = g.Nick;
-                }
-                catch
-                {
+                    long qq = Convert.ToInt64(hmsg.qq.Split(';')[0]);
+                    GroupMemberInfo g = e.FromGroup.GetGroupMemberInfo(qq);
+                    string QQName = ""; string Nick = "";
                     try
                     {
-                        Nick = e.CQApi.GetStrangerInfo(qq).Nick;
+                        QQName = g.Card;
+                        Nick = g.Nick;
                     }
                     catch
                     {
-                        Nick = QQName;
+                        try
+                        {
+                            Nick = e.CQApi.GetStrangerInfo(qq).Nick;
+                        }
+                        catch
+                        {
+                            Nick = QQName;
+                        }
                     }
+                    if (hmsg.msg.ToLower() == text.ToLower() && (QQName.ToLower().IndexOf(name) >= 0 || Nick.ToLower().IndexOf(name) >= 0)) { exit = false; break; }
                 }
-                if (hmsg.msg.ToLower() == text.ToLower() && (QQName.ToLower().IndexOf(name) >= 0 || Nick.ToLower().IndexOf(name) >= 0)) { exit = false;break; }
             }
             if (exit) { return 0; }
             DontCheck:
@@ -590,6 +593,27 @@ namespace io.github.buger404.intallk.Code
                     if (t.Count == 0) { return; }
                     e.FromGroup.SendGroupMessage(name + "曾经说过");
                     e.FromGroup.SendGroupMessage(t[r.Next(0, t.Count)]);
+                    return;
+                }
+                if(e.Message.Text.IndexOf("语录集")>= 0)
+                {
+                    string[] p = e.Message.Text.Split(new string[] { "语录集" }, StringSplitOptions.None);
+                    string name = p[0].ToLower();
+                    int Count = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                    List<String> t = new List<string>();
+                    for (int i = 0; i < Count; i++)
+                    {
+                        if (Manager.wordcollect.getkey("owner" + i, "name").ToLower().IndexOf(name) >= 0)
+                        {
+                            t.Add(Manager.wordcollect.getkey("repeat", "item" + i));
+                        }
+                    }
+                    if (t.Count == 0) { e.FromGroup.SendGroupMessage(name + "此人在数据库中没有任何语录。"); return; }
+                    e.FromGroup.SendGroupMessage("已经将语录集推送至消息队列");
+                    for(int i = t.Count - 1;i >= 0; i--)
+                    {
+                        MessagePoster.SimSay(name + "语录 No." + i + "\n" + t[i], e.FromGroup.Id,(t.Count - i) * 2500);
+                    }
                     return;
                 }
 
