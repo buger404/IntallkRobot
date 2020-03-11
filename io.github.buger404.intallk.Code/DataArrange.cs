@@ -138,13 +138,13 @@ namespace MainThread
             List<delaymsg> t = delays.FindAll(m => m.group == number && m.kind == k);
             if (t.Count == 0) { return; }
 
-            foreach (delaymsg d in t)
+            for (int i = 0;i < t.Count;i++)
             {
-                if (action == 1) { d.SetTime(Convert.ToInt64(d.time * 0.75)); }
-                if (action == 2) { delays.Remove(d); }
-                if (action == 3) { d.SetTime(Convert.ToInt64(d.time + 30000 * r.Next(85,115) / 100)); }
-                if (action == 4) { d.SetTime(Convert.ToInt64(d.time * 1.25)); }
-                if (fd.group == 0) { fd = d; }
+                if (action == 1) { t[i].SetTime(Convert.ToInt64(t[i].time * 0.75)); }
+                if (action == 2) { delays.Remove(t[i]); }
+                if (action == 3) { t[i].SetTime(Convert.ToInt64(t[i].time + 30000 * r.Next(85,115) / 100)); }
+                if (action == 4) { t[i].SetTime(Convert.ToInt64(t[i].time * 1.25)); }
+                if (fd.group == 0) { fd = t[i]; }
             }
 
             if (action == 3)

@@ -40,9 +40,9 @@ namespace DataArrange.Storages
         {
             int u = getuser(user);
             int i = data.Areas[u].Items.FindIndex(m => m.Key == key);
-            if (i == -1) { data.Areas[u].Items.Add(new DataItem { Key = key, Value = value }); Store(user); return; }
+            if (i == -1) { data.Areas[u].Items.Add(new DataItem { Key = key, Value = value }); if (autostore) { Store(); } return; }
             data.Areas[u].Items[i] = data.Areas[u].Items[i].newkey(value);
-            if (autostore) { Store(user); }
+            if (autostore) { Store(); }
         }
         public string getkey(string user, string key)
         {
@@ -68,13 +68,8 @@ namespace DataArrange.Storages
             data.Areas = new List<DataArea>();
             Restore();
         }
-        public void Store(string user)
+        public void Store()
         {
-            string vername = "beta_225.1_json";
-            if (getkey(user, "libver") != vername)
-            {
-                putkey(user, "libver", vername, false);
-            }
             DataContractJsonSerializer w = new DataContractJsonSerializer(typeof(DataAreas));
             FileStream f = File.Create(@"C:\DataArrange\" + data.Owner + "-userdata.json");
             w.WriteObject(f, data);

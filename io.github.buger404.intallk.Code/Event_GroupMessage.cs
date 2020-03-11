@@ -318,7 +318,18 @@ namespace io.github.buger404.intallk.Code
                             {
                                 string QQName = e.CQApi.GetGroupMemberInfo(e.FromGroup.Id, Convert.ToInt64(hmsg.qq.Split(';')[0])).Card;
                                 string Nick = e.CQApi.GetGroupMemberInfo(e.FromGroup.Id, Convert.ToInt64(hmsg.qq.Split(';')[0])).Nick;
-                                PutRepeat(QQName + "(" + Nick + ")", hmsg.msg, e);
+                                string[] ctemp = hmsg.msg.Split(new string[] { "[cq:image,file=" },StringSplitOptions.None);
+                                string cmsg = "";
+                                for (int j = 0; j < ctemp.Length; j++)
+                                {
+                                    string[] temp = ctemp[j].Split(']');
+                                    if (temp.Length > 1) { cmsg += temp[1]; }
+                                }
+                                if (cmsg.Trim().Length > 3)
+                                {
+                                    //如果删除图片以外的内容字数大于3则记录
+                                    PutRepeat(QQName + "(" + Nick + ")", hmsg.msg, e);
+                                }
                                 Log("(" + e.FromGroup.Id + ")(" + i + ")Disapper repeat:" + hmsg.msg, ConsoleColor.Red);
                             }
                             Manager.Hots.data.RemoveAt(i); goto nexthmsg;
@@ -553,8 +564,7 @@ namespace io.github.buger404.intallk.Code
                             }
                         }
                         if (t.Count == 0) { return; }
-                        e.FromGroup.SendGroupMessage(name + "曾经说过");
-                        e.FromGroup.SendGroupMessage(t[r.Next(0, t.Count)]);
+                        e.FromGroup.SendGroupMessage(name + "：" + t[r.Next(0, t.Count)]);
                         return;
                     }
 
@@ -564,11 +574,11 @@ namespace io.github.buger404.intallk.Code
                         if (t.Length < 2) { return; }
                         if (PutRepeat(t[0], t[1], e, false) == 1)
                         {
-                            e.FromGroup.SendGroupMessage(t[0] + "云：\n" + t[1] + "\n采集成功！");
+                            e.FromGroup.SendGroupMessage("采集成功！");
                         }
                         else
                         {
-                            e.FromGroup.SendGroupMessage("无法在上下文中证明此人说过这句话，请勿造谣。");
+                            e.FromGroup.SendGroupMessage(t[0] + "：我没说过");
                         }
                         return;
                     }
@@ -591,8 +601,7 @@ namespace io.github.buger404.intallk.Code
                         }
                     }
                     if (t.Count == 0) { return; }
-                    e.FromGroup.SendGroupMessage(name + "曾经说过");
-                    e.FromGroup.SendGroupMessage(t[r.Next(0, t.Count)]);
+                    e.FromGroup.SendGroupMessage(name + "：" + t[r.Next(0, t.Count)]);
                     return;
                 }
                 if(e.Message.Text.IndexOf("语录集")>= 0)
@@ -608,11 +617,11 @@ namespace io.github.buger404.intallk.Code
                             t.Add(Manager.wordcollect.getkey("repeat", "item" + i));
                         }
                     }
-                    if (t.Count == 0) { e.FromGroup.SendGroupMessage(name + "此人在数据库中没有任何语录。"); return; }
-                    e.FromGroup.SendGroupMessage("已经将语录集推送至消息队列");
+                    if (t.Count == 0) { e.FromGroup.SendGroupMessage(name + "没有任何语录。"); return; }
+                    e.FromGroup.SendGroupMessage("已将语录集推送至消息队列");
                     for(int i = t.Count - 1;i >= 0; i--)
                     {
-                        MessagePoster.SimSay(name + "语录 No." + i + "\n" + t[i], e.FromGroup.Id,(t.Count - i) * 2500);
+                        MessagePoster.SimSay(name + "语录 No." + (i+1) + "\n" + t[i], e.FromGroup.Id,(t.Count - i) * 2500);
                     }
                     return;
                 }
@@ -656,11 +665,43 @@ namespace io.github.buger404.intallk.Code
                         }
                         switch (p[1])
                         {
+                            case ("clearwords"):
+                                if ((int)pe < 32767) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied"); return; }
+                                ProtectCount = 404;
+                                int RCount = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                                Storage stw = new Storage("word-clear");
+                                Storage otw = new Storage("wordcollections");
+                                otw.Restore();
+                                int SCount = 0;
+                                for (int i = 0; i < RCount; i++)
+                                {
+                                    string[] ctemp = otw.getkey("repeat", "item" + i).Split(new string[] { "[cq:image,file=" }, StringSplitOptions.None);
+                                    string cmsg = "";
+                                    for (int j = 0;j < ctemp.Length; j++)
+                                    {
+                                        string[] temp = ctemp[j].Split(']');
+                                        if (temp.Length > 1) { cmsg += temp[1]; }
+                                    }
+                                        
+                                    if (cmsg.Trim().Length >= 3)
+                                    {
+                                        Log("Reserve " + SCount, ConsoleColor.Green);
+                                        stw.putkey("owner" + SCount, "name", otw.getkey("owner" + i, "name"),false);
+                                        stw.putkey("repeat", "item" + SCount, otw.getkey("repeat", "item" + i),false);
+                                        SCount++;
+                                    }
+                                    Thread.Sleep(10);
+                                    Log("Clearing " + i + "/" + RCount, ConsoleColor.Green);
+                                }
+                                stw.putkey("repeat", "count", SCount.ToString(),false);
+                                stw.Store();
+                                e.FromGroup.SendGroupMessage("本次删除了" + (RCount - SCount) + "条语录，感觉自己萌萌哒~");
+                                break;
                             case ("word"):
                                 int Count = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
                                 int Index = r.Next(0, Count);
                                 e.FromGroup.SendGroupMessage(
-                                    Manager.wordcollect.getkey("owner" + Index, "name") + " 云：\n" +
+                                    Manager.wordcollect.getkey("owner" + Index, "name") + "：" +
                                     Manager.wordcollect.getkey("repeat", "item" + Index)
                                     );
                                 break;
