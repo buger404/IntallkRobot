@@ -135,17 +135,26 @@ namespace MainThread
 
             Random r = new Random(Guid.NewGuid().GetHashCode());
             delaymsg fd = new delaymsg();fd.group = 0;
-            List<delaymsg> t = delays.FindAll(m => m.group == number && m.kind == k);
-            if (t.Count == 0) { return; }
+            bool CanAction = false;
 
-            for (int i = 0;i < t.Count;i++)
+            for (int i = 0;i < delays.Count;i++)
             {
-                if (action == 1) { t[i].SetTime(Convert.ToInt64(t[i].time * 0.75)); }
-                if (action == 2) { delays.Remove(t[i]); }
-                if (action == 3) { t[i].SetTime(Convert.ToInt64(t[i].time + 30000 * r.Next(85,115) / 100)); }
-                if (action == 4) { t[i].SetTime(Convert.ToInt64(t[i].time * 1.25)); }
-                if (fd.group == 0) { fd = t[i]; }
+            delayhead:
+                if (i >= delays.Count) { break; }
+                delaymsg d = delays[i];
+                if (d.group == number && d.kind == k)
+                {
+                    CanAction = true;
+                    if (action == 1) { d.time = Convert.ToInt64(GetTickCount() + (d.time - GetTickCount()) * 0.9); }
+                    if (action == 2) { delays.Remove(delays[i]);goto delayhead; }
+                    if (action == 3) { d.time = (Convert.ToInt64(d.time + 30000 * r.Next(85, 115) / 100)); }
+                    if (action == 4) { d.time = (Convert.ToInt64(GetTickCount() + (d.time - GetTickCount()) * 1.1)); }
+                    delays[i] = d;
+                    if (fd.group == 0) { fd = d; }
+                }
             }
+
+            if (!CanAction) { return; }
 
             if (action == 3)
             {
