@@ -54,7 +54,14 @@ namespace MainThread
                 this.time = ntime;
             }
         }
+        public struct flowlibrary
+        {
+            public string[] lib;
+            public string name;
+        }
         public static List<delaymsg> delays = new List<delaymsg>();
+        public static List<string> ptList;
+        public static List<flowlibrary> flibrary = new List<flowlibrary>();
         public static void SimSay(string Comments, long Group, long delay)
         {
 
@@ -105,6 +112,30 @@ namespace MainThread
                 b = (b || (target.IndexOf(matches[i]) == 0));
             }
             return b;
+        }
+        public static void LoadFlows()
+        {
+            string[] files = Directory.GetFiles(@"C:\DataArrange\Library");
+            foreach(string f in files)
+            {
+                flowlibrary fl = new flowlibrary();
+                fl.lib = File.ReadAllText(f,Encoding.UTF8)
+                             .Split(new string[] { "\r\n" }, StringSplitOptions.None);
+                fl.name = f.Replace("词库.txt", "").Replace(@"C:\DataArrange\Library\", "");
+                flibrary.Add(fl);
+                Log("词库[" + fl.name + "]已加载，共" + fl.lib.Length + "条数据。");
+            }
+        }
+        public static void LoadPTemples()
+        {
+            string[] files = Directory.GetFiles(@"C:\DataArrange\PTemple");
+            ptList = new List<string>();
+            foreach (string f in files)
+            {
+                string[] temp = f.Split('\\');
+                ptList.Add(temp[temp.Length - 1].Split('.')[0]);
+            }
+            Log("已加载" + ptList.Count + "个P图模板");
         }
         public static void CheckProcessMsg(string msg,long number,int k)
         {
@@ -197,7 +228,8 @@ namespace MainThread
                     //System.Diagnostics.Process.Start(workpath + "\\CQA.exe", "/account 3529296290");
                     //System.Environment.Exit(0);
                 }
-                return;
+                Thread.Sleep(1000);
+                goto posthead;
             }
             if (sys.getkey("root", "sleep") == "zzz")
             {

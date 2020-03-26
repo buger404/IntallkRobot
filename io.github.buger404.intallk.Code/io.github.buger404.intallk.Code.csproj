@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -48,11 +49,13 @@
   <ItemGroup>
     <Compile Include="AAI.cs" />
     <Compile Include="DataArrange.cs" />
+    <Compile Include="Effect.cs" />
     <Compile Include="Event_FriendAddRequest.cs" />
     <Compile Include="Event_GroupMessage.cs" />
     <Compile Include="Event_Startup.cs" />
     <Compile Include="Event_PrivateMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptDrawer.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="Undertale.cs" />
     <Compile Include="VoidLife.cs" />

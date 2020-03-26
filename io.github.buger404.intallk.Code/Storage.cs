@@ -35,7 +35,29 @@ namespace DataArrange.Storages
         }
         public DataAreas data;
         public bool FirstStore = false;
-
+        public List<DataItem> GetUserData(string user)
+        {
+            int u = getuser(user);
+            return (data.Areas[u].Items);
+        }
+        public void RemoveUser(string user)
+        {
+            int u = getuser(user);
+            data.Areas.RemoveAt(u);
+        }
+        public void Remove(string user, string key)
+        {
+            int u = getuser(user);
+            int i = data.Areas[u].Items.FindIndex(m => m.Key == key);
+            if (i == -1) { return; }
+            data.Areas[u].Items.RemoveAt(i);
+        }
+        public void putkey(string user, int index, string value, bool autostore = true)
+        {
+            int u = getuser(user);
+            data.Areas[u].Items[index] = data.Areas[u].Items[index].newkey(value);
+            if (autostore) { Store(); }
+        }
         public void putkey(string user, string key, string value, bool autostore = true)
         {
             int u = getuser(user);
@@ -43,6 +65,11 @@ namespace DataArrange.Storages
             if (i == -1) { data.Areas[u].Items.Add(new DataItem { Key = key, Value = value }); if (autostore) { Store(); } return; }
             data.Areas[u].Items[i] = data.Areas[u].Items[i].newkey(value);
             if (autostore) { Store(); }
+        }
+        public string getkey(string user, int index)
+        {
+            int u = getuser(user);
+            return (data.Areas[u].Items[index].Value);
         }
         public string getkey(string user, string key)
         {

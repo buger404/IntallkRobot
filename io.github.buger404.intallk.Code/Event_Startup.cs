@@ -25,6 +25,7 @@ namespace io.github.buger404.intallk.Code
         public void CQStartup(object sender, CQStartupEventArgs e)
         {
             MessagePoster.workpath = Application.StartupPath;
+            ScriptDrawer.AssetsPath = Application.StartupPath + "\\data\\image\\";
             MessagePoster.logid = Guid.NewGuid().ToString();
             MessagePoster.pCQ = e.CQApi;
             MessagePoster.TenClockLock = (DateTime.Now.Hour >= 22);
@@ -38,6 +39,8 @@ namespace io.github.buger404.intallk.Code
             Manager.Hots = new DataArrange("messagehots");
             Manager.scrBan = new DataArrange("screenmsgbanners");
             UT.inits();
+            MessagePoster.LoadPTemples();
+            MessagePoster.LoadFlows();
             Thread thread = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
             thread.Start();
             VoidLifes.LoadGame();
