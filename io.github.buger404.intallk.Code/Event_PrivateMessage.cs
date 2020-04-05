@@ -30,65 +30,75 @@ namespace io.github.buger404.intallk.Code
 
         public void PrivateMessage(object sender, CQPrivateMessageEventArgs e)
         {
-            Log("(" + e.FromQQ.Id + ")Private: " + e.Message.Text,ConsoleColor.Green);
-            Storage sys = new Storage("system");
-            if (sys.getkey("root", "sleep") == "zzz")
+            try
             {
-                e.FromQQ.SendPrivateMessage(
-                        "I'm now sleeping , please wake me up later.");
-                return;
-            }
-
-            if (VoidLifes.TargetQQ == e.FromQQ.Id)
-            {
-                VoidLifes.Solve(e.Message.Text);
-            }
-            else
-            {
-                if (e.Message.Text.StartsWith("post\r\n"))
+                Log("(" + e.FromQQ.Id + ")Private: " + e.Message.Text, ConsoleColor.Green);
+                Storage sys = new Storage("system");
+                if (sys.getkey("root", "sleep") == "zzz")
                 {
-                    string code = e.Message.Text.Replace("post\r\n", "");
-                    string state = "";
-                    state = VoidLifes.LoadEvent(code);
-                    if (state == "")
-                    {
-                        File.WriteAllText(@"C:\DataArrange\VoidLife\" + e.FromQQ.Id.ToString() + "-" + 
-                            DateTime.Now.Year + "." + DateTime.Now.Month + "." + DateTime.Now.Day + 
-                            "." + DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + ".txt", code);
-                        e.FromQQ.SendPrivateMessage("congratulations! your post has been used in the game!");
-                    }
-                    else
-                    {
-                        e.FromQQ.SendPrivateMessage(state + "\n\ntype 'post help' for help.");
-                    }
-                    return;
-                }
-                if (e.Message.Text.StartsWith("post help"))
-                {
-                    e.FromQQ.SendPrivateMessage(File.ReadAllText(@"C:\DataArrange\voidlife.example.txt"));
+                    e.FromQQ.SendPrivateMessage(
+                            "I'm now sleeping , please wake me up later.");
                     return;
                 }
 
-                MessagePoster.CheckProcessMsg(e.Message.Text, e.FromQQ.Id, 1);
-                long lstime = 0;
-                for(int i = 0;i < MessagePoster.delays.Count; i++)
+                if (VoidLifes.TargetQQ == e.FromQQ.Id)
                 {
-                    MessagePoster.delaymsg d = MessagePoster.delays[i];
-                    if(d.group == e.FromQQ.Id)
-                    {
-                        lstime = d.time;return;
-                    }
+                    VoidLifes.Solve(e.Message.Text);
                 }
-                if(GetTickCount() - lstime > 3000)
+                else
                 {
-                    string tsay = ArtificalAI.Talk(e.Message.Text, "tieba");
-                    if (tsay != "")
+                    if (e.Message.Text.StartsWith("post\r\n"))
                     {
-                        MessagePoster.LetSay(tsay, e.FromQQ.Id, 1);
+                        string code = e.Message.Text.Replace("post\r\n", "");
+                        string state = "";
+                        state = VoidLifes.LoadEvent(code);
+                        if (state == "")
+                        {
+                            File.WriteAllText(@"C:\DataArrange\VoidLife\" + e.FromQQ.Id.ToString() + "-" +
+                                DateTime.Now.Year + "." + DateTime.Now.Month + "." + DateTime.Now.Day +
+                                "." + DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + ".txt", code);
+                            e.FromQQ.SendPrivateMessage("congratulations! your post has been used in the game!");
+                        }
+                        else
+                        {
+                            e.FromQQ.SendPrivateMessage(state + "\n\ntype 'post help' for help.");
+                        }
+                        return;
                     }
-                }
+                    if (e.Message.Text.StartsWith("post help"))
+                    {
+                        e.FromQQ.SendPrivateMessage(File.ReadAllText(@"C:\DataArrange\voidlife.example.txt"));
+                        return;
+                    }
+
+                    if(MessagePoster.CheckProcessMsg(e.Message.Text, e.FromQQ.Id, 1))
+                    {
+                        return;
+                    }
+                    long lstime = 0;
+                    for (int i = 0; i < MessagePoster.delays.Count; i++)
+                    {
+                        MessagePoster.delaymsg d = MessagePoster.delays[i];
+                        if (d.group == e.FromQQ.Id)
+                        {
+                            lstime = d.time; return;
+                        }
+                    }
+                    if (GetTickCount() - lstime > 3000)
+                    {
+                        string tsay = ArtificalAI.Talk(e.Message.Text, "tieba");
+                        if (tsay != "")
+                        {
+                            MessagePoster.LetSay(tsay, e.FromQQ.Id, 1, new Random(Guid.NewGuid().GetHashCode()).Next(0, 4) == 2);
+                        }
+                    }
 
 
+                }
+            }catch(Exception err)
+            {
+                e.FromQQ.SendPrivateMessage(err.Message);
+                Log(err.StackTrace + "\n" + err.Message, ConsoleColor.Red);
             }
 
         }

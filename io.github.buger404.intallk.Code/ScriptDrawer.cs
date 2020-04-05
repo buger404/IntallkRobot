@@ -67,10 +67,10 @@ namespace io.github.buger404.intallk.Code
 
         public static void Draw(string infile,string oufile,params string[] param)
         {
-            tryagain:
-
             int fail = 0;
             Graphics g = Graphics.FromHwnd(IntPtr.Zero); Bitmap b = new Bitmap(1, 1);
+
+        tryagain:
 
             try
             {
@@ -184,12 +184,27 @@ namespace io.github.buger404.intallk.Code
                     }
                 }
 
+                //System.Drawing.Imaging.ImageAttributes attr = new System.Drawing.Imaging.ImageAttributes();
+                //float[][] colorMatrixElements = {
+                //new float[] {.33f,  .33f,  .33f,  0, 0},        // r = (r+g+b)/3
+                //new float[] {.33f,  .33f,  .33f,  0, 0},        // g = (r+g+b)/3
+                //new float[] {.33f,  .33f,  .33f,  0, 0},        // b = (r+g+b)/3
+                //new float[] {0,  0,  0,  1, 0},        // alpha scaling factor of 1
+                //new float[] {0,  0,  0,  0, 1}};    // 
+                //System.Drawing.Imaging.ColorMatrix matrix = new System.Drawing.Imaging.ColorMatrix(colorMatrixElements);
+                //attr.SetColorMatrix(matrix);
+                //g.DrawImage(b, new Rectangle(0,0,b.Width+1,b.Height+1), 0, 0, b.Width + 1, b.Height + 1, GraphicsUnit.Pixel, attr);
+
                 b.Save(oufile);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Draw succeed :" + oufile);
             }
-            catch
+            catch(Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Draw failed , retry :" + fail + "\n" + ex.Message + "\n" + ex.StackTrace + "\n" + ex.TargetSite);
                 g.Dispose(); b.Dispose();
-                if (fail >= 100) { return; }
+                if (fail >= 13) { return; }
                 goto tryagain;
             }
             g.Dispose(); b.Dispose();

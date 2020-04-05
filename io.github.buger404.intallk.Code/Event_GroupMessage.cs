@@ -76,6 +76,7 @@ namespace io.github.buger404.intallk.Code
             public string lmsg;
         }
         public static int recordtime = 0;
+        private static bool IsWalling = false;
         private static string GetPermissionName(PermissionName pe)
         {
             switch (pe)
@@ -522,7 +523,7 @@ namespace io.github.buger404.intallk.Code
                             cindex++;
                         }
                     }
-                    e.FromGroup.SendGroupMessage("消息回溯功能自动触发。\n" + cret);
+                    e.FromQQ.SendPrivateMessage("消息回溯功能自动触发。\n" + cret);
                     Log("feed back to (" + cqq + "):\n" + cret);
                 }
 
@@ -551,9 +552,10 @@ namespace io.github.buger404.intallk.Code
                         ssid = i;
                         pem.anger += 1.1;
                         if (e.Message.Text.Length >= 160) { pem.anger += (e.Message.Text.Length / 160); }
-                        if (e.Message.Text.IndexOf(pem.lmsg) >= 0 || pem.lmsg.IndexOf(e.Message.Text) >= 0) { pem.anger = pem.anger + 1.2; }
-                        pem.lmsg = e.Message.Text;
                         pem.anger -= (GetTickCount() - pem.tick) / 666;
+                        pem.lmsg = e.Message.Text;
+                        if (e.Message.Text.IndexOf(pem.lmsg) >= 0 || pem.lmsg.IndexOf(e.Message.Text) >= 0) 
+                        { pem.anger = pem.anger + 1.5; }
                         if (pem.anger < 0) { pem.anger = 0; }
                         if (GetTickCount() - pem.tick <= 3000)
                         {
@@ -572,7 +574,7 @@ namespace io.github.buger404.intallk.Code
                                     e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "别再刷屏了，好吗？");
                                     break;
                                 case (8):
-                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "不理你了！欺负人家不是管理员！");
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "不理你了！");
                                     break;
                                 case (9):
                                     e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "讨厌！不理你了！");
@@ -589,7 +591,12 @@ namespace io.github.buger404.intallk.Code
                         {
                             if (e.FromGroup.Id != 490623220 || e.FromQQ.CQApi.GetGroupMemberInfo(e.FromGroup.Id, e.FromQQ.Id).MemberType != Native.Csharp.Sdk.Cqp.Enum.QQGroupMemberType.Manage)
                             {
-                                TimeSpan bantime = new TimeSpan(0, 10, 0);
+                                double bant = Math.Pow(pem.anger, 3) / 200 * 15 / 2;
+                                double band;double banh;double banm;
+                                banm = bant;banh = banm / 60;band = banh / 24;
+                                banm %= 60;banh %= 24;
+                                if (band > 29) { band = 29; }
+                                TimeSpan bantime = new TimeSpan((int)band, (int)banh,(int)banm, 0);
                                 e.FromGroup.SetGroupMemberBanSpeak(Convert.ToInt64(e.FromQQ.Id), bantime);
                             }
                         }
@@ -647,7 +654,7 @@ namespace io.github.buger404.intallk.Code
                 string tsay = "";
                 if (e.Message.Text.IndexOf("[CQ:") < 0)
                 {             
-                    if ((r.Next(0, 200) == 88) || (FailAI == true))
+                    if ((r.Next(0, 100) == 88) || (FailAI == true))
                     {
                         if (ignore.getkey(e.FromGroup.Id.ToString(), "ai") == "√") { return; }
                         try
@@ -663,7 +670,7 @@ namespace io.github.buger404.intallk.Code
                                 tsay = tsa[r.Next(0, tsa.Length)];
                                 if (tsay.Length <= 350)
                                 {
-                                    FailAI = false; MessagePoster.LetSay(tsay, e.FromGroup.Id);
+                                    FailAI = false; MessagePoster.LetSay(tsay, e.FromGroup.Id,0,r.Next(0,2) == 1);
                                 }
                                 else
                                 {
@@ -784,6 +791,14 @@ namespace io.github.buger404.intallk.Code
                     return;
                 }
 
+                //Anti-Anti-Robot
+                if(r.Next(0,3) == 2 && e.FromQQ.Id == 1724673579)
+                {
+                    string[] tp = e.Message.Text.Split(']');
+                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(1724673579),
+                                                 "不许" + tp[tp.Length - 1]);
+                }
+
                 //Function Switch
                 if (e.Message.Text.StartsWith("switch"))
                 {
@@ -857,6 +872,7 @@ namespace io.github.buger404.intallk.Code
                 if (e.Message.Text.StartsWith("."))
                 {
                     if (ignore.getkey(e.FromGroup.Id.ToString(), "command") == "√") { return; }
+                    long lstime = 0;
 
                     try
                     {
@@ -1118,7 +1134,15 @@ namespace io.github.buger404.intallk.Code
                                 break;
                             case ("wall"):
                                 if (!JudgePermission(e.FromQQ.Id, PermissionName.UserPermission)) { return; }
-                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id) + Wallpaper.GetWallpaper());
+                                if (IsWalling) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), " last task is processing ."); return; }
+                                IsWalling = true;
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), " downloading ...");
+                                WebClient wcd = new WebClient();
+                                string wurl = Wallpaper.GetWallpaper();
+                                wcd.DownloadFile(wurl, MessagePoster.workpath + "\\data\\image\\wall.jpg");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),CQApi.CQCode_Image("wall.jpg"),wurl);
+                                wcd.Dispose();
+                                IsWalling = false;
                                 break;
                             case ("fsleep"):
                                 if (!JudgePermission(e.FromQQ.Id, PermissionName.MasterPermission)) { return; }
@@ -1258,6 +1282,35 @@ namespace io.github.buger404.intallk.Code
                                 }
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "operated successfully");
                                 break;
+                            case ("tkv"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.SupermanPermission)) { return; }
+                                if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
+                                for (int i = 2; i < p.Length; i++)
+                                {
+                                    ques = ques + p[i] + " ";
+                                }
+                                for (int i = 0; i < MessagePoster.delays.Count; i++)
+                                {
+                                    MessagePoster.delaymsg d = MessagePoster.delays[i];
+                                    if (d.group == e.FromQQ.Id)
+                                    {
+                                        lstime = d.time; return;
+                                    }
+                                }
+                                if (GetTickCount() - lstime > 3000)
+                                {
+                                    tsay = ArtificalAI.Talk(ques, "tieba");
+                                    e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id));
+                                    if (tsay != "")
+                                    {
+                                        MessagePoster.LetSay(tsay, e.FromGroup.Id,0,true);
+                                    }
+                                    else
+                                    {
+                                        MessagePoster.LetSay("no search result", e.FromGroup.Id, 0, true);
+                                    }
+                                }
+                                break;
                             case ("tk"):
                                 if (!JudgePermission(e.FromQQ.Id, PermissionName.SupermanPermission)) { return; }
                                 if (p.Length < 3) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
@@ -1265,7 +1318,6 @@ namespace io.github.buger404.intallk.Code
                                 {
                                     ques = ques + p[i] + " ";
                                 }
-                                long lstime = 0;
                                 for (int i = 0; i < MessagePoster.delays.Count; i++)
                                 {
                                     MessagePoster.delaymsg d = MessagePoster.delays[i];
@@ -1375,51 +1427,51 @@ namespace io.github.buger404.intallk.Code
                             case ("help"):
                                 string cmdstr = "";
                                 if (CanMatch(e.Message.Text,"*",  "壁纸", "桌面", "背景", "图片", "风景", "wall", "param")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "wall 取得壁纸\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".wall 取得壁纸\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "404", "睡觉", "晚安", "关机", "强制", "force", "sleep")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "fsleep 服务器关机\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + ".fsleep 服务器关机\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "禁言", "违规", "刷屏", "shit", "bun")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "ban <QQ> <分钟> 禁言\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".ban <QQ> <分钟> 禁言\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "禁言", "违规", "刷屏", "shit", "全员", "所有人", "bun")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "aban true/false 开关全体禁言\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".aban true/false 开关全体禁言\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "sgdnight <内容> 艾特所有人发送\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + ".sgdnight <内容> 艾特所有人发送\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "危险", "祝福", "超级", "问候", "全员", "所有人", "super", "goodnight")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "sgdnightf♂ <内容> 私聊所有人发送\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + ".sgdnightf♂ <内容> 私聊所有人发送\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "新", "任命", "我要", "提权", "权限", "地位", "manger")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "man <QQ> 设置管理员\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + ".man <QQ> 设置管理员\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "撤", "罢免", "我要", "降权", "权限", "地位", "manger")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "unman <QQ> 取消管理员\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + ".unman <QQ> 取消管理员\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "permission", "令牌", "修改", "系统", "更改", "权限", "地位", "permiss", "pemission", "permision")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "pms <QQ> <权限> 授予权限\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".pms <QQ> <权限> 授予权限\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "聊天", "无逻辑", "无聊", "百度", "搜索", "骚")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "tk <内容> 谈话\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".tk <内容> 谈话\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "头衔", "名片", "永久")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "honor <内容> 专属头衔设置\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".honor <内容> 专属头衔设置\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "赞", "资料卡", "名片", "个人", "prise", "prase")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "prs 点赞十次\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".prs 点赞十次\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "管理", "头衔", "名片", "锁定", "昵称", "lock")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "lkc <QQ> <名称> 锁定名片\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".lkc <QQ> <名称> 锁定名片\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "复读", "信息", "统计", "数据", "最热", "今日", "发言", "热词", "poplular")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + "pop 今日最热复读\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + ".pop 今日最热复读\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "信息", "统计", "用户", "数据", "人数")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + "info [QQ] 显示信息\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + ".info [QQ] 显示信息\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "game", "游戏", "UT", "ut", "传说之下", "undertale", "Undertale", "UnderTale", "猜词", "猜台词")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "ut 传说之下猜角色游戏\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".ut 传说之下猜角色游戏\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "game", "游戏", "UT", "ut", "传说之下", "undertale", "Undertale", "UnderTale", "猜词", "猜台词")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "ut 传说之下完型游戏\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".ut 传说之下完型游戏\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "game", "游戏", "void", "Void", "虚拟", "人生", "life", "虚假", "live")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "bvoid <角色名> 开始虚假人生游戏\njvoid 加入游戏\ncvoid 关闭游戏\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".bvoid <角色名> 开始虚假人生游戏\njvoid 加入游戏\ncvoid 关闭游戏\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "praise", "表扬", "问候", "祝福", "好")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "nice 向你问好\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".nice 向你问好\n"; }
                                 if (CanMatch(e.Message.Text,"*",  "word", "collect", "复读", "语录", "录")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + "word 一个语录\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.UserPermission) + ".word 一个语录\n"; }
                                 if (CanMatch(e.Message.Text, "*", "switch", "开关", "开启", "关闭", "功能")) 
                                 { cmdstr += JP(e.FromQQ.Id, PermissionName.MasterPermission) + "switch t/<群号> on/off <功能> 开关功能\n"; }
                                 if (CanMatch(e.Message.Text, "*", "draw", "art", "paint", "ps", "图"))
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "draw ?/[模板名] [QQ] P图\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + ".draw ?/[模板名] [QQ] P图\n"; }
                                 if (CanMatch(e.Message.Text, "*", "draw", "art", "paint", "ps", "图")) 
-                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + "drawlist 所有P图模板\n"; }
+                                { cmdstr += JP(e.FromQQ.Id, PermissionName.AirPermission) + ".drawlist 所有P图模板\n"; }
                                 if (CanMatch(e.Message.Text, "*", "word", "collect", "复读", "语录", "录","云")) 
                                 { cmdstr += JP(e.FromQQ.Id, PermissionName.SupermanPermission) + "<名字>云 输出对应语录\n"; }
                                 if (CanMatch(e.Message.Text, "*", "word", "collect", "复读", "语录", "录", "云")) 

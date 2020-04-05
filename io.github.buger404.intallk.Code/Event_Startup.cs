@@ -24,6 +24,7 @@ namespace io.github.buger404.intallk.Code
         // 接收事件
         public void CQStartup(object sender, CQStartupEventArgs e)
         {
+            MessagePoster.LastOSUTime = DateTime.Now.Hour + 1;
             MessagePoster.workpath = Application.StartupPath;
             ScriptDrawer.AssetsPath = Application.StartupPath + "\\data\\image\\";
             MessagePoster.logid = Guid.NewGuid().ToString();
