@@ -14,6 +14,7 @@ using MainThread;
 using Undertale.Dialogs;
 using VoidLife.Simulator;
 using DataArrange.Storages;
+using Repeater;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -24,6 +25,8 @@ namespace io.github.buger404.intallk.Code
         // 接收事件
         public void CQStartup(object sender, CQStartupEventArgs e)
         {
+            Thread thread;
+            Repeaters.LoadInfo();
             MessagePoster.LastOSUTime = DateTime.Now.Hour + 1;
             MessagePoster.workpath = Application.StartupPath;
             ScriptDrawer.AssetsPath = Application.StartupPath + "\\data\\image\\";
@@ -42,7 +45,9 @@ namespace io.github.buger404.intallk.Code
             UT.inits();
             MessagePoster.LoadPTemples();
             MessagePoster.LoadFlows();
-            Thread thread = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
+            Thread thread2 = new Thread(new ThreadStart(MessagePoster.Poster));//创建线程
+            thread2.Start();
+            thread = new Thread(new ThreadStart(Repeaters.AutoSave));
             thread.Start();
             VoidLifes.LoadGame();
             Console.WriteLine("Message poster thread works properly .");

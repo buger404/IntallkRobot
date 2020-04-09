@@ -21,6 +21,7 @@ using Native.Csharp.Sdk.Cqp.Model;
 using System.IO;
 using System.Diagnostics;
 using System.Net;
+using Repeater;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -278,6 +279,7 @@ namespace io.github.buger404.intallk.Code
             {
                 if (ignore.getkey(e.FromGroup.Id.ToString(), "group") == "√") { return; }
 
+                Repeaters.SpeakOnce(e.FromQQ.Id, e.FromGroup.Id);
                 Log("(" + e.FromGroup.Id + ")Message:" + e.FromQQ.Id + "," + e.Message.Text, ConsoleColor.Cyan);
                 //Moring Protection
                 Storage sys = new Storage("system");
@@ -383,6 +385,12 @@ namespace io.github.buger404.intallk.Code
                             // 不是同一个QQ在刷屏
                             if (hmsg.qq.IndexOf(e.FromQQ.Id.ToString() + ";") < 0)
                             {
+                                string[] qqtemp = hmsg.qq.Split(';');
+                                Repeaters.ZeroRepeat(long.Parse(qqtemp[0]), e.FromGroup.Id);
+                                if (qqtemp.Length == 2)
+                                {
+                                    Repeaters.FirstRepeat(e.FromQQ.Id, e.FromGroup.Id);
+                                }
                                 Log("(" + e.FromGroup.Id + ")(" + i + ")Heat:" + hmsg.msg + " , hot :" + hmsg.hot);
                                 hmsg.hasup = true;
                                 hmsg.qq = hmsg.qq + e.FromQQ.Id.ToString() + ";";
@@ -405,6 +413,7 @@ namespace io.github.buger404.intallk.Code
                             }
                             else
                             {
+                                Repeaters.BoringRepeat(e.FromQQ.Id, e.FromGroup.Id);
                                 hmsg.banqq = hmsg.banqq + e.FromQQ.Id.ToString() + ";";
                                 int bancount = GotCount(hmsg.banqq, e.FromQQ.Id.ToString());
                                 Log("(" + e.FromGroup.Id + ")(" + i + ")Boring-repeat:" + e.FromQQ.Id + " x " + bancount, ConsoleColor.Red);
@@ -932,10 +941,150 @@ namespace io.github.buger404.intallk.Code
                         } while (pcmd.IndexOf("  ") >= 0);
                         pcmd = pcmd.Remove(0, 1).Insert(0, "ik ");
                         string[] p = pcmd.Split(' ');
+                        string word = "";string ret = "";int longc = 0;
 
                         if (ignore.getkey(e.FromGroup.Id.ToString(), p[1]) == "√") { return; }
                         switch (p[1])
                         {
+                            case ("msginfo"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.UserPermission)) { return; }
+                                long tarqq = e.FromQQ.Id;
+                                if (p.Length > 2) { tarqq = long.Parse(p[2].Replace("[CQ:at,qq=", "").Replace("]", "")); }
+                                try
+                                {
+                                    GroupMemberInfo gmit = e.FromGroup.GetGroupMemberInfo(tarqq);
+                                }
+                                catch
+                                {
+                                    e.FromGroup.SendGroupMessage("目标不在此群。");
+                                    return;
+                                }
+                                Repeaters.member meminfo = Repeaters.Information(tarqq, e.FromGroup.Id);
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(tarqq) ,"\n",
+                                                             "总发言条数：" + meminfo.wcount + "条\n"
+                                                             + "复读发起次数：" + meminfo.zfcount + "条("
+                                                             + (int)(meminfo.zfcount / meminfo.wcount * 100) + "%)\n"
+                                                             + "首次复读次数：" + meminfo.frcount + "条("
+                                                             + (int)(meminfo.frcount / meminfo.wcount * 100) + "%)\n"
+                                                             + "刷屏次数：" + meminfo.bacount + "条("
+                                                             + (int)(meminfo.bacount / meminfo.wcount * 100) + "%)\n"
+                                                             );
+                                break;
+                            case ("wreport"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.Error404)) { return; }
+                                ProtectCount = 404;
+                                e.FromGroup.SendGroupMessage("已将保护值设置到404防止其他消息干扰该操作。");
+                                longc = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                                int cmdc = 0;int icec = 0;int rec = 0;
+                                string reret = "";
+                                for (int i = 0; i < longc; i++)
+                                {
+                                    word = Manager.wordcollect.getkey("repeat", "item" + i);
+                                    for (int s = i; s < longc; s++)
+                                    {
+                                        if (word == Manager.wordcollect.getkey("repeat", "item" + s) && i != s)
+                                        {
+                                            rec++; reret = reret + i + " ";
+                                            break;
+                                        }
+                                    }
+                                    if(word.StartsWith(".") || word.StartsWith("/")
+                                       || word.StartsWith("\\") || word.StartsWith("?")
+                                       || word.StartsWith("!") || word.StartsWith("#")
+                                       || word.StartsWith("dy") || word.StartsWith("stop")
+                                       || word.StartsWith("闭嘴") || word.StartsWith("别说了")
+                                       || word.IndexOf("撤回了啥") >= 0 || word.IndexOf("居然") >= 0
+                                       )
+                                    {
+                                        cmdc++;
+                                    }
+                                    if (word.StartsWith("冰棍") 
+                                       || word.ToLower().StartsWith("ice"))
+                                    {
+                                        icec++;
+                                    }
+                                }
+                                e.FromGroup.SendGroupMessage("语录集数据库总收集量：" + longc + "条" + "\n" +
+                                                             "重复语录：" + rec + "条(" 
+                                                             + (int)(Convert.ToDouble(rec) / Convert.ToDouble(longc) * 100) 
+                                                             + "%)，位于：\n" + reret + "\n"
+                                                             + "指令语录：" + cmdc + "条("
+                                                             + (int)(Convert.ToDouble(cmdc) / Convert.ToDouble(longc) * 100)
+                                                             + "%)\n"
+                                                             + "提及冰棍的语录：" + icec + "条("
+                                                             + (int)(Convert.ToDouble(icec) / Convert.ToDouble(longc) * 100)
+                                                             + "%)");
+                                
+                                ProtectCount = 0;
+                                break;
+                            case ("wclear"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.Error404)) { return; }
+                                ProtectCount = 404;
+                                e.FromGroup.SendGroupMessage("已将保护值设置到404防止其他消息干扰该操作。");
+                                string uifile = Guid.NewGuid().ToString();
+                                File.Copy(@"C:\DataArrange\wordcollections-userdata.json",
+                                    @"C:\DataArrange\[backup]wordcollections-" + uifile + ".json");
+                                e.FromGroup.SendGroupMessage("备份[" + uifile + "]已创建。");
+                                longc = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                                List<string> owners = new List<string>();
+                                List<string> repeates = new List<string>();
+                                List<bool> removemap = new List<bool>();
+                                for (int i = 0;i < longc; i++)
+                                {
+                                    repeates.Add(Manager.wordcollect.getkey("repeat", "item" + i));
+                                    owners.Add(Manager.wordcollect.getkey("owner" + i, "name"));
+                                    removemap.Add(false);
+                                }
+                                for(int i = 2;i < p.Length; i++)
+                                {
+                                    removemap[int.Parse(p[i])] = true;
+                                }
+                                int repi = 0;
+                                Storage newword = new Storage("wordoper");
+                                for (int i = 0;i < owners.Count; i++)
+                                {
+                                    if (!removemap[i])
+                                    {
+                                        newword.putkey("owner" + repi, "name", owners[i],false);
+                                        newword.putkey("repeat", "item" + repi, repeates[i],false);
+                                        repi++;
+                                    }
+                                }
+                                newword.putkey("repeat", "count", repi.ToString(),false);
+                                newword.Store();
+                                File.Delete(@"C:\DataArrange\wordcollections-userdata.json");
+                                File.Copy(@"C:\DataArrange\wordoper-userdata.json",
+                                          @"C:\DataArrange\wordcollections-userdata.json");
+                                File.Delete(@"C:\DataArrange\wordoper-userdata.json");
+                                Manager.wordcollect.Restore();
+                                e.FromGroup.SendGroupMessage("removed");
+                                ProtectCount = 0;
+                                break;
+                            case ("wdetail"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.Error404)) { return; }
+                                word = Manager.wordcollect.getkey("repeat", "item" + p[2]);
+                                e.FromGroup.SendGroupMessage("NO." + p[2] + "\n" + word);
+                                break;
+                            case ("wfetchs"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.Error404)) { return; }
+                                longc = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                                for (int i = 0; i < longc; i++)
+                                {
+                                    word = Manager.wordcollect.getkey("repeat", "item" + i);
+                                    if (word.StartsWith(p[2])) ret = ret + i + " ";
+                                }
+                                e.FromGroup.SendGroupMessage(ret);
+                                break;
+                            case ("wfetch"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.Error404)) { return; }
+                                longc = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+                                for(int i = 0;i < longc; i++)
+                                {
+                                    word = Manager.wordcollect.getkey("repeat", "item" + i);
+                                    if (word.IndexOf(p[2]) >= 0) ret = ret + i + " ";
+                                }
+                                e.FromGroup.SendGroupMessage(ret);
+                                break;
                             case ("clearwords"):
                                 if (!JudgePermission(e.FromQQ.Id,PermissionName.Error404)){ return; }
                                 ProtectCount = 404;
