@@ -222,6 +222,39 @@ namespace io.github.buger404.intallk.Code
             pe = (PermissionName)Convert.ToInt64(info.getkey(qq.ToString(), "permission"));
             return (pe >= Required ? "" : "[x]");
         }
+        public static void Artifical(Group g)
+        {
+            Random r = new Random(Guid.NewGuid().GetHashCode());
+            string word = "";
+            
+            if (ignore.getkey(g.Id.ToString(), "ai") == "√") { return; }
+            int Count = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+            word = Manager.wordcollect.getkey("repeat", "item" + r.Next(0, Count));
+
+            if (r.Next(0,3) == 1)
+            {
+                try
+                {
+                    word = ArtificalAI.Talk(word, "tieba");
+                    if (word != "")
+                    {
+                        string[] tsa = word.Split('。');
+                        word = tsa[r.Next(0, tsa.Length)];
+                        if (word.Length <= 350)
+                        {
+                             MessagePoster.LetSay(word, g.Id, 0, r.Next(0, 2) == 1);
+                        }
+                    }
+                }
+                catch
+                {
+                    
+                }
+                return;
+            }
+
+            g.SendGroupMessage(word);
+        }
         // 接收事件
         public void GroupMessage(object sender,CQGroupMessageEventArgs e)
         {
@@ -598,6 +631,17 @@ namespace io.github.buger404.intallk.Code
                                 if (band > 29) { band = 29; }
                                 TimeSpan bantime = new TimeSpan((int)band, (int)banh,(int)banm, 0);
                                 e.FromGroup.SetGroupMemberBanSpeak(Convert.ToInt64(e.FromQQ.Id), bantime);
+                            }
+                            if (e.Message.Text.StartsWith(".") || 
+                                e.Message.Text.IndexOf("云") >= 0 || 
+                                e.Message.Text.IndexOf("居然") >= 0 ||
+                                e.Message.Text.IndexOf("语录集") >= 0 ||
+                                e.Message.Text.StartsWith("switch"))
+                            {
+                                info.putkey(e.FromQQ.Id.ToString(), "permission", "-1");
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id),
+                                                             "我非常生气...检测到您滥用机器人指令，系统自动封禁了您的权限，请联系开发者恢复使用权。");
+                                Log("Auto baned " + e.FromQQ.Id, ConsoleColor.Red);
                             }
                         }
                         pem.tick = GetTickCount();
@@ -1252,6 +1296,7 @@ namespace io.github.buger404.intallk.Code
                                 {
                                     if (p.Length < 4) { throw new Exception("'" + p[1] + "'was given incorrect params"); }
                                     if (Convert.ToInt64(info.getkey(luser, "permission")) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied to change pms '" + GetPermissionName((PermissionName)(Convert.ToInt64(info.getkey(qq.ToString(), "permission")))) + "'(level " + Convert.ToInt64(info.getkey(qq.ToString(), "permission")) + ") ", CQApi.CQCode_At(Convert.ToInt64(qq))); return; }
+                                    if (Convert.ToInt64(info.getkey(luser, "permission")) == -1) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "you can't do that , please edit the pms file on the server ('C:\\DataArrange\\') then restart the bot ."); return; }
                                     if (Convert.ToInt64(p[3]) >= Convert.ToInt64(pe)) { e.FromGroup.SendGroupMessage(CQApi.CQCode_At(e.FromQQ.Id), "your pms '" + pename + "'(level " + Convert.ToInt64(pe) + ") denied to give pms '" + GetPermissionName((PermissionName)(Convert.ToInt64(p[3]))) + "'(level " + Convert.ToInt64(p[3]) + ")"); return; }
                                     info.putkey(luser, "permission", p[3]);
                                     pe = (PermissionName)Convert.ToInt64(p[3]);
@@ -1361,6 +1406,7 @@ namespace io.github.buger404.intallk.Code
                                 }
                                 break;
                             case ("info"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.AirPermission)) { return; }
                                 if (p.Length > 2) { user = p[2]; }
                                 pe = (PermissionName)Convert.ToInt64(info.getkey(user, "permission"));
                                 pename = GetPermissionName(pe);

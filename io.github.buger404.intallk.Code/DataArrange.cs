@@ -225,8 +225,15 @@ namespace MainThread
         public static void Poster()
         {
         posthead:
+            Random r = new Random(Guid.NewGuid().GetHashCode());
             try
             {
+                if (r.Next(0,250) == 88)
+                {
+                    List<GroupInfo> lg = pCQ.GetGroupList();
+                    Event_GroupMessage.Artifical(lg[r.Next(0,lg.Count)].Group);
+                }
+
                 //OSU
                 if (LastOSUTime == DateTime.Now.Hour && DateTime.Now.Minute == 30)
                 {
@@ -235,7 +242,6 @@ namespace MainThread
                     LastOSUTime = (DateTime.Now.Hour + 1) % 24;
                     Group droid = new Group(pCQ, 577344771);
                     List<GroupMemberInfo> gml = droid.GetGroupMemberList();
-                    Random r = new Random(Guid.NewGuid().GetHashCode());
                     GroupMemberInfo gmi = gml[r.Next(0, gml.Count)];
                     long qq = gmi.QQ.Id;
                     string targett = MessagePoster.ptList[r.Next(0, MessagePoster.ptList.Count)];
