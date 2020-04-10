@@ -15,6 +15,7 @@ using Undertale.Dialogs;
 using VoidLife.Simulator;
 using DataArrange.Storages;
 using Repeater;
+using Native.Csharp.Sdk.Cqp.Model;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -51,6 +52,7 @@ namespace io.github.buger404.intallk.Code
             thread.Start();
             VoidLifes.LoadGame();
             Console.WriteLine("Message poster thread works properly .");
+            new QQ(e.CQApi, 1361778219).SendPrivateMessage("机器人服务启动成功。");
         }
     }
 }

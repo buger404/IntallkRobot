@@ -108,7 +108,16 @@ namespace io.github.buger404.intallk.Code
                                 }
                                 p[1] = f + "_face.jpg";
                             }
-                            Image im = Image.FromFile(AssetsPath + RepValue(p[1]));
+                            Image im;
+                            try
+                            {
+                                im = Image.FromFile(AssetsPath + RepValue(p[1]));
+                            }
+                            catch
+                            {
+                                im = new Bitmap(1, 1);
+                            }
+                            
                             switch (p.Length)
                             {
                                 case (4):
