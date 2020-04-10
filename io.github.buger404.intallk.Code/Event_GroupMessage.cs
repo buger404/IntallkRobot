@@ -22,6 +22,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Net;
 using Repeater;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace io.github.buger404.intallk.Code
 {
@@ -256,6 +257,29 @@ namespace io.github.buger404.intallk.Code
 
             g.SendGroupMessage(word);
         }
+        public static bool IsCmd(string s)
+        {
+            return( s.StartsWith(".") ||
+                    s.IndexOf("云") >= 0 ||
+                    s.IndexOf("居然") >= 0 ||
+                    s.IndexOf("语录集") >= 0 ||
+                    s.StartsWith("switch"));
+        }
+        public string GetName(CQGroupMessageEventArgs e,long qq)
+        {
+            string name = "";
+            try
+            {
+                name = e.FromGroup.GetGroupMemberInfo(qq).Card;
+                if (name == "") name = e.FromGroup.GetGroupMemberInfo(qq).Nick; 
+            }
+            catch
+            {
+                name = qq.ToString();
+            }
+            if (name.Length > 6) { name = name.Substring(0, 6) + "..."; }
+            return name;
+        }
         // 接收事件
         public void GroupMessage(object sender,CQGroupMessageEventArgs e)
         {
@@ -279,7 +303,7 @@ namespace io.github.buger404.intallk.Code
             {
                 if (ignore.getkey(e.FromGroup.Id.ToString(), "group") == "√") { return; }
 
-                Repeaters.SpeakOnce(e.FromQQ.Id, e.FromGroup.Id);
+                if(!IsCmd(e.Message.Text)) Repeaters.SpeakOnce(e.FromQQ.Id, e.FromGroup.Id);
                 Log("(" + e.FromGroup.Id + ")Message:" + e.FromQQ.Id + "," + e.Message.Text, ConsoleColor.Cyan);
                 //Moring Protection
                 Storage sys = new Storage("system");
@@ -386,10 +410,10 @@ namespace io.github.buger404.intallk.Code
                             if (hmsg.qq.IndexOf(e.FromQQ.Id.ToString() + ";") < 0)
                             {
                                 string[] qqtemp = hmsg.qq.Split(';');
-                                Repeaters.ZeroRepeat(long.Parse(qqtemp[0]), e.FromGroup.Id);
+                                if (!IsCmd(e.Message.Text)) Repeaters.ZeroRepeat(long.Parse(qqtemp[0]), e.FromGroup.Id);
                                 if (qqtemp.Length == 2)
                                 {
-                                    Repeaters.FirstRepeat(e.FromQQ.Id, e.FromGroup.Id);
+                                    if (!IsCmd(e.Message.Text)) Repeaters.FirstRepeat(e.FromQQ.Id, e.FromGroup.Id);
                                 }
                                 Log("(" + e.FromGroup.Id + ")(" + i + ")Heat:" + hmsg.msg + " , hot :" + hmsg.hot);
                                 hmsg.hasup = true;
@@ -413,7 +437,7 @@ namespace io.github.buger404.intallk.Code
                             }
                             else
                             {
-                                Repeaters.BoringRepeat(e.FromQQ.Id, e.FromGroup.Id);
+                                
                                 hmsg.banqq = hmsg.banqq + e.FromQQ.Id.ToString() + ";";
                                 int bancount = GotCount(hmsg.banqq, e.FromQQ.Id.ToString());
                                 Log("(" + e.FromGroup.Id + ")(" + i + ")Boring-repeat:" + e.FromQQ.Id + " x " + bancount, ConsoleColor.Red);
@@ -424,6 +448,8 @@ namespace io.github.buger404.intallk.Code
                         {
                             if (hmsg.hasup)
                             {
+                                string[] qqtemp2 = hmsg.qq.Split(';');
+                                if (!IsCmd(hmsg.msg) && qqtemp2.Length > 3) Repeaters.EndRepeat(long.Parse(qqtemp2[qqtemp2.Length - 2]), e.FromGroup.Id);
                                 string QQName = e.CQApi.GetGroupMemberInfo(e.FromGroup.Id, Convert.ToInt64(hmsg.qq.Split(';')[0])).Card;
                                 string Nick = e.CQApi.GetGroupMemberInfo(e.FromGroup.Id, Convert.ToInt64(hmsg.qq.Split(';')[0])).Nick;
                                 string[] ctemp = hmsg.msg.ToLower().Split(new string[] { "[cq:image,file=" },StringSplitOptions.None);
@@ -628,6 +654,12 @@ namespace io.github.buger404.intallk.Code
                                     break;
                             }
                             Log("(" + e.FromGroup.Id + ")(" + i + ")anger incrasing:" + e.FromQQ.Id + "x" + pem.anger, ConsoleColor.Red);
+                        }
+                        if(pem.anger >= 2)
+                        {
+                            if (IsCmd(e.Message.Text)) Repeaters.SpeakOnce(e.FromQQ.Id, e.FromGroup.Id);
+
+                            Repeaters.BoringRepeat(e.FromQQ.Id, e.FromGroup.Id);
                         }
                         if (pem.anger >= 6)
                         {
@@ -946,8 +978,122 @@ namespace io.github.buger404.intallk.Code
                         if (ignore.getkey(e.FromGroup.Id.ToString(), p[1]) == "√") { return; }
                         switch (p[1])
                         {
+                            case ("msgrk"):
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.AirPermission)) { return; }
+                                List<Repeaters.member> meml = new List<Repeaters.member>();
+                                double wmin = 0;
+                                foreach(Repeaters.member rmm in Repeaters.List.data)
+                                {
+                                    if(rmm.group == e.FromGroup.Id) wmin += rmm.wcount;
+                                }
+                                wmin = wmin / Repeaters.List.data.Count;
+                                wmin *= 0.33;
+                                if(p.Length >= 4)
+                                {
+                                    if(p[3] == "all") { wmin = 0; }
+                                }
+                                if (p[2] == "msg")
+                                {
+                                    meml = Repeaters.List.data.FindAll(
+                                        m => m.group == e.FromGroup.Id && m.wcount > wmin);
+                                }
+                                else
+                                {
+                                    if (p[2] == "zerore")
+                                        meml = Repeaters.List.data.FindAll(
+                                            m => m.group == e.FromGroup.Id && m.zfcount > 0 && m.wcount > wmin);
+                                    if (p[2] == "firstre")
+                                        meml = Repeaters.List.data.FindAll(
+                                            m => m.group == e.FromGroup.Id && m.frcount > 0 && m.wcount > wmin);
+                                    if (p[2] == "endre")
+                                        meml = Repeaters.List.data.FindAll(
+                                            m => m.group == e.FromGroup.Id && m.encount > 0 && m.wcount > wmin);
+                                    if (p[2] == "ban")
+                                        meml = Repeaters.List.data.FindAll(
+                                            m => m.group == e.FromGroup.Id && m.bacount > 0 && m.wcount > wmin);
+                                    if (p[2] == "re")
+                                        meml = Repeaters.List.data.FindAll(
+                                            m => m.group == e.FromGroup.Id && m.wcount > wmin);
+                                }
+                                if (p[2] == "msg") { meml.Sort((m2, m1) => m1.wcount.CompareTo(m2.wcount)); }
+                                if (p[2] == "zerore") { meml.Sort((m2, m1) => (m1.zfcount / m1.wcount).CompareTo(m2.zfcount / m2.wcount)); }
+                                if (p[2] == "firstre") { meml.Sort((m2, m1) => (m1.frcount / m1.wcount).CompareTo(m2.frcount / m2.wcount)); }
+                                if (p[2] == "endre") { meml.Sort((m2, m1) => (m1.encount / m1.wcount).CompareTo(m2.encount / m2.wcount)); }
+                                if (p[2] == "re") 
+                                { 
+                                    meml.Sort((m2, m1) => 
+                                    ((m1.encount + m1.frcount) / m1.wcount * 0.8 + m1.zfcount / m1.wcount * 0.2)
+                                    .CompareTo((m2.encount + m2.frcount) / m2.wcount * 0.8 + m2.zfcount / m2.wcount * 0.2)); 
+                                }
+                                List<DrawTable.tabs> ltab = new List<DrawTable.tabs>();
+                                ltab.Add(new DrawTable.tabs("排序", Color.Black, Color.FromArgb(255,232,232,232)));
+                                ltab.Add(new DrawTable.tabs("名称", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("消息条数", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("复读发起", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("初次复读", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("终结复读", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("刷屏", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                ltab.Add(new DrawTable.tabs("复读率", Color.Black, Color.FromArgb(255, 232, 232, 232)));
+                                double wmax = meml.Max(m => m.wcount);
+                                if (wmax == 0) wmax = 1;
+                                double zmax = meml.Max(m => (m.zfcount / m.wcount));
+                                if (zmax == 0) zmax = 1;
+                                double fmax = meml.Max(m => (m.frcount / m.wcount));
+                                if (fmax == 0) fmax = 1;
+                                double emax = meml.Max(m => (m.encount / m.wcount));
+                                if (emax == 0) emax = 1;
+                                double bmax = meml.Max(m => (m.bacount / m.wcount));
+                                if (bmax == 0) bmax = 1;
+                                double rmax = meml.Max(m => ((m.encount + m.frcount) / m.wcount * 0.8 + m.zfcount / m.wcount * 0.2));
+                                if (rmax == 0) rmax = 1;
+                                for (int i = 0;i < meml.Count; i++)
+                                {
+                                    ltab.Add(new DrawTable.tabs((i + 1).ToString(), Color.Gray, Color.White));
+                                    ltab.Add(new DrawTable.tabs(GetName(e, meml[i].qq), Color.Black, Color.White));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            meml[i].wcount.ToString(), 
+                                            p[2] == "msg" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(meml[i].wcount / wmax * 100),0,176,240), 
+                                            p[2] == "msg"));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            ((int)(meml[i].zfcount / meml[i].wcount * 10000) / 100.0f).ToString() + "%", 
+                                            p[2] == "zerore" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(meml[i].zfcount / meml[i].wcount / zmax * 100), 0, 176, 240),
+                                            p[2] == "zerore"));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            ((int)(meml[i].frcount / meml[i].wcount * 10000) / 100.0f).ToString() + "%",
+                                            p[2] == "firstre" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(meml[i].frcount / meml[i].wcount / fmax * 100), 0, 176, 240),
+                                            p[2] == "firstre"));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            ((int)(meml[i].encount / meml[i].wcount * 10000) / 100.0f).ToString() + "%", 
+                                            p[2] == "endre" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(meml[i].encount / meml[i].wcount / emax * 100), 0, 176, 240),
+                                            p[2] == "endre"));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            ((int)(meml[i].bacount / meml[i].wcount * 10000) / 100.0f).ToString() + "%",
+                                            p[2] == "ban" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(meml[i].bacount / meml[i].wcount / bmax * 100), 0, 176, 240),
+                                            p[2] == "ban"));
+                                    ltab.Add(
+                                        new DrawTable.tabs(
+                                            ((int)(((meml[i].frcount + meml[i].encount) / meml[i].wcount * 0.8 + meml[i].zfcount / meml[i].wcount * 0.2) * 10000) / 100.0f).ToString() + "%",
+                                            p[2] == "re" ? Color.Black : Color.Gray,
+                                            Color.FromArgb((int)(((meml[i].frcount + meml[i].encount) / meml[i].wcount * 0.8 + meml[i].zfcount / meml[i].wcount * 0.2) / rmax * 100), 0, 176, 240),
+                                            p[2] == "re"));
+                                }
+                                DrawTable.ExportTable("按照" + p[2] + "排序(阈值：" + Math.Floor(wmin) + ")" , 900,
+                                                      new float[] {0.06f,0.18f,0.13f,0.13f,0.13f,0.13f,0.13f,0.13f},
+                                                      ltab);
+                                e.FromGroup.SendGroupMessage(CQApi.CQCode_Image("table.png"));
+                                break;
                             case ("msginfo"):
-                                if (!JudgePermission(e.FromQQ.Id, PermissionName.UserPermission)) { return; }
+                                if (!JudgePermission(e.FromQQ.Id, PermissionName.AirPermission)) { return; }
                                 long tarqq = e.FromQQ.Id;
                                 if (p.Length > 2) { tarqq = long.Parse(p[2].Replace("[CQ:at,qq=", "").Replace("]", "")); }
                                 try
@@ -962,12 +1108,14 @@ namespace io.github.buger404.intallk.Code
                                 Repeaters.member meminfo = Repeaters.Information(tarqq, e.FromGroup.Id);
                                 e.FromGroup.SendGroupMessage(CQApi.CQCode_At(tarqq) ,"\n",
                                                              "总发言条数：" + meminfo.wcount + "条\n"
-                                                             + "复读发起次数：" + meminfo.zfcount + "条("
-                                                             + (int)(meminfo.zfcount / meminfo.wcount * 100) + "%)\n"
-                                                             + "首次复读次数：" + meminfo.frcount + "条("
-                                                             + (int)(meminfo.frcount / meminfo.wcount * 100) + "%)\n"
-                                                             + "刷屏次数：" + meminfo.bacount + "条("
-                                                             + (int)(meminfo.bacount / meminfo.wcount * 100) + "%)\n"
+                                                             + "复读发起：" + meminfo.zfcount + "次("
+                                                             + (int)(meminfo.zfcount / meminfo.wcount * 10000) / 100.0f + "%)\n"
+                                                             + "初次复读：" + meminfo.frcount + "次("
+                                                             + (int)(meminfo.frcount / meminfo.wcount * 10000) / 100.0f + "%)\n"
+                                                             + "终结复读：" + meminfo.encount + "次("
+                                                             + (int)(meminfo.encount / meminfo.wcount * 10000) / 100.0f + "%)\n"
+                                                             + "刷屏：" + meminfo.bacount + "次("
+                                                             + (int)(meminfo.bacount / meminfo.wcount * 10000) / 100.0f + "%)\n"
                                                              );
                                 break;
                             case ("wreport"):

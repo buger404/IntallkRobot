@@ -228,10 +228,13 @@ namespace MainThread
             Random r = new Random(Guid.NewGuid().GetHashCode());
             try
             {
-                if (r.Next(0,500) == 88)
+                if (r.Next(0,1000) == 88)
                 {
-                    List<GroupInfo> lg = pCQ.GetGroupList();
-                    Event_GroupMessage.Artifical(lg[r.Next(0,lg.Count)].Group);
+                    if(DateTime.Now.Hour >= 7 && DateTime.Now.Hour < 24)
+                    {
+                        List<GroupInfo> lg = pCQ.GetGroupList();
+                        Event_GroupMessage.Artifical(lg[r.Next(0, lg.Count)].Group);
+                    }
                 }
 
                 //OSU

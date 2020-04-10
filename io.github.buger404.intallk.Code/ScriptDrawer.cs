@@ -25,6 +25,7 @@ namespace io.github.buger404.intallk.Code
         private static FontFamily font = new FontFamily("Microsoft Yahei");
         private static StringFormat stf = new StringFormat();
         private static SolidBrush brush = new SolidBrush(Color.Transparent);
+        private static Pen pen = new Pen(Color.Transparent);
         public static string AssetsPath = "";
         
         public static object Eval(string s)
@@ -67,7 +68,7 @@ namespace io.github.buger404.intallk.Code
 
         public static void Draw(string infile,string oufile,params string[] param)
         {
-            int fail = 0;
+            int fail = 0;int fi = 0; string[] cmd = new string[] { "" };
             Graphics g = Graphics.FromHwnd(IntPtr.Zero); Bitmap b = new Bitmap(1, 1);
 
         tryagain:
@@ -85,9 +86,10 @@ namespace io.github.buger404.intallk.Code
                     plist.Add(pa);
                 }
 
-                string[] cmd = File.ReadAllText(infile).Split(new string[] { "\r\n" }, StringSplitOptions.None);
+                cmd = File.ReadAllText(infile).Split(new string[] { "\r\n" }, StringSplitOptions.None);
                 for (int i = 0; i < cmd.Length; i++)
                 {
+                    fi = i;
                     string[] p = cmd[i].Split(',');
                     for (int s = 0; s < p.Length; s++)
                     {
@@ -143,6 +145,14 @@ namespace io.github.buger404.intallk.Code
                             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                             g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
                             g.Clear(GoColor(p[3]));
+                            break;
+                        case ("rectl"):
+                            pen.Color = GoColor(p[5]);
+                            g.DrawRectangle(pen,
+                                            new Rectangle(
+                                            Convert.ToInt32(FinalValue(p[1])), Convert.ToInt32(FinalValue(p[2])),
+                                            Convert.ToInt32(FinalValue(p[3])), Convert.ToInt32(FinalValue(p[4])))
+                                            );
                             break;
                         case ("rect"):
                             brush.Color = GoColor(p[5]);
@@ -202,7 +212,8 @@ namespace io.github.buger404.intallk.Code
             catch(Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Draw failed , retry :" + fail + "\n" + ex.Message + "\n" + ex.StackTrace + "\n" + ex.TargetSite);
+                Console.WriteLine("Draw failed , retry :" + fail + "\n" + ex.Message + "\n" + ex.StackTrace + "\n" + ex.TargetSite 
+                                  + "\n\n" + cmd[fi]);
                 g.Dispose(); b.Dispose();
                 if (fail >= 13) { return; }
                 goto tryagain;

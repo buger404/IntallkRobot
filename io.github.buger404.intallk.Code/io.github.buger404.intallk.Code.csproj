@@ -41,6 +41,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AAI.cs" />
     <Compile Include="DataArrange.cs" />
+    <Compile Include="DrawTable.cs" />
     <Compile Include="Effect.cs" />
     <Compile Include="Event_FriendAddRequest.cs" />
     <Compile Include="Event_GroupMessage.cs" />

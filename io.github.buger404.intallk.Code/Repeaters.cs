@@ -19,11 +19,12 @@ namespace Repeater
             public double frcount;               //第一个跟读次数
             public double zfcount;               //发起复读次数
             public double bacount;               //刷屏次数
+            public double encount;               //终结次数
             public long group;                 //群
             public member(long qqnum,long groupnum)
             {
                 qq = qqnum;group = groupnum;
-                wcount = 0;frcount = 0;zfcount = 0;bacount = 0;
+                wcount = 1;frcount = 0;zfcount = 0;bacount = 0;encount = 0;
             }
         }
         [Serializable]
@@ -96,5 +97,13 @@ namespace Repeater
             member me = List.data[i];
             me.bacount++; List.data[i] = me;
         }
+        public static void EndRepeat(long qq, long group)
+        {
+            int i = List.data.FindIndex(m => m.qq == qq && m.group == group);
+            if (i == -1) { List.data.Add(new member(qq, group)); i = List.data.Count - 1; }
+            member me = List.data[i];
+            me.encount++; List.data[i] = me;
+        }
+
     }
 }
