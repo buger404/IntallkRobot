@@ -1,0 +1,34 @@
+##TIMELINE(18)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=++++++++++++Console.Write(%22Input+comic+id%3A%22)%3B%0D%0A++++++++++++string+id+%3D+Console.ReadLine()%3B&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%B2%9F%E7%B1%B3%E6%8D%A2%E9%A6%96dj&red_tag=e0313206225
+Web data received !
+Link:/p/3275579297?pid=57028519326&cid=0#57028519326
+Connect:https://tieba.baidu.com//p/3275579297?pid=57028519326&cid=0#57028519326
+Web data received !
+Faile to get contents !
+##TIMELINE(19)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Arich%2Ctext%3D%0A+%E5%BF%AB%E9%80%92%E5%91%98%E7%BB%99%E9%A1%BE%E5%AE%A2%E7%A3%95%E5%A4%B4%E9%81%93%E6%AD%89+%E5%8E%9F%E5%9B%A0%E8%AE%A9%E7%BD%91%E5%8F%8B%E6%80%92%E4%BA%86%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%8F%AF%E8%83%BD%E6%98%AF%E4%BD%A0%E5%81%B7%E4%B8%9C%E8%A5%BF%E9%81%AD%E5%A4%A9%E8%B0%B4%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/5139510341?pid=107620233198&cid=0#107620233198
+Connect:https://tieba.baidu.com//p/5139510341?pid=107620233198&cid=0#107620233198
+Web data received !
+Reply:年方少血气方刚，戒之在色，七尺男儿顶天立地，纵然才高八斗色这关过不了，也是枉然。所以因怀有远大的理想和抱负，所以行动起来！
+##TIMELINE(20)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AE%B0%E4%BA%8B%E6%9C%AC%E5%B7%AE%E8%AF%84&red_tag=e0313206225
+Web data received !
+Link:/p/5812848759?pid=130824925393&cid=0#130824925393
+Link:/p/6466029548?pid=129626617041&cid=0#129626617041
+Link:/p/6197286864?pid=129071620711&cid=0#129071620711
+Link:/p/6357530233?pid=128522428709&cid=0#128522428709
+Link:/p/6250527303?pid=127470852195&cid=0#127470852195
+Link:/p/6242215523?pid=127441395260&cid=0#127441395260
+Link:/p/6028558994?pid=126714785460&cid=0#126714785460
+Link:/p/6169216185?pid=126191270958&cid=0#126191270958
+Connect:https://tieba.baidu.com//p/6242215523?pid=127441395260&cid=0#127441395260
+Web data received !
+Reply:今天淘宝客服还给我打电话问我收没收到，我说收到了，但也没给我个说法为什么跑？？然后就一直给我道歉。

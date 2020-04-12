@@ -1,0 +1,76 @@
+##TIMELINE(15)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=switch+t+off+ai&red_tag=e0313206225
+Web data received !
+Link:/p/6562240532?pid=130864000000&cid=0#130864000000
+Link:/p/6535095898?pid=130521923221&cid=0#130521923221
+Link:/p/6313235452?pid=128072969811&cid=0#128072969811
+Link:/p/6175932549?pid=126293604995&cid=0#126293604995
+Link:/p/6051982726?pid=124347148592&cid=0#124347148592
+Connect:https://tieba.baidu.com//p/6562240532?pid=130864000000&cid=0#130864000000
+Web data received !
+AD:Arduino:1.8.10 (Windows 7), 开发板：&quot;Generic ESP8266 Module, 80 MHz, Flash, Disabled, ck, 26 MHz, 40MHz, DOUT (compatible), 512K (no SPIFFS), 2, v2 Lower Memory, Disabled, None, Only Sketch, 115200&quot;blinker_xiaoai_dengpao:4:21: error: Blinker.h: No such file or directorycompilation terminated.exit status 1Blinker.h: No such file or directory代码如下#define BLINKER_WIFI#define BLINKER_DUEROS_OUTLET   //小度小度#include &lt;Blinker.h&gt;char auth[] = &quot;*******&quot;;char ssid[] = &quot;*******&quot;;char pswd[] = &quot;*******&quot;;BlinkerButton Button1(&quot;btn-on&quot;);     //定义按钮数据BlinkerButton Button2(&quot;btn-off&quot;);BlinkerButton Button3(&quot;btn-aaa&quot;);bool oState = false;int counter = 0;void duerPowerState(const String &amp; state){  BLINKER_LOG(&quot;need set power state: &quot;, state);  if (state == BLINKER_CMD_ON) {     //小度小度控制开命令    digitalWrite(0, LOW);    BlinkerDuerOS.powerState(&quot;on&quot;);    BlinkerDuerOS.print();    oState = true;  }  else if (state == BLINKER_CMD_OFF) {   //小度小度控制关命令    digitalWrite(0, HIGH);    BlinkerDuerOS.powerState(&quot;off&quot;);    BlinkerDuerOS.print();    oState = false;  }}void duerQuery(int32_t queryCode)      //小度小度控制{  BLINKER_LOG(&quot;MIOT Query codes: &quot;, queryCode);  switch (queryCode)  {    case BLINKER_CMD_QUERY_ALL_NUMBER :      BLINKER_LOG(&quot;MIOT Query All&quot;);      BlinkerMIOT.powerState(oState ? &quot;on&quot; : &quot;off&quot;);      BlinkerMIOT.print();      break;    case BLINKER_CMD_QUERY_POWERSTATE_NUMBER :      BLINKER_LOG(&quot;MIOT Query Power State&quot;);      BlinkerMIOT.powerState(oState ? &quot;on&quot; : &quot;off&quot;);      BlinkerMIOT.print();      break;    default :      BlinkerMIOT.powerState(oState ? &quot;on&quot; : &quot;off&quot;);      BlinkerMIOT.print();      break;  }}void dataRead(const String &amp; data)      // 如果未绑定的组件被触发，则会执行其中内容{  BLINKER_LOG(&quot;Blinker readString: &quot;, data);  Blinker.vibrate();  uint32_t BlinkerTime = millis();  Blinker.print(&quot;millis&quot;, BlinkerTime);}void button1_callback(const String &amp; state)     //点灯app内控制按键触发{  digitalWrite(0, LOW);  BLINKER_LOG(&quot;get button state:on&quot;, state);}void button2_callback(const String &amp; state)     //点灯app内控制按键触发{  digitalWrite(0, HIGH);  BLINKER_LOG(&quot;get button state:off&quot;, state);}void button3_callback(const String &amp; state)     //点灯app内控制按键触发{  BLINKER_LOG(&quot;get button state:on&quot;, state);  Blinker.print(state);  if (state == &quot;on&quot;) {    digitalWrite(0, LOW);    // Button3.print(&quot;on&quot;);  } else if (state == &quot;off&quot;) {    digitalWrite(0, HIGH);    //        Button3.print(&quot;off&quot;);  }}void setup(){  Serial.begin(115200);  BLINKER_DEBUG.stream(Serial);  pinMode(0, OUTPUT);              //定义io口为输出  digitalWrite(0, LOW);           //定义io默认为高电平  Blinker.begin(auth, ssid, pswd);  Blinker.attachData(dataRead);  BlinkerMIOT.attachPowerState(miotPowerState);  BlinkerMIOT.attachQuery(miotQuery);  Button1.attach(button1_callback);  Button2.attach(button2_callback);  Button3.attach(button3_callback);}void loop(){  Blinker.run();}
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=.info&red_tag=e0313206225
+Web data received !
+Link:/p/6609273303?pid=131407317804&cid=0#131407317804
+Link:/p/6609259490?pid=131407192723&cid=0#131407192723
+Link:/p/6609258856?pid=131407186755&cid=0#131407186755
+Link:/p/6609258382?pid=131407182330&cid=0#131407182330
+Link:/p/6609257730?pid=131407176476&cid=0#131407176476
+Link:/p/6609251976?pid=131407122558&cid=0#131407122558
+Link:/p/6609248715?pid=131407092940&cid=0#131407092940
+Link:/p/6609243013?pid=131407040884&cid=0#131407040884
+Connect:https://tieba.baidu.com//p/6609273303?pid=131407317804&cid=0#131407317804
+Web data received !
+AD:【马里奥制造2】龟龟爱情!夜色虽美,警惕绑匪_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili转自:https://www.bilibili.com/video/BV1SA411t7f7/?share_medium=web&amp;share_source=baidu&amp;bbid=26E71742-2428-4B43-B1D3-4FD5499F998453948infoc&amp;ts=1586504185375
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=.help*&red_tag=e0313206225
+Web data received !
+Link:/p/6397220198?pid=130854288387&cid=131407741104#131407741104
+Link:/p/6381079920?pid=128994221805&cid=131407722992#131407722992
+Link:/p/6362748019?pid=128754931014&cid=131407711043#131407711043
+Connect:https://tieba.baidu.com//p/6397220198?pid=130854288387&cid=131407741104#131407741104
+Web data received !
+Reply:研究生学霸带你fly 诚信担保 想咨询+企鹅 ++11955772
+##TIMELINE(16)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%85%9A%E2%99%82%E6%BB%91%E2%99%82%E8%BD%AE&red_tag=e0313206225
+Web data received !
+Link:/p/6471309706?pid=129806525387&cid=0#129806525387
+Link:/p/6225423012?pid=127075687867&cid=0#127075687867
+Link:/p/5993833954?pid=123458164622&cid=0#123458164622
+Link:/p/5951178076?pid=122867186165&cid=0#122867186165
+Link:/p/5930470718?pid=122629789312&cid=0#122629789312
+Connect:https://tieba.baidu.com//p/6225423012?pid=127075687867&cid=0#127075687867
+Web data received !
+Reply:心不是一般的大，撞了也不下来看看，我要不下去敲车窗你还不能下来，我要不在前面停着你还敢闯过去。整个文山线修路修的乌七八糟，南半部修好后还有北半部，得些日子啊
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91giao&red_tag=e0313206225
+Web data received !
+Link:/p/6609090790?pid=131408018968&cid=131409025834#131409025834
+Link:/p/6609453660?pid=131408987695&cid=0#131408987695
+Link:/p/6607971475?pid=131395754687&cid=131408964077#131408964077
+Link:/p/6604234993?pid=131350976683&cid=131408848170#131408848170
+Link:/p/6609397481?pid=131408826891&cid=0#131408826891
+Link:/p/6609163770?pid=131408665485&cid=131408725992#131408725992
+Link:/p/6608725660?pid=131408399385&cid=131408579684#131408579684
+Link:/p/6609118285?pid=131405944164&cid=131408571949#131408571949
+Link:/p/6604234993?pid=131408589702&cid=0#131408589702
+Connect:https://tieba.baidu.com//p/6609090790?pid=131408018968&cid=131409025834#131409025834
+Web data received !
+Reply:咋样才能处到对象。。。
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B8%BA%E4%BB%80%E4%B9%885%E6%9D%A1%E4%B9%9F%E4%BA%A4%E5%88%B7%E5%B1%8F&red_tag=e0313206225
+Web data received !
+Link:/p/6606887702?pid=131380742589&cid=0#131380742589
+Link:/p/6606881606?pid=131380687801&cid=0#131380687801
+Link:/p/6606880806?pid=131380680168&cid=0#131380680168
+Link:/p/6605474872?pid=131363812001&cid=0#131363812001
+Link:/p/6605392170?pid=131362686426&cid=0#131362686426
+Link:/p/6594618172?pid=131237083058&cid=0#131237083058
+Link:/p/6593293516?pid=131224929932&cid=0#131224929932
+Link:/p/6592772461?pid=131217910299&cid=0#131217910299
+Link:/p/6590364208?pid=131210069099&cid=0#131210069099
+Connect:https://tieba.baidu.com//p/6605392170?pid=131362686426&cid=0#131362686426
+Web data received !
+Reply:抖音电商培训短视频平台的发展趋势十分明显，就是算法推荐机制，用户点赞一个视频的动力远远超过关注一个账号——这对品牌方而言来说并非好事，品牌方更需要的是用户关注账号，以便后续触达、转化。品牌方运营抖音类短视频时，更应该做技能类、知识类视频，这也是每个品牌方都能做的内容。  抖音爆粉的运营秘籍之一 “两微一快一抖”不仅存在于媒体，也成为企业的标配，但对于玩转视频社交平台的朋友来说，如果对于平台的规则还懵懵懂懂，那恭喜你，这篇超级干货，会让你茅塞顿开，一起阅读吧！下面我就以抖音平台作为解析案例（其他视频社交平台的规则其实都差不多）  入门篇  1、新注册的号为何不能马上发作品，需要先养号？  在正式开始发布内容前，最好先养号3-5天，主要的目的就是为了增加账号的初始权重。养号就是模拟真人行为，点赞、关注、评论、分享、看直播，在线时长，也就是说并不是我每天关注一个点赞一个这就算一天，是根据你抖音在线时长，也就是说你前期刷个几百条，但是刷的内容要和你定位相关。  2、做短视频中常见的4种类型？  影片+字幕型、人声配合字说型、图片滑动型、真人出镜+字幕型  3、短视频常见的2种格式？  横屏的是16:9，竖屏的是9:16  4、视频作品是不是发的越多涨粉越快？  粉丝的多少，与作品的多少没有直接关系，有时发太多还会起到反作用，形成的刷屏让粉丝形成审美疲劳。所以，宁愿花一周打磨好一个作品，而不是一天发7个所谓的“作品”。  5、如何开通1分钟长视频权限？  需要有1000粉丝才能开通。  6、如何开通电商橱窗功能？  同时满足这三个条件：≥3000粉丝+≥10个视频作品+实名认证  7、如何获得直播权限？  抖音电商培训这个是抖音主动邀请运营者开通的，一般粉丝量要达到几千到上万不等都能收到。（不过，不以万为单位的粉丝量级开直播，基本等于照镜子。）  8、DOU+是什么？  DOU+是一款内容加热工具，就是抖音官方的广告投放平台，可以帮你把视频推荐给更多潜在用户。  9、前期做视频内容要注意什么？  第一：前五个视频没起来基本就会沦为僵尸号，也就是后面发出的视频得不到什么推荐量，即使有爆款视频出现也是偶尔走运，大部分视频的4项指标都低的可怜；  第二：别刷粉、别刷赞、别刷任何量，千万别刷；  第三：牢记第二条。  10、搬运别人的作品可以火吗？  搬运视频是一个捷径，但是有的时候捷径并不适合所有人走，有些人能火是有很多运气成分在里面，短期可以玩玩，对于长期做号是不可以的。最保险的生产方式还是踏踏实实做原创。  11、抖音的算法是怎么回事？  抖音的算法，其实是一个漏斗机制，跟今日头条的去中心化的推荐算法原理基本一致。它分为三个步骤：  第一、冷启动流量池曝光：  假设每天在抖音上有100万人上传短视频，抖音会随机给每个短视频分配一个平均曝光量的冷启动流量池。比如，每个短视频通过审核发出后，平均有1000次曝光。  第二、数据挑选：  抖音会从这100万个短视频的1000次曝光，分析点赞、关注、评论、转发等各个维度的数据，从中再挑出各项指标超过10%的视频，每条再平均分配10万次曝光。然后再去看哪些是点赞、关注、转发、评论是超过10%的，再滚进下一轮更大的流量池进行推荐。  第三、精品推荐池：  抖音电商培训通过一轮又一轮验证，筛选出来点赞率、播放完成率、评论互动率等指标都极高的短视频才有机会进入精品推荐池，用户打开时，看到的那些动辄几十上百万点赞量的视频就是这么来的。　一、抖音算法机制　　有经常玩抖音的同学，就应该对抖音的算法机制有所了解。　　就是你经常在抖音刷“化妆”的短视频　　慢慢的你打开抖音接收的短视频，几乎都是“化妆”相关短视频。　　没错，抖音的算法机制是通过你平时在抖音刷的视频确定你“标签画像”　　然后再根据你的标签智能推送符合你标签画像的短视频。　　举个简单的例子：　　假如你第一次进入抖音，看到了一段关于学古筝的短视频　　然后你持续点开了很多个跟古筝相关的短视频。　　这时，抖音就根据你的视频内容给予一个“古筝”的标签。　　下次你再次打开抖音，首先呈现给你的便是跟“古筝”相关的短视频。　　这就是抖音的算法，通过用户的习惯进行标签精准匹配内容进行推送。　　这如果用人性来解，可称之为“投其所好”　　这也是很多人刷抖音会上瘾的原因所在。　　二、抖音流量入口　　抖音流量的入口，直接进入抖音首页即可看见，如图：　　分别是推荐、同城、(主动)搜索。有用过抖音的同学都该知道　　其实抖音的功能很少。所以，它的流量入口也少。　　那如何让自己的内容能够出现在这些入口处呢?　　这得了解抖音的推送规律!可以这样理解：　　而用户的正向认可则是通过短视频的播放完成率、点赞数、评论数、转发数来决定。　　当然，这其中还跟“标签”的用户数量有关。　　假设“物理”这个标签的用户群体只有10万　　那么你最大的粉丝关注也就在10万左右徘徊，更何况这个标签的创作者并不止你一个。　　所以，很多专业领域即便内容很好　　但是由于大众不懂(导致喜爱的用户数量有限)　　导致播放量、点赞、评论、转发都少，自然粉丝关注就低。　　三、抖音的好内容　　什么样的内容较好呢?当然是点赞数越高啊!　　在抖音的众多维度中，点赞是最核心的评估指标。　　那什么样的抖音内容好呢?可以从以下几类入手：　　1、技能型内容　　俗话说：“技多不压身。”多一样技能，少一样危险。　　所以，你专门录制技能型的内容准没错。　　比如做美食、化妆、魔术、瘦身……等，这些一定是对用户有帮助的技能内容。　　2、心理型内容　　这里的心理型内容偏重于“情感共鸣”　　而在该领域做得最好的应该属杜子建了。他的很多内容，都能够勾引起众多人群的共鸣。　　这类内容有个特点，就是“逆向思考”。　　假如你讲的内容，是大众都懂的，那就没啥意思了。　　所以，从反向去思考内容，然后给出合理的解释即可。　　3、赚钱型内容　　这个类型的内容永远不会过时，只要有国家、社会存在　　货币自然就少不了。在任何时候谈赚钱型的内容，都是最佳的选择。　　假设你想从这个领域入手　　那就以电商、创业、融资、股票、门店、营销、销售、文案、微商　　……等某一门作为主讲内容。　　4、颜值型内容　　为什么有直播网红?是她们的才华很好吗?　　显然不是，重点是人长得漂亮，说话暖人心，心目中的女神。　　这类内容重点是吸引穷*丝，他们没足够的钱娶到女神　　所以就只能在虚拟的互联网世界去去关注一些女神……女神的粉丝来了!　　5、搞笑型内容　　为什么陈翔六点半、papi酱能火?　　不就是靠做搞笑内容来获取用户的关注嘛!　　这类内容具体包括了讲笑话、搞恶作剧、冒傻气、以及一些“势利眼”类的视频。　　毕竟多数人刷抖音都是在碎片时间找乐趣　　一旦你的内容能够让用户笑口常开，获得用户的喜欢就顺其自然了。　　四、粉丝怎么关注　　粉丝为什么要关注?因为抖音刷到你的视频，假设不关注，下次就不一定能再刷到了。　　所以，你在抖音上发的内容，尽量让用户觉得有用，不关注就是一种损失。　　那怎么做内容能获得粉丝的关注呢?很简单，做到两点：　　1、对用户有好处2、拍摄成连续集　　这样用户就会像看电视剧一样，看完了这一集　　再期待着下一集!不上瘾、不关注你才怪呢!　　五、场景转化成交　　玩抖音很多人埋怨不赚钱，为什么呢?因为他们搞错了成交的场景!　　在如今的互联网环境下，最佳的成交环境要嘛在电商平台，要嘛在微信。　　所以，要想通过抖音赚钱，就得将抖音的粉丝往电商平台或微信上导　　然后再在电商平台或微信上成交。抖音短视频购物车橱窗卖货，抖音上卖货的本质就是通过短视频下面的购物车功能，购物车产品可以直接跳转到我们淘宝店铺进行下单付款就可以实现购买了。这里建议大家在拥有10万粉丝以上的时候再考虑卖货，前期先吸粉，先吧账户做起来在考虑卖货的事情。不要初期粉丝不多的时候就开始卖货，这样显得我们目的性非常强，还会引起粉丝反感，只要我们账户做起来了，粉丝量有了就不用担心卖货赚钱问题了。
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D27C363B4963E6592915973B2F116DC87.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !

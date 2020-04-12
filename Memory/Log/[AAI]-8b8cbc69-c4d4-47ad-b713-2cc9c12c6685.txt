@@ -1,0 +1,88 @@
+##TIMELINE(13)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%86%B0%E6%A3%8D+&red_tag=e0313206225
+Web data received !
+Link:/p/6539041446?pid=130578746859&cid=130588811373#130588811373
+Link:/p/6538122287?pid=130588810806&cid=0#130588810806
+Link:/p/6540151605?pid=130588272960&cid=0#130588272960
+Link:/p/6325525140?pid=130378556761&cid=130588057792#130588057792
+Link:/p/6105539345?pid=130588008390&cid=0#130588008390
+Link:/p/6540201321?pid=130587917605&cid=0#130587917605
+Connect:https://tieba.baidu.com//p/6325525140?pid=130378556761&cid=130588057792#130588057792
+Web data received !
+Reply:说一下技能顺序呀……
+Connect:https://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word=%E7%99%BE%E5%BA%A6+
+Web data received !
+Link:https://zhidao.baidu.com/question/1046909041223444779.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1951960555889717308.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/52893885.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1580234818449582300.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/584645763815369325.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1829764053410007100.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1499224966516869659.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1889015351264513628.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1373233739405302379.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Link:https://zhidao.baidu.com/question/1544107310450434747.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Connect:https://zhidao.baidu.com/question/1951960555889717308.html?fr=iks&word=%e7%99%be%e5%ba%a6&ie=gbk
+Web data received !
+Reply:չ��ȫ��1.�ٶ��Ŀ�ͻ���ǩ�����Ի�á�2.�������û�ע���ٶ��Ŀ�Ҳ���Ի�á�3.�ϴ����ĵ�����������Ҳ���Ի��
+Connect:https://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word=%E7%99%BE%E5%BA%A6+www.google.com+
+Web data received !
+Link:https://zhidao.baidu.com/question/2381576.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/752366395997579204.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/56586015.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/140775593.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/16638554.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/1830301059302573820.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/1862419268686757547.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/19449129.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/29317970.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Link:https://zhidao.baidu.com/question/1958344415522744780.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Connect:https://zhidao.baidu.com/question/16638554.html?fr=iks&word=%e7%99%be%e5%ba%a6+www.google.com&ie=gbk
+Web data received !
+AD:չ��ȫ����������������󼯺�http://libk.blogdriver.com/libk/123249.htmlhttp://www.baidu.comhttp://www.google.comhttp://cn.msn.comhttp://cn.yahoo.comhttp://www.sogou.comhttp://so.tom.com/
+Reply:
+##TIMELINE(14)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-update&red_tag=e0313206225
+Web data received !
+Link:/p/6540383215?pid=130590153615&cid=0#130590153615
+Link:/p/6535634186?pid=130590098388&cid=0#130590098388
+Link:/p/5848532152?pid=126119446149&cid=130589892071#130589892071
+Link:/p/6490952588?pid=130589728939&cid=0#130589728939
+Link:/p/5476926022?pid=130575831527&cid=130589654153#130589654153
+Link:/p/6250147962?pid=127502529079&cid=130589616984#130589616984
+Link:/p/6535634186?pid=130589730223&cid=130589905469#130589905469
+Link:/p/6535634186?pid=130589100034&cid=130589896891#130589896891
+Connect:https://tieba.baidu.com//p/5848532152?pid=126119446149&cid=130589892071#130589892071
+Web data received !
+Reply:很简单，装个360，然后把他的下载速度限制为1k/s我是不是很机灵，我看他一天能下多少
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%9B%B4%E5%88%B0&red_tag=e0313206225
+Web data received !
+Link:/p/6539725604?pid=130591345737&cid=0#130591345737
+Link:/p/6539382792?pid=130591343595&cid=0#130591343595
+Link:/p/6540492553?pid=130591342911&cid=0#130591342911
+Link:/p/6540490423?pid=130591339915&cid=0#130591339915
+Link:/p/6540492044?pid=130591337166&cid=0#130591337166
+Link:/p/6540480385?pid=130591332905&cid=0#130591332905
+Link:/p/6540490423?pid=130591319423&cid=0#130591319423
+Connect:https://tieba.baidu.com//p/6539382792?pid=130591343595&cid=0#130591343595
+Web data received !
+AD:#王源大主宰#，#王源牧尘#，#演员王源#，#歌手王源#，#王源#。花开过 悄然无息，蝉声在 夏末静谧，每一天 慢慢走过，而时光 却匆匆，我们是 沿途的旅客，相遇多 蜿蜒离奇，像涟漪 边靠近 边失踪。
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%91%B5%EF%BD%9E%E5%97%AF%E5%95%8A%EF%BD%9E%E5%91%B5%E5%91%B5%E5%91%B5%E5%A5%BD%E7%88%BD&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=hehe&red_tag=e0313206225
+Web data received !
+Web data received !
+Web data received !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%BB%88%E4%BA%8E%E8%BF%87%E4%BA%86&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6539402022?pid=130576847552&cid=130591353108#130591353108
+Link:/p/6540493014?pid=130591348029&cid=0#130591348029
+Link:/p/6540439978?pid=130591107309&cid=130591344827#130591344827
+Link:/p/6536481276?pid=130591343703&cid=0#130591343703
+Link:/p/6539570760?pid=130591338399&cid=0#130591338399
+Link:/p/6539833297?pid=130587571705&cid=130591335073#130591335073
+Link:/p/6392564690?pid=129472401231&cid=130591333007#130591333007
+Connect:https://tieba.baidu.com//p/6539570760?pid=130591338399&cid=0#130591338399
+Web data received !
+Reply:嗯，我电毒双元素

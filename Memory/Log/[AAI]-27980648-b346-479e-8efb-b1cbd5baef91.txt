@@ -1,0 +1,17 @@
+##TIMELINE(14)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=kingdom+Cu+%27s+word+is+right&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%91%B5%E5%91%B5%E5%91%B5%E5%91%B5%EF%BC%9F&red_tag=e0313206225
+Web data received !
+Link:/p/6524447813?pid=130552232612&cid=130591420260#130591420260
+Link:/p/6540499557?pid=130591418908&cid=0#130591418908
+Link:/p/6535924470?pid=130533801846&cid=130591397939#130591397939
+Link:/p/6536948241?pid=130591355375&cid=0#130591355375
+Link:/p/6538062843?pid=130581439348&cid=130591341575#130591341575
+Link:/p/6478275392?pid=130589315452&cid=130591334543#130591334543
+Link:/p/6486214680?pid=130544239381&cid=130591314680#130591314680
+Link:/p/6486214680?pid=130230506624&cid=130591308789#130591308789
+Connect:https://tieba.baidu.com//p/6536948241?pid=130591355375&cid=0#130591355375
+Web data received !
+Reply:支持

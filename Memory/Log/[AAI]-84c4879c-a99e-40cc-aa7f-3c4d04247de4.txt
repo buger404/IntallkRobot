@@ -1,0 +1,774 @@
+##TIMELINE(8)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%8D%89&red_tag=e0313206225
+Web data received !
+Link:/p/6541785947?pid=130607548236&cid=130640951135#130640951135
+Link:/p/6544288812?pid=130640934253&cid=130640950638#130640950638
+Link:/p/6491797796?pid=130640950261&cid=0#130640950261
+Link:/p/6527600507?pid=130640950000&cid=0#130640950000
+Link:/p/6542068510?pid=130612410966&cid=130640950141#130640950141
+Link:/p/6542158515?pid=130613778384&cid=130640949630#130640949630
+Link:/p/6502887867?pid=130640949498&cid=0#130640949498
+Link:/p/6543773942?pid=130640949319&cid=0#130640949319
+Connect:https://tieba.baidu.com//p/6543773942?pid=130640949319&cid=0#130640949319
+Web data received !
+Reply:【雨歇390雨歇921雨歇61】YX2362【电五双梦道长4W5】100CW瀚海长风100CW霜影玄玑双橙武劲足赤兔蓝黑白路焰归/一代金狐金猪金兔金考金10金发猪红十红/红年轮蓝年轮白娃娃星野蓝人面/黑盒青盒蓬莱盒喵盒貂盒毒盒蓝腿盒丝路盒泠月盒小白龙盒18盒子/情R枕六翼金鱼天辉天辉画卷星空龙头红凤凰明如雪19披风/赤兔•飞虹/2虚空交椅/小熊猫执夷玄凤白狐/蓝黑白路焰归夜话/6W资历/紫霞功PVP45957紫霞功PVE50741/95CW周流星位YX2301【电一蝶恋花道姑6k3】狐金龙女金中秋金鸡金蝶金9金发猴红七红八红鸡红/粉娃娃镶云无色舞寒江/红盒青盒唐盒狗盒一代七夕盒二代七夕盒一代蓝中秋盒/白莲花素玉炸毛玉树蓝月亮几度春新星空/飞霞骠•惊帆/虚位交椅/夜话YX3514【幽月轮咩萝8K5】五红狐金龙女金中秋金蝶金3红5金/粉白菜白螺母红风露情阅打歌服紫兰庭白中宵3复刻/红腿/二代黑短粉/脚气马双椅子/橘胖/4W5资历/PVEQC4W1YX3744【双梦咩萝5k8】阴阳两界/9w资历•资历金/月兔金猴红/一代七夕二代花朝四代七夕四代蓝中秋青盒白盒秃盒白鸡腿衣/黄无色蓝沐云飞绿雪衣/复刻蓝雪山蓝一梦/下架绿潇湘/4商城成衣/3商城拓印/1梨园头饰/素玉披风/霸红尘里飞沙/9w资历阴阳两界少年行茶馆平生心愿惜往日/PVE4w5PVP4w（可重置）YX2028【电五华乾雪萝8k5】100归墟玄晶YX3478【电五雪爹5k】100大铁归墟玄晶/飒金/霆螭月华/飞霞骠•黑云/西山拂雪小毛驴/隐龙诀PVE43977YX3694【电五幽月轮雪爹6K7】100CW临渊/鸡金/粉鼠盒蓝鼠盒黑谪仙盒/翻羽抹云驹/隐龙诀PVE49579/真实YX2073【雪爹8K】100大铁归墟玄晶•小铁0•PVE3W1YX3642【唯满侠雪爹8K2】100CW临渊/夜幕星河/33十三段冲排名队/PVP4W1（可重置）YX2121【电五华乾雪爹1W】100玄晶*1/八红/黑谪仙盒/雪啸刚风/千蛟影•丹心/隐龙诀PVE45248YX2270【雪爹7K5】电五/猪金月兔金玫瑰金/八九十猪红/青盒子秃盒子伞盒子刀盒子毒盒子/小白龙盒子四代七夕盒子四代中秋粉盒子二代重阳盒子黑谪仙衣踏云衣/复刻彩云复刻潇湘复刻度晚复刻螺母复刻清商/5披风/挂宠白狐狸/夜话白鹭/PVP4WYX2919【双一飞鸢雪姐1w2】100大铁归墟玄晶/100小铁*118/飒金/雾影仙风•绛英/乌蹄抱月/夜话/隐龙诀PVE44523YX3226【斗转雪娘2W11】100CW临渊/鼠红/粉公主粉人面/复刻白白菜新罗姆/四代七夕黑谪仙/黑狐裘白狐裘/黄粱软椅/红狐/PVE5W（可重置）YX3701【电五雪娘1w4】100CW临渊/八红鸡金/雾影仙风•绛英/雪盒/2披风/千蛟影•丹心/挂宠白狐/脚印/PVE5w/pvp5wYX3229【电五幽月轮雪爹7K5】100CW临渊/鸡金/隐龙诀PVP46511YX3685【电五华乾侠女20W】五红一代金狐金猴金11金发3红发/白螺母谷雨白娃娃黄娃娃富婆套粉公主红年轮蓝兰庭粉人面明镜雪涛蓝九天红舞步望云霆螭冷霜黄长安/22复刻二代双色白菜二代双色罗姆/狄仁杰丝路踏云蓝谪仙黑谪仙乘风红腿蓝腿小白龙飞天棉袄一二代花朝二三四代七夕三代中秋四代蓝中秋二代重阳紫重阳三代元宵/青盒单衣/黑盒红盒蓝盒唐盒粉盒叽盒秃盒歌盒蓬莱盒喵盒貂盒毒盒猪盒/24披风六翼双色狐裘情人枕双天辉搞事红二代中秋披风大蝴蝶双十一黑/黄粱软椅踏炎/小熊猫执夷红狐白狐/瓜子囊/黑龙夜话九霄喷火小熊猫/4W6资历
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%87%87%E9%9B%86%E6%88%90%E5%8A%9F%EF%BC%81&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%8D%89&red_tag=e0313206225
+Web data received !
+Link:/p/6544218392?pid=130639745665&cid=0#130639745665
+Link:/p/6544208023?pid=130639594706&cid=0#130639594706
+Link:/p/6541785947?pid=130607548236&cid=130640951135#130640951135
+Link:/p/4972351459?pid=130638234288&cid=0#130638234288
+Link:/p/6544288812?pid=130640934253&cid=130640950638#130640950638
+Link:/p/6544004187?pid=130635818905&cid=0#130635818905
+Link:/p/6491797796?pid=130640950261&cid=0#130640950261
+Link:/p/6543931057?pid=130634682371&cid=0#130634682371
+Link:/p/6527600507?pid=130640950000&cid=0#130640950000
+Link:/p/6543744333?pid=130631909610&cid=0#130631909610
+Link:/p/6542068510?pid=130612410966&cid=130640950141#130640950141
+Link:/p/6542274697?pid=130631172578&cid=0#130631172578
+Link:/p/6542158515?pid=130613778384&cid=130640949630#130640949630
+Link:/p/6537571044?pid=130556036876&cid=130628295678#130628295678
+Link:/p/6502887867?pid=130640949498&cid=0#130640949498
+Connect:https://tieba.baidu.com//p/6537571044?pid=130556036876&cid=130628295678#130628295678
+Link:/p/6543773942?pid=130640949319&cid=0#130640949319
+Connect:https://tieba.baidu.com//p/6542158515?pid=130613778384&cid=130640949630#130640949630
+Web data received !
+Web data received !
+Reply:卖书 有兴趣吗 需要加q2387822729
+##TIMELINE(9)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%A5%A5%E5%88%A9%E7%BB%99&red_tag=e0313206225
+Web data received !
+Link:/p/6541728518?pid=130632722842&cid=130640164648#130640164648
+Link:/p/6544242946?pid=130640139011&cid=0#130640139011
+Link:/p/6543305883?pid=130640126963&cid=0#130640126963
+Link:/p/6538164827?pid=130585178405&cid=130640046186#130640046186
+Link:/p/6543949693?pid=130640009046&cid=0#130640009046
+Link:/p/6544005113?pid=130640000303&cid=0#130640000303
+Link:/p/6543981421?pid=130636254226&cid=130639961585#130639961585
+Link:/p/6542037351?pid=130639953726&cid=0#130639953726
+Link:/p/6544230117?pid=130639935241&cid=0#130639935241
+Link:/p/6541728518?pid=130611688307&cid=130640083928#130640083928
+Connect:https://tieba.baidu.com//p/6538164827?pid=130585178405&cid=130640046186#130640046186
+Web data received !
+Reply:骗术里有他的世界
+##TIMELINE(10)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%9D%A5%E7%A7%8D%E5%87%A0%E6%A3%B5%E5%87%BD%E6%95%B0%E5%90%97%EF%BC%9F&red_tag=e0313206225
+Web data received !
+Link:/p/6462415338?pid=130191101174&cid=0#130191101174
+Link:/p/6303009598?pid=127974100393&cid=0#127974100393
+Link:/p/6174413825?pid=126271828508&cid=0#126271828508
+Connect:https://tieba.baidu.com//p/6462415338?pid=130191101174&cid=0#130191101174
+Web data received !
+Reply:第一！
+##TIMELINE(11)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%9C%80%E8%BF%91%E5%92%8B%E8%80%81%E5%87%BA%E8%BF%99%E7%8E%A9%E6%84%8F&red_tag=e0313206225
+Web data received !
+Link:/p/6485912620?pid=130621721633&cid=0#130621721633
+Link:/p/6541187273?pid=130613787359&cid=0#130613787359
+Link:/p/6496390258?pid=130511053586&cid=0#130511053586
+Link:/p/6530497409?pid=130464675456&cid=0#130464675456
+Link:/p/6525832751?pid=130406921558&cid=0#130406921558
+Link:/p/6522377356?pid=130363738582&cid=0#130363738582
+Link:/p/6521903696?pid=130357926612&cid=0#130357926612
+Connect:https://tieba.baidu.com//p/6522377356?pid=130363738582&cid=0#130363738582
+Web data received !
+Reply:这段剧情居然还没被关不过我记得瑞尔斯这里好像是故意被黑化的，后面要背刺邪灵组织
+##TIMELINE(12)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%3A(&red_tag=e0313206225
+Web data received !
+Link:/p/6544225183?pid=130639853365&cid=0#130639853365
+Connect:https://tieba.baidu.com//p/6544225183?pid=130639853365&cid=0#130639853365
+Web data received !
+Reply:3月12日全天女王蜂专🚗车讯🇨🇳第一车牌:NN6(中午:12:30)打手押金80 💰纯坐40元不止50金 ➕100紫➕160蓝➕🎁联盟大礼物➕🎁各种购物礼打手套餐(最低套餐12个3级)野怪:(女王蜂)(毒液)女王蜂专车🚗•••••••••••••••••••••••••••••••••🎆第二车牌:NN6(晚上:6:50)打手押金80 💰纯坐40元不止50金 ➕100紫➕160蓝➕🎁联盟大礼物➕🎁各种购物礼打手套餐(最低套餐12个3级)野怪:(女王蜂)(毒液)女王蜂专车🚗•••••••••••••••••••••••••••••••••🇨🇳第三车牌:NN7(晚上:8点50)打手押金80 💰纯坐40元不止50金 ➕100紫➕160蓝➕🎁联盟大礼物➕🎁各种购物礼打手套餐(最低套餐12个3级)野怪:(女王蜂)(毒液)女王蜂专车🚗•••••••••••••••••••••••••••••••••▲核心，奖励：双蓝3 单紫5 双紫8，单金10，双金15(核心需要录屏，录屏不了的带联盟聊天打上日期截图)💰长期招聘车队拉手售票合作
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-signin&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E3%80%90%E5%A5%BD%E5%95%A6%2C+%E7%A4%BC%E5%B0%9A%E5%BE%80%E6%9D%A5%E5%96%94%7E%E3%80%91&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6542493142?pid=130639470299&cid=0#130639470299
+Link:/p/6542980430?pid=130622605537&cid=0#130622605537
+Link:/p/6542949631?pid=130622313074&cid=0#130622313074
+Link:/p/6143219438?pid=125799970722&cid=0#125799970722
+Link:/p/6035484532?pid=130585491273&cid=130596891451#130596891451
+Link:/p/5807539212?pid=123738388132&cid=0#123738388132
+Link:/p/6538571937?pid=130596080336&cid=0#130596080336
+Link:/p/5807806710?pid=122248988771&cid=0#122248988771
+Link:/p/6540507030?pid=130591499564&cid=0#130591499564
+Link:/p/5644564728?pid=119129019940&cid=0#119129019940
+Link:/p/6540241111?pid=130589085486&cid=0#130589085486
+Connect:https://tieba.baidu.com//p/5807539212?pid=123738388132&cid=0#123738388132
+Connect:https://tieba.baidu.com//p/6540507030?pid=130591499564&cid=0#130591499564
+Web data received !
+Web data received !
+AD:江南大学大学英语（三）2020年上半学期 100{答案}一、词汇与结构（共10道小题总分值40分）1.Bob took a part-time job ________ handbills for a cosmetic company.（4分）Achecking outBsetting upCputting downDgiving out2.The computer is very useful because it is able to store ____________.（4分）Amuch informationBa number of informationsCmany informationsDa lot information3.Since China has entered the WTO, the _______ on foreign businesses will gradually be reduced.（4分）ArestrictionsBaccessCexchangeDopportunity4.Everyone of us ______ tired and wanted a good rest（4分）AseemBwas seemedCseemsDseemed5.Take this medicine, _____ you will not recover.（4分）AandBsoCorDbecause6.By the time we arrived at the airport, the rain ________already______.（4分）Ahas …stoppedBhad… stoppedC/…stoppedD/ … stops7.I’d _______ it if you would turn the radio down.（4分）AamuseBundertakeCappreciateDsuspect8.The plane _______ take off at 8:30 a.m. has been delayed because of thick fog.（4分）Adue toBalreadyCfar fromDso far9.The Internet enables us to ________ the world without leaving home.（4分）AregisterBexploreCsecureDconduct10.The invention of the telephone was a great _______ to human communication.（4分）AstressBinquiryCintentionDcontribution二、完形填空（共1道小题总分值40分）1.Have you 1asked yourself why children go to school? You will probably say that they go 2their own language and other languages, arithmetic, history, science and 3subjects. That is quite true; but why do they learn these things? And are these things 4that they learn at school?We 5our children to school to 6them for the time 7 they will be big and will have to work 8themselves. Nearly all they study at school has some   9use in their life, but is that the only reason 10 they go to school?There is 11 in education than just learning facts. We go to school 12  all to learn how to learn, 13when we have 14school we can continue to learn. A man who really knows  15will always be successful , because 16he has to do something new which he has never had to do 17, he will rapidly teach himself how to do it in the best 18 . The uneducated person, 19, is probably unable to do something new, or does it badly. The purpose of schools, therefore, is not just to teach languages, arithmetic, etc.,  20to teach pupils the way to learn.（40分）(1)（2分）AEitherBonce CeverDthen(2)（2分）Alearn Bto learn  Clearning  Dand to learn(3)（2分）Aall anotherBthe other allCall the otherDthe all other(4)（2分）AthoseBonesCanything  Dall(5)（2分）AsendBpresentCappoint Dselect(6)（2分）Arely    BprepareCmake   Dget(7)（2分）AwhichBwhenCwhileDas(8)（2分）AorBonCwithDto(9)（2分）AtrueBfortunate Clucky Dpractical(10)（2分）AwhyBwhichCbecause  Dwhat(11)（2分）AmuchBmostCa lotDmore(12)（2分）Aabove BoverConDin(13)（2分）Aso asBand that  Cso that Dsuch that(14)（2分）AremainedBleftCgot out  Dsent(15)（2分）Ahow earnedBhow to learnCto how learnDhow learning(16)（2分）AwheneverBwhicheverCwhateverDhowever(17)（2分）AagoBlaterCbeforeDafter(18)（2分）ApathBcourseCroadDway(19)（2分）Aon another handBon other handCon the other handsDon the other hand(20)（2分）AandBthatCbutDso三、阅读理解（共1道小题总分值20分）1.Ever since humans have inhabited the earth, they have made use of various forms of communication. Generally, this expression of thoughts and feelings has been in the form of oral speech. When there is a language barrier, communication is accomplished through sign language in which motions stand for letters, words and ideas. Tourists, the deaf, and the mute have had to resort to this form of expression. Many of these symbols of whole words are very picturesque and exact and can be used internationally; spelling, however, cannot. Body language transmits ideas or thoughts by certain actions, either intentionally or unintentionally.. A wink can be a way of flirting or indicating that the party is only joking. A nod signifies approval, while shaking the head indicates a negative reaction.Other forms of nonlinguistic language can be found in Braille ( a system of raised dots read with the fingertips), signal flags, ,Morse code, and smoke signals. Road maps and picture signs also guide, warn, and instruct people. While verbalization is the most common form of language, other systems and techniques also express human thoughts and feelings.（20分）(1)Which of the following best summarize this passage?（4分）AWhen language is a barrier, people will find other forms of communicationBEverybody uses only one form of communication.CNonlinguistic language is invaluable to foreignersDAlthough other forms of communication exist, verbalization is the fastest(2)Which of the following statements is NOT true according to the passage?（4分）AThere are many forms of communication in existence todayBVerbalization is the most common form of communicationCThe deaf andmute do not need sign language for communicationDIdeas and thoughts can be transmitted by language(3)Which form other than oral speech would be most commonly used among blind people?（4分）APicture signBBrailleCBody languageDSignal flags(4)How many different forms of communication are mentioned here?（4分）A2-4B5-7C8-10Dover 10(5)Sign language is said to be very picturesque and exact and can be used internationally as it doesn’t represent _____________.（4分）ASpellingsBwhole wordsCideasDfeelings大学英语（三）2019上半年机考第二阶段一、词汇与结构（共10道小题总分值40分）1.The _________ problem lies in their inability to distinguish between reality and fantasy.（4分）A currentB fundamentalC infertileD unfold2.Alcohol ________ to 100,000 deaths a year in the US.（4分）A accomplishesB sortsC contributesD alters3.Deaf people are sometimes treated as being mentally ________.（4分）A currentB reluctantC deficientD invincible4.The _________ situation is very different to that in 2000.（4分）A remarkB fragmentC currentD negotiate5.Many students ________ enormous satisfaction from the course.（4分）A derivedB distractedC impliedD bred6.Animal rights ________ argue that zoos are really animal prisons and very often cruel.（4分）A fragmentsB legislationsC motivationsD advocates7.She is one of the most _________ painters of our time.（4分）A accomplishedB fundamentalC organizedD disdained8.If you want to be efficient, you need to ________ your tasks.（4分）A pile upB contributeC mirrorD prioritize9.I disliked the ________ criticism in his voice.（4分）A devastated B remarkedC impliedD remarked10.His new career as a writer is not successful and he has written only one novel ________.（4分）A so farB by farC in farD with far二、完形填空（共1道小题总分值40分）1.here are various ways to say things without actually using words. For example, if you want to __1__ a seat next to you at a sports event, you put a sweater or jacket across the seat. When you do this, your __2__ tells people that the seat is not __3__. Your sweater or jacket has marked the place as __4__ you for a while. The same message is given __5__ you spread a blanket on a beach. You are telling people which __6__ you are claiming. You are laying out a boundary (界限, 分界线) that marks a section of the sand as __7__. It includes not only the blanket area, but also a small area __8__ it.__9__ you happen to go to the park and occupy the middle of a bench, you are showing __10__ that you want the entire bench to yourself for a while. __11__ if you slide over to the side of the bench, you are letting people know that you are willing to __12__ the bench with others.All human beings need territories (领土), __13__ areas, of their own. All of us find ways to mark places as ours. Space says without __14__ what a person&#39;s territory is. Space also tells something about a person&#39;s __15__ towards others.Dr. Edward T. Hall was one of the first scientists to study how &quot;space __16__&quot;. He believes that each human being, like other animals, has various zones __17__ to move about, or to stay. Dr. Hall __18__ that there is an invisible bubble around each person. This bubble defines each person&#39;s own private territory. It is the __19__ that people want to __20__ between themselves and other people or things.（40分）(1)（2分）A findB reserveC assignD distribute(2)（2分）A actionB actC behaviorD performance(3)（2分）A sufficientB severeC availableD steady(4)（2分）A fitting intoB sending forC calling onD belonging to(5)（2分）A whenB thoughC ifD and(6)（2分）A propertyB destinationC spaceD basis(7)（2分）A youB othersC yourselfD yours(8)（2分）A aroundB besidesC behindD in(9)（2分）A AfterB IfC SinceD Although(10)（2分）A the otherB thoseC othersD them(11)（2分）A ThusB ButC ThereforeD Moreover(12)（2分）A shareB tackleC loanD entertain(13)（2分）A andB alsoC butD or(14)（2分）A soundB wordsC sentencesD meanings(15)（2分）A ideaB viewC attitudeD image(16)（2分）A tellsB saysC speaksD conveys(17)（2分）A howB whichC of whichD in which(18)（2分）A estimatesB claimsC urgesD inquires(19)（2分）A paceB proportionC rateD distance(20)（2分）A keepB getC takeD make三、阅读理解（共1道小题总分值20分）1.Normally a student must attend a certain number of courses in order to graduate, and each courses which he attends gives him a credit which he may count towards a degree. In many American universities the total work for a degree consists of thirty- six courses, each lasting for one semester. A typical course consists of three classes per week for fifteen weeks. While attending a university a student will probably attend four or five courses during each semester. Normally a student would expect to take four years attending two semesters each year. It is possible to spread the period of work for the degree course, though this is not in fact done as a regular practice. For every course that he follows a student is given a grade, which is recorded, and the record is available for the student to show to prospective employers. All this is imposes pressure from the strain of work, but in spite of this some students still find time for great activity in student affairs. Elections to positions in student organizations arouse much enthusiasm. The effective work of maintaining discipline is usually performed example by cheating, has to appear before a student court. With the enormous numbers of students, the operation of the system does involve a certain amount of activity. A student who has held one of these positions of authority is much respected and it will be of benefit to him or her in his or her career. （20分）(1)Normally a student would at least attend __________ classes each week.（4分）A 10B 12C 15D 20(2)According to the first paragraph an American student is allowed _________.（4分）A to live in a different universityB to take a particular course in a different universityC to live at home and drive to classesD to get two degrees from two different universities(3)American university students are usually under pressure of work because____________ （4分）A their academic performance will affect their future careersB they are heavily involved in student affairsC they have to observe university disciplineD they want to run for positions of authority in student organizations.(4)Some students are enthusiastic for positions in student organizations probablybecause_______（4分）A they hate the constant pressure and strain of their studyB they will then be able to stay longer in the university.C such positions help them get better jobsD such positions are usually well paid.(5)The student organization seem to be effective in ___________.（4分）A dealing with the academic affairs of the universityB ensuring that the students observe university regulationsC evaluating students, performance by bringing them before a courtD keeping up the students, enthusiasm for social activities
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E3%80%82%E3%80%82%E3%80%82%E3%80%82&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=77.5%25&red_tag=e0313206225
+Web data received !
+Link:/p/6541908135?pid=130609924651&cid=130643140008#130643140008
+Link:/p/6543678164?pid=130631027518&cid=0#130631027518
+Link:/p/6539509907?pid=130578463090&cid=0#130578463090
+Link:/p/6538863209?pid=130569777391&cid=0#130569777391
+Link:/p/6538749876?pid=130568437117&cid=0#130568437117
+Link:/p/6528208091?pid=130435609963&cid=0#130435609963
+Link:/p/6522936783?pid=130394148240&cid=0#130394148240
+Connect:https://tieba.baidu.com//p/6541908135?pid=130609924651&cid=130643140008#130643140008
+Web data received !
+Reply:5。大唐175第一效率物理。点杀最强门派，店小二得意弟子任务扫主，你要只挂溅射那请放过这个门派可堆伤害，也可以堆暴击
+##TIMELINE(14)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%97%AF&red_tag=e0313206225
+Web data received !
+Link:/p/6543925338?pid=130643599124&cid=0#130643599124
+Link:/p/6544039162?pid=130643556141&cid=130643598395#130643598395
+Link:/p/6515827757?pid=130641586515&cid=130643596758#130643596758
+Link:/p/6544255158?pid=130640716024&cid=130643596358#130643596358
+Link:/p/6482502262?pid=130631166566&cid=130643593310#130643593310
+Link:/p/6520999833?pid=130643592943&cid=0#130643592943
+Link:/p/6542929269?pid=130637789643&cid=130643593078#130643593078
+Link:/p/6538273845?pid=130634417803&cid=130643590925#130643590925
+Connect:https://tieba.baidu.com//p/6543925338?pid=130643599124&cid=0#130643599124
+Web data received !
+Reply:hxdm，👴从今天开始更新🐭人日记，今天的日记发在评论区里，喜欢的兄弟们多多支持嗷，故事根据真实经历改编。
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=stop&red_tag=e0313206225
+Web data received !
+Link:/p/6541742590?pid=130618063988&cid=0#130618063988
+Link:/p/6542513486?pid=130617665846&cid=0#130617665846
+Link:/p/3933634641?pid=130617385290&cid=0#130617385290
+Link:/p/6541792859?pid=130617332540&cid=0#130617332540
+Link:/p/6542484878?pid=130617068921&cid=0#130617068921
+Link:/p/6539141897?pid=130573954078&cid=130615986498#130615986498
+Link:/p/6542513486?pid=130617533916&cid=0#130617533916
+Link:/p/6542513486?pid=130617450922&cid=0#130617450922
+Connect:https://tieba.baidu.com//p/6541742590?pid=130618063988&cid=0#130618063988
+Web data received !
+AD:#王一博谢允##王一博有翡#画里走出的男子 ，温柔，在为自己想要的一切努力坚持中[心][心] 未来可期@UNIQ-王一博
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D9648510197AD8A6F0637682CBEA35147.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DE3A0497B5C03C5C0537A0C01AB589EE9.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DE11609444947D424189E4666B5FB4151.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DA8A9D5DDC762BC357ACC00E1E8940A03.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D98FCF046642C3253832ECFDDE046D82B.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D9DFDD9965EB24EFF0B87CCD773908310.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D74AD801DD67696D83147A8AE4552DAA1.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D39B2AFF1B12A5A613A248388F2D74EAD.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DFA4593A9826574BD7EFF10B0987A438F.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DD508AD0AB432973DBD4A0754185A5EB4.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D3BF8928526B5730A6FDD2978D16B57B1.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D4A0B5DA4B8D6670976E8E3FDE674CA56.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DF6B8565E05778DA807CC40AAC0705D86.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D5ECDF106D5CCE2C15CB575D068D221FD.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D041D5E09F8BA886FB8F7952CBCA862D3.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DEC6E3F1867FE1C9D1C6A2CC70BB00799.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D2F18BCD3F4F898B8FEC66EA137F9A357.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D92B14C68EA4F5750D31A52445A33843A.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D711D5132737FA54B96AD4AB8488177FB.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D6A8626720217451CDD6B58F4FD4DD68B.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D0BAB82CD1B813012740FBC09ECB7CFE4.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D75AE3E27342E519F4A043965AC8528ED.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DE6E107B3F311D9C924B527EDA64CFB16.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D56C0E3BEA80A05B65631DA659F3AE04E.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D7D6B2C2B2831E9BDE9172E6570174368.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D60886284D6157DC47A1B154BDFE3611D.png%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D3ED7252654DDCA3A0CB9DAD1C8A00C95.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D9891480820EC9055EA7AD5635E98935B.png%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D2B2C603693E95A57A5CC58F00EB03090.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D19B5808D9514F813435ABCC44D45E2F5.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D5D517FE2CD65AE7E96AE8A8F27CD56B8.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D9E1FB5B94FF6709DC7223D58AB41A20B.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D1ED732FDDF8EF5507A72FCFAD5E6B26A.gif%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DF86D85A97EE5F0518C22D1404E8E8B21.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3D230F9F619884EDD9BD9409DCB456E9A2.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Aimage%2Cfile%3DA0B58D4B2C110E84EA1E7AE60B23F371.jpg%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+##TIMELINE(15)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B8%8D%E7%84%B6%E6%96%B9%E4%BE%BF%E5%A4%9A%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6545026302?pid=130650030392&cid=0#130650030392
+Link:/p/6545101481?pid=130649976679&cid=0#130649976679
+Link:/p/6545101422?pid=130649976158&cid=0#130649976158
+Link:/p/6545100096?pid=130649962411&cid=0#130649962411
+Link:/p/6543648587?pid=130649957394&cid=0#130649957394
+Connect:https://tieba.baidu.com//p/6545101481?pid=130649976679&cid=0#130649976679
+Web data received !
+Reply:很多新手的司机想报名考试，但都不知道怎么报名，去那报名，要提交什么资料，我们今天说说具体的流程吧！下面我们就说说，至于缺少那些的，继续看下面报名费：580元1：身份证2：驾驶证3：体检报告4：毕业证5：相片6：不需要居住证（很多人问是不是要居住证，很明确告诉你，不需要，已经不需要居住证）以上部分提供不了的也可以用其他办法的，但1.2.5就必须要提供的需要的证件以下解析毕业证：无毕业证的，如果你户口本上学历是初中以上的，可以带户口本（户口本不在身边的可以叫家人扫描过来），如果户口本也是小学的也可以，但必须要户口本的户主页和你自己的那页的扫描件）体检报告：要求提供广州市二级甲等以上医院出具的1年内体检报告，不合格或可以联系下面客服相片：到照相馆拍，和老板说是网约车资格证用的，会有回执的，找不到能拍的相馆，可以联系客服，公司附近就有的驾驶证：非广州本地驾驶证，驾驶证需要迁移到广州，手续很简单，先在微信关注 广州交警 预约一下办理时间，带上身份证，驾驶证就可以了，相片可以到车管所拍的，很方便的，建议预约岑村车管所，为什么呢，看下面节约时间技巧：如果需要迁移驾驶证到广州，预约时间最好在下午3点前，预约岑村车管所，办理很快的，然后就去报名点附近拍网约车资格证相片，再去报名点提交资料，一个下午就可以办理完整个流程，广州本地驾驶证的，拍个照片就可以带上证件直接过去证件说明就这么多了，下面就说报名点了不需要网上预约考试，直接到报名点预约，带齐资料当场预约录入资料就可以了再说一次，不需要网上预约，预约大部分都是很慢的，报名点工作人员，直接提交资料更快的，然后培训这个你去不去都可以的 报名地址：广州市天河区华观路天虹科技园A栋002房（直接导航“万天网约车”）有什么不明白的，可以联系报名点工作人员：17502061149这里报名很快可以安排考试，正常都是一个月内可以考，不像很多报名点，两三个月都还没安排考试
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%88%AB%E5%8D%96%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6545103965?pid=130650002574&cid=0#130650002574
+Connect:https://tieba.baidu.com//p/6545103965?pid=130650002574&cid=0#130650002574
+Web data received !
+Reply:《愿无余生也无你TXT》姜如蜜裴恒全集下载阅读【完本】《愿无余生也无你TXT》姜如蜜裴恒全集下载阅读【完本】方雨清接了姜如意的话[愿无余生也无你姜如蜜裴恒]：“秦*说过的，你要是再敢出现在海市，她就不是断你指节这么简单了！”提起旧事，姜如蜜笑得更欢了：“是吗？那我等着！不过比这个，我想你们还是赶紧叫人来搬家吧，不然明天我发现屋子里面还有任何东西，我直接就让人给砸了。”她说着，抬手撩了一下头发：“毕竟，我可不喜欢用别人用过的东西。”“那你有本事也别住这*！”姜如蜜收了几分笑意，看着姜如蜜仿佛看着一个傻子一样：“我真金白银花了一千五百多万买的房子，为什么就不能住了？”她不想跟她们扯下去：“话我带到了，别到时候怪我没通知你们。”说完，姜如蜜转身就走了。对方雨清她们而言，被赶出家门，这仅仅只是个开始而已！姜如蜜刚走，方雨清就打*让姜同生回来了。姜同生那一天是被人拿刀架在脖子上才不得不卖了*的，当初*是抵给*那边了，怎么一下子到了姜如蜜那儿去了？听完方雨清的话，姜同生还是不敢相信：“你说真的？”“什么真的假的！姜同生，这房子是不是你卖出去了？！”姜同生有些心虚，可是一想到这是他姜家的房子，底气又重了几分：“我就卖了，你能怎么着？如果这房子真的是落到姜如蜜的手上去了，那就好了。”方清雨气得一口气差点儿喘不上来，跌在沙发上：“你疯了吗姜同生？！这是*给你留的房子！你真的是疯了！”“疯什么疯！姜如蜜也是我女儿，她买了，这房子还不是一样是*的？！”方清雨冷笑了一声：“你想的真是多，你的女儿今天特意过来通知我们明天要搬走，不然她就让人把我们扔出去！”“她敢？！”看到姜同生这样，方雨清也起了几分心思。她就不信了，这姜如蜜还真的能赶出赶亲爹出家门的事情！两个人吵了半个多小时，总算是达成一致共识，就是不搬！姜如意听到楼下动静没了才下来问方雨清搬不搬。方雨清看了一眼沙发上坐着的男人，*地笑了一下：“搬什么？没听*说的吗？姜如蜜难道还能赶她亲爸出门不成？”一一一一一一一一一一一一阅读小说到维【5信】【公1】【众2】【号3】：【精灵吧】去里面发送书号：【3229】即可阅读全文！一一一一一一一一一一一一
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E7%BB%99%E4%BD%A0%E5%8D%96&red_tag=e0313206225
+Web data received !
+Link:/p/6542155960?pid=130650079059&cid=0#130650079059
+Connect:https://tieba.baidu.com//p/6542155960?pid=130650079059&cid=0#130650079059
+Web data received !
+Reply:好像说奸商没有呀未来，可是他们奸的流油阿
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%97%AF%EF%BC%8C%EF%BC%8C%EF%BC%8C&red_tag=e0313206225
+Web data received !
+Link:/p/6544841308?pid=130650211775&cid=0#130650211775
+Link:/p/6531374411?pid=130644748330&cid=130650104948#130650104948
+Link:/p/6544897541?pid=130647974272&cid=130650088649#130650088649
+Connect:https://tieba.baidu.com//p/6544897541?pid=130647974272&cid=130650088649#130650088649
+Web data received !
+Reply:看看隔壁高达模型的吧务 非模型讨论贴直接删除 违反吧规直接十循
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AF%B4%E7%82%B9%E5%A5%87%E6%80%AA%E7%9A%84%E7%BB%99%E7%88%B7%E5%90%AC%E5%90%AC+&red_tag=e0313206225
+Web data received !
+Link:/p/6530497059?pid=130645906155&cid=0#130645906155
+Link:/p/6429069073?pid=130634828619&cid=0#130634828619
+Link:/p/6369018585?pid=130600208467&cid=0#130600208467
+Link:/p/6537530778?pid=130555206653&cid=0#130555206653
+Link:/p/6537527272?pid=130555155414&cid=0#130555155414
+Link:/p/6530536351?pid=130485761154&cid=0#130485761154
+Link:/p/6530644165?pid=130466606141&cid=0#130466606141
+Link:/p/6528664527?pid=130441621881&cid=0#130441621881
+Connect:https://tieba.baidu.com//p/6530644165?pid=130466606141&cid=0#130466606141
+Web data received !
+Reply:【完整版】《重生为聘：顾兄英年莫早逝》全文在线阅读已完结【完整版】《重生为聘：顾兄英年莫早逝》全文在线阅读已完结沈柏按捺住兴奋激动跟到顾恒舟营帐，(重生为聘：顾兄英年莫早逝沈柏顾恒舟)她就知道这人不会眼看着她挨饿不管的！顾恒舟的吃食和军中将士无异，三个馒头，一荤一素一汤，都是伙头兵的大锅里盛出来的，油腥少得可怜。“顾恒舟，你就吃这个啊？”沈柏一不留神把心里的话说出来，顾恒舟回头凉凉的看着她：“沈少爷不能吃这个？”你听听，人家是好意关心，他偏偏喜欢用恶意揣测别人。沈柏不做辩解，抓起两个还热乎的馒头一个咬了一口，把腮帮子撑得鼓鼓的，像只仓鼠：“我什么都能吃，整个昭陵，再找不到比我更好养活的人了！”顾恒舟看了她一会儿，淡淡开口：“军中不许浪费食物，你最好能全部吃完。”军中的馒头做得比外面卖的大一倍，沈柏只饿了两顿，万万吃不完两个馒头，连忙把自己咬过的部分掰下来，剩下的都放回碗里，咽下嘴里的东西谄媚一笑：“我……我刚刚是替督监尝尝味道，没想到这些伙头兵馒头蒸得还挺好的。”说完，自己端了椅子在他面前坐下，出了操，喉咙发干，沈柏先喝了口汤润润嗓子才意味深长的看着顾恒舟：“顾兄，你好歹是个堂堂督监，怎么不给自己开小灶？人家新瀚营的伍长都吃得比你好呢。”“你可以去他们那里吃。”顾恒舟黑幽的目光笔直的望进沈柏眸底，沈柏被看得老脸发烫，垂眸避开：“我不是嫌弃这些吃的不好，只是觉得很奇怪，瀚京校尉营本是一体，却在外人不知道的时候分成了两派。顾兄都毫无国公世子的架子与将士同吃同住，手下的人却堂而皇之的搞特殊对待。”说到这里，沈柏顿了顿，眸子迸出一丝*耀眼的星火：“顾兄，你难道不觉得，瀚京校尉营就是昭陵山河腐朽、积重难返的缩影吗？”“沈柏，你可知你在说什么？”“当然！”沈柏毫不犹豫的点头，“我既倾心顾兄，自会想顾兄所想，忧顾兄所忧。”顾恒舟周身的温度陡然降到冰点，眉头拧成麻绳，恨不得让目光凝成实物，在沈柏身上扎出几个血洞来。偏偏沈柏还不怕死，特别诚恳的继续说：“虽然眼下我对顾兄的爱还不被世俗所容，但顾兄放心，我一定会想办法解决的！”“你想屠尽天下人？”“怎会？我若是那等凶狠残暴之人，怎配得上顾兄的满腔大义？”“那你要如何？”“我……”自当设法恢复女儿身，穿上凤冠霞帔，堂堂正正的嫁你为妻！沈柏语塞，她现在还没想到万全之策，不能将自己的真实身份告诉他，不然日后说不定连镇国公府都要被连坐，治一个知情不报的包庇之罪。“如何？”顾恒舟挑眉，步步紧*，沈柏心虚的塞了一口馒头，把话题又转回到一开始：“顾兄，校尉营这样下去不是法子，我看赵定远招进新瀚营的人根本就是拿着军饷混吃等死之辈，依我之见，应该借此机会好好整顿一番。”话题转得很生硬，还心虚的眼珠子乱转，那些爱慕的话分明只是这人一时兴起的恶作剧。顾恒舟看破，并不*，顺着沈柏的话道：“沈少爷想戴罪立功？”“镇国公战功赫赫已到封无可封的地步，周校尉又曾是国公麾下的人，顾兄的身份*，不宜直接出面处理此事，我自然是很乐意做顾兄手里的一把刀。顾兄所想，便是我刀之所向！”一一一一一一一一一一一一阅读小说到维【5信】【公1】【众2】【号3】：【约精灵】去里面发送书号：【3215】即可阅读全文！一一一一一一一一一一一一
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AF%B4%E7%82%B9%E5%A5%87%E6%80%AA%E7%9A%84%E7%BB%99%E7%88%B7%E5%90%AC%E5%90%AC+&red_tag=e0313206225
+Web data received !
+Link:/p/6530497059?pid=130645906155&cid=0#130645906155
+Link:/p/6429069073?pid=130634828619&cid=0#130634828619
+Link:/p/6369018585?pid=130600208467&cid=0#130600208467
+Link:/p/6537530778?pid=130555206653&cid=0#130555206653
+Link:/p/6537527272?pid=130555155414&cid=0#130555155414
+Link:/p/6530536351?pid=130485761154&cid=0#130485761154
+Link:/p/6530644165?pid=130466606141&cid=0#130466606141
+Link:/p/6528664527?pid=130441621881&cid=0#130441621881
+Connect:https://tieba.baidu.com//p/6369018585?pid=130600208467&cid=0#130600208467
+Web data received !
+Reply:来了
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AF%B4%E7%82%B9%E5%A5%87%E6%80%AA%E7%9A%84%E7%BB%99%E7%88%B7%E5%90%AC%E5%90%AC+&red_tag=e0313206225
+Web data received !
+Link:/p/6530497059?pid=130645906155&cid=0#130645906155
+Link:/p/6429069073?pid=130634828619&cid=0#130634828619
+Link:/p/6369018585?pid=130600208467&cid=0#130600208467
+Link:/p/6537530778?pid=130555206653&cid=0#130555206653
+Link:/p/6537527272?pid=130555155414&cid=0#130555155414
+Link:/p/6530536351?pid=130485761154&cid=0#130485761154
+Link:/p/6530644165?pid=130466606141&cid=0#130466606141
+Link:/p/6528664527?pid=130441621881&cid=0#130441621881
+Connect:https://tieba.baidu.com//p/6429069073?pid=130634828619&cid=0#130634828619
+Web data received !
+Reply:十八这一夜我翻翻覆覆，没有睡踏实。我怀疑那个人的声音对我有魔力，让我这一会儿来来去去起了好几身鸡皮疙瘩了......等我好不容易睡着了，天都快亮了。吴宗宥准时出现在我的病房中成功的把我吵醒了，紧接着我哥也来了，他们两个在我这里晃悠了大半天，我还真是挺烦躁的。我特别想安安静静的自己待会儿。于是吃过午饭，我就把他们俩轰走了。反正今天的我已经可以扶着床边自己起卧了，就更不需要他们这哼哈二将，左右监护了。下午的时候，丁卯过来探望了我。“没想到，我们以这样的方式重逢啊。”他的眼神很温和。我在丁卯的帮助下，侧身半靠在床头上，和他聊了起来：“诶，丁卯，你说怪不怪，我只记得当时我和你一同从二层甲板上往下走，然后我脚下踩空摔了下去，可我怎么现在就躺在医院里了呢？”    “我还想问你呢？！那天你告诉我你要回北平，怎么现在你又在天津遭了劫？”“咳呀，我是不是摔傻了啊？”  “呦，丁少爷也在哪！”一个梳着麻花马尾辫，不修边幅的男子踱步进来，打断了我和丁卯的闲聊。他身后还跟着个大眼睛的姑娘。“你们怎么来了？”丁卯和他们打了个招呼，看的出来他们很熟。“你能来，凭什么我们不能来，再说，就我和付队长的关系，他表妹遇到这么大的事，我怎么也要过来慰问一下啊，对吧。”他虽然一副吊儿郎当的样子，却不招人讨厌。我听明白了。估计这两位我也认识，而且他们还认识我哥。“你们好，你们好，”我也赶紧和他们打招呼，“还麻烦二位跑一趟，真是十分感谢啊。”“这么客气干什么，”那个姑娘说了话，“你一个姑娘在天津，也没几个朋友，只有付队长一个亲戚，”之后小声嘀咕了一句：“还这么不靠谱……”她看了看我的反应，我对她这话也没什么可反驳的，她说的对，我哥有时候是挺不靠谱的，但这依旧不能撼动他在我心中的美好形象。姑娘清了清嗓子接着说：“以后我们多走动走动，有事也好有个照应呀。”“好的呀，”我连忙点了点头，“但是，你们俩能不能先告诉我，你们……是谁……”他们两个对我的话大为吃惊，是丁卯告诉他们我失忆的事情的。他们俩只得又为我重新做了自我介绍。我才知道他们一个是五河捞尸队的小河神郭得友，一个是神婆顾影。原来我还认识天津卫这两位人物呢啊，我心里挺高兴。“你真的什么都不记得了？”郭得友似是疑惑又不甘心的问了我一句。     “有关天津的事，反正是什么都不记得了......”“哎......”他轻微叹了口气。“干嘛？好好的叹什么气？”丁卯问他。郭得友稍显沮丧的回他：“本来有了点线索，看来现在又要断了......”“什么线索？”丁卯连忙问到。郭得友却扭头盯着我，试探着问了一句：“你听没听说过....魔古道？”。“什么道？茶马古道倒是听说过，至于你说的......没听说过。”“嗨呀，你现在问这个有什么用，就算认识魔古道，她能记得吗？”顾影埋怨了郭得友一句。郭得友没有理睬顾影，锲而不舍的继续问我：“你记不记得，你曾经去过英国领事馆举办的酒会？”我摇了摇头，“问这个干嘛？”我反问郭得友。“对啊，问这个干嘛？”丁卯也在一旁发了问，“你们和她第一次见面不就是在那个酒会上吗？”“对，但重点不是这个。”郭得友故作神秘的说。“那是什么？”我和丁卯异口同声的问到。“重点是，在群尸乱舞的那个场面，你，一个柔弱的女子，是怎么能做到毫发无伤安然无恙的离开的？！”他瞪大了双眼，盯的我直发毛。“什么，群尸乱舞？”我颤巍巍的小声问到，“是我做错了什么事了吗？”“郭得友，你别跟审犯人似的，行吗？”丁卯气哼哼的替我打抱不平，“到底是怎么回事，你先说清楚行不行？”郭得友将双臂环抱于胸前，徐徐说到：“那天，我故意将王美仁打晕锁在了二楼的房间里。”他的话刚至此，我就发现顾影的眼中已是升腾起了满满的怒气。郭得友瞥了一眼愤愤不平的顾影，继续说到：“而当王美仁醒过来之后，正好从窗口看到了----你”郭得友转头盯住我。“我怎么了？！”“你被一个穿着西装，带着礼帽的男人接进了车里，然后扬长而去。”“那又怎么了？”丁卯问到。郭得友瞪了他一眼，数落到：“怎！么！了？要不是您丁大少爷养尊处优，身孱体弱的，那天在酒会上能把人给跟丢了吗？”丁卯一下愣住了，若有所思的不再言语。“您们想要表达什么呢？你们说的这些，我完全没有印象了啊。”我无助的看了看丁卯。“没事，没什么大事，记不住就算了。”丁卯安抚我到。“什么叫没什么大事？！”郭得友反驳完他，继而又语重心长的对我说到：“虽然你记不住到底发生了，但是，现在我要告诉你，魔古道，那是邪教，不是什么好东西，离远一点。”“哦。”我点点头，“这个魔古道到底干了什么？骗了大家的钱？”他们三个摇了摇头。“杀人放火了？”“薛家小姐的死，丁卯父亲的死，胡夫人的死，黄大少的死，还有海河里那一百过个漂子都和他们脱不了干系。”郭得友咬牙说到。“喔噻，这些人都是魔古道杀的？！”我惊叹道，“太可怕了！！”郭得友犹豫了一下，答到：“也...不算是魔古道杀的，但都和他们脱不了干系，这些人都是他们间接害死的！”“那魔古道为什么要杀这些人呢？”我问，“邪教不是应该给人洗脑，通过控制人们的思想来左右政权吗？杀人，一定不是他们的最终目的吧。”郭得友神情放松下来，玩笑到：“呦，你还挺明白的，看来，我的担心多于喽？你这留过洋信奉科学的人是不会轻易被他们洗脑了。不过，至于他们到底要干什么？我也不知道，但我一定会查清楚的。”我对鼓着腮帮子踌躇满志的郭得友点了点头。这小河神神神叨叨的，还挺可爱，哈哈。  “行了，你好好休息吧，我们有空再来看你。”丁卯催促着郭得友和顾影离开。顾影已经迫不及待的开始审问郭得友：“王美仁临走那天去找你，就告诉了你这事？”我目送他们仨人离去，脑子里却是一团浆糊。郭得友刚刚跟我说的到底都是些什么。魔古道，又和我有什么关系......
+##TIMELINE(16)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%98%AF%E7%9A%84&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%81%87%E7%9A%84&red_tag=e0313206225
+Web data received !
+Link:/p/6066920218?pid=130651628901&cid=0#130651628901
+Link:/p/6519565547?pid=130651624713&cid=0#130651624713
+Connect:https://tieba.baidu.com//p/6519565547?pid=130651624713&cid=0#130651624713
+Web data received !
+Reply:求助！在某鱼上买了瓶纪梵希小熊宝宝 但是怀疑是假的不知道怎么鉴别 求教
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%A4%AA%E6%9A%B4%E5%8A%9B%E4%BA%86+%E7%9B%B4%E6%8E%A5%E6%8A%8A%E5%BC%B9%E5%B9%95%E6%A1%86%E6%B3%A8%E9%87%8A%E6%8E%89%E4%BA%86&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-stat&red_tag=e0313206225
+Web data received !
+Link:/p/6519447453?pid=130374507496&cid=130650636567#130650636567
+Link:/p/6544472162?pid=130643501724&cid=130649344232#130649344232
+Link:/p/6544970905?pid=130648664858&cid=0#130648664858
+Link:/p/6517389820?pid=130646182886&cid=0#130646182886
+Link:/p/6544583381?pid=130644158133&cid=0#130644158133
+Connect:https://tieba.baidu.com//p/6544970905?pid=130648664858&cid=0#130648664858
+Web data received !
+Reply:这把枪用的时间长了，磨损越来越高就成了原皮
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%B2%9F%E7%B1%B3%E7%B2%BD&red_tag=e0313206225
+Web data received !
+Link:/p/6437005432?pid=129306808600&cid=0#129306808600
+Link:/p/6241843276?pid=127343617018&cid=0#127343617018
+Link:/p/6168546208?pid=126181616580&cid=0#126181616580
+Link:/p/6160153249?pid=126055541274&cid=0#126055541274
+Link:/p/5120979709?pid=107589797554&cid=0#107589797554
+Connect:https://tieba.baidu.com//p/6160153249?pid=126055541274&cid=0#126055541274
+Web data received !
+Reply:钓鱼
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AE%B2%E7%82%B9%E5%A5%BD%E5%90%AC%E7%9A%84+&red_tag=e0313206225
+Web data received !
+Link:/p/6545245063?pid=130651965411&cid=0#130651965411
+Link:/p/6497339207?pid=130651585756&cid=0#130651585756
+Link:/p/6537213485?pid=130651092735&cid=0#130651092735
+Link:/p/6545205016?pid=130650970546&cid=0#130650970546
+Link:/p/6533730996?pid=130650956227&cid=0#130650956227
+Link:/p/6545028998?pid=130650669762&cid=0#130650669762
+Link:/p/6544994613?pid=130649773106&cid=0#130649773106
+Connect:https://tieba.baidu.com//p/6533730996?pid=130650956227&cid=0#130650956227
+Web data received !
+Reply:dd
+##TIMELINE(17)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%85%B7%E5%95%8A%EF%BC%8C%E5%93%A5%E4%BB%AC%EF%BC%8C%E5%85%A8%E6%96%B0%E7%88%B7%E7%88%B7&red_tag=e0313206225
+Web data received !
+Link:/p/5316693896?pid=127979840267&cid=0#127979840267
+Link:/p/5342763915?pid=112583818996&cid=0#112583818996
+Connect:https://tieba.baidu.com//p/5342763915?pid=112583818996&cid=0#112583818996
+Web data received !
+Reply:文/笺己Doc.1    夏日告白“或许，你愿意和我一起吃个饭？”小维停止了脚步，脸突然变得通红。“嗯，我是想，你可能现在有空。”男孩挠了挠头，露出一颗小虎牙，解释道。“是啊，我确实有时间。”小维的声音也温柔了几分，就像小小的涓流滑过男孩的心间。“太好了，一起走吧。”他笑了，笑得很温柔，和梦里的一样。他们一前一后，穿过操场，穿过小巷，穿过人流，小维双手抱书安静跟在男孩的身后，和她平时张牙舞爪的形象一点都不一样。男孩抱着篮球，他白色的衬衣被球上的污渍蹭脏了一块，女孩就盯着那一点污渍，直愣愣踩在他的影子里。阳光穿过他带着汗滴的头发，闪闪发光，夕阳西下，有骑单车的青年穿过他们的身边冲着小维吹口哨，她的脸突然又红了一下。“你想吃什么？”嗯？小维晃过神来，看着眼前的菜单，上面写着今日主推“夏至套餐”。原来今天就是夏至了呀。一年中最灿烂的日子，无限阻止黑夜的降临。“就这个吧。”她指了指，淑女得和她平日里泼辣的作风一点都不一样。“好的。”他又笑了，和他平日里酷酷的作风一点都不一样。小维望着窗外久久不落的太阳，想着幸亏有这些光线掩护，才能隐藏她通红的脸和局促不安的神情。她喜欢他两年了，她一直是他的好哥们，好到有时他都忘记她的性别。“你说他真的知道我是个女的吗？”小维有次抠着脚丫问我，我也无法作答，只能尴尬的望着她跷起的脚丫子。“或许这样也不错。啊，我的男人！”望着她忘情的高歌，把养乐多喝出青岛啤酒的架势，我冷漠的支着头不发一言。夏至这天，或许是白昼实在太长，人们纵情声色，把原本安静的小巷挤得水泄不通。我看见小维的时候，她正穿着人字拖，恍若大汉般左右摆着从外面走回来。只是她满面通红，还带着一种奇特的表情，让我忍不住多看了几眼。“你怎么了？”她没有回答我，眼神迷离。“小维？小维！”“哎！”她晃过神来。“你到底怎么啦。”我插着腰。“我······”她突然抬起了亮晶晶的眼睛，把我着实吓了一跳，“我告白成功了。”我稳了稳身子，没把自己手里的硬币扔出去：“告白？和谁？和月？”“是······啊······他就捏了捏我的手······怎么办，我觉得我要死了。”“没事······死了都要爱嘛······”真不知我从哪里找来的蹩脚的笑话，一点也不应景。夏至的夜晚来的格外漫长，小维推开窗户，脸蛋红扑扑的抬头，突然指了指天边：“啊，流星。”过了很久，小维突然回过身来，认认真真地望着我的眼睛：“小兔子，你告诉我，我是不是在做梦？”虽然小维是我的朋友，但是必要的时候，我还是要告诉她真相的，我倒吸了一口凉气，回答道：Doc.2  春梦破碎“是的！你确实在做梦！快醒醒！”小维感到周身一阵眩晕，下一秒她就在一片混沌中睁开了眼睛。啊，好刺眼。她摸了摸眼睛，感受到了眼眶里的异物，又向下摸去蹭到了自己嘴角的一滩口水。她撩了撩短发，发现被子已经被自己踢到了地上，自己正卷着一角床单美美的做梦，床边的小兔子玩偶正无辜躺在她的手边。“是你叫醒我的吗？小兔子？”小维锤了我一拳，我感到腹部一阵剧痛，不满的抽了抽嘴角。“哎呀，这种春梦，就让我让沉醉一会吧，有什么关系呢。”她从床上一跃而下，望着镜子里粗糙的自己，用力搓掉了嘴角的口水印记。身后的日历牌正是“夏至”这一天。今天说不定有好事情要发生，小维拉开窗帘，眯起了眼睛。“小维，来吃早饭吧。”“不吃了，我和月约好了去打篮球。”风风火火的小女子小维冲进了仓库，从中间仔细挑出了一个篮球冲出了家门。夏至的阳光烈焰一般燃在她的短发上，她像一根在阳光下奔跑的火炬本能的向前冲去。那个破旧的社区篮球场上，她的好哥们月在等着她。“嗨，小子，你很不错哦。”两年前她因为念书的原因搬到了这个附近，也是那一年的夏天，她在篮球场遇到了月。一点也不浪漫的开场白，月转过身来，好看的笑了。他长得很高，皮肤很白，就像他的名字一样，月。又高又明亮，整整照耀了小维两年。在这之前，小维从未想过自己会有青春期这种东西，即使考试成绩下降了，班主任找谈话的开场白也是：“我们都知道你没有谈恋爱。”我们？哪个我们？自然不是和小兔子我了。很多个夜晚，我这个女汉子主人都暴露出格外少女心的一面。“你说他要是知道，我对他不单纯甚至另有所图，他会不会讨厌我？”“你说他要是知道，他把我当兄弟我却想泡他，他会不会火上三丈？”“应该不会，肯定不会，他那么迟钝，又不分男女！”然而小兔子我知道，大概就只有小维会觉得月不懂爱情、不欣赏女孩子。就算慢半拍的男孩子也知道食色性也，也知道美丑的差别。但那一天总会来的，就像她手里的球总会坠地一样。篮球场上的月正目不转睛的看着一个女孩，虽然只是背影，但是那长发飘飘，那多姿的身材还是让人浮想联翩。月手上拍着的篮球慢了半拍，他抿着嘴，那是小维从未见过的神色，许久，他似乎下定决心走了过去和女孩搭讪了起来，教女孩打篮球，教女孩正确的投篮姿势，那种温柔，是突然从后面给小维额头一击的恶作剧少年从未展现的温柔。所以说，所有的人，还是喜欢漂亮的脸蛋，淑女的微笑，小维几分懊恼的用球鞋蹭着地面的沙子，不明白那个穿着好看凉鞋的女孩是如何打球的，可是月并不在乎这一切，他在乎的，只是那天使般的微笑。“小兔子，你说我该怎么办呢？”最终小维还是没有去，蔫蔫的打道回府。而我？一只神奇又忠心耿耿的兔子，当然不能只用自己柔软的下巴蹭着主人来安慰她啦。“小维，你想改变自己吗？”作为一只有魔力的兔子，我变戏法般从怀里掏出了一瓶绿色的药水，“只要喝下它，你就能变成你想成为的那种淑女。”喝下它，就能成为月喜欢的那种女孩，可是那样的女孩是自己吗？小维迟疑了一下——Doc.3  美梦成真“喝！”小维握了握拳头，从我手里接过那绿色的药水，眼睛一闭，全数喝下。慢慢的，她开始感受到了自己身体的变化，有一种奇妙的力量正冲击着她，她痛苦的合上了双眼，周身的一切正渐渐脱落，而一个新的自己正从旧的躯体里慢慢破出。“你好，小维。”她呆呆望着镜子里新的自己，喃喃说道。我的主人，小维，此刻正站在我的面前，一头乌黑的秀发垂落腰间，脸蛋精致，皮肤白皙，身材姣好，双目明亮，明媚的就像三月里的春光，她吃惊望着自己，艰难转动着腰肢，看着全新的自己。小维打开衣柜，皱了皱眉，那些曾经她最爱的运动类服饰很明显已经不适合如今的她，她偷偷溜进妈妈的房间，拿了一双还算合脚的高跟鞋换上。她细细梳理自己的长发，换上了舒适的长裙，跨上了精致的小包，决定出门。变成了淑女的小维不能再风风火火一路狂奔去找月了，她小心翼翼踩在高跟鞋上，优雅的走向篮球场。夕阳西下，寂静的篮球场上，只有月还在坚持不懈的练球，那“哒哒”的排球声，也撞击在小维的心间。“月。”她轻声喊着。男孩抹了抹头发上的汗水，缓缓转过身来：“小维，你来啦，我等了你······”他有些吃惊的合不上嘴，愣愣站在原地：“······很久了。”“对不起，我来晚了。”女孩温柔的笑了，映在夕阳里，一种说不出的好看。月抿嘴浅浅一笑，就像刚刚那样，带着点男孩特有的害羞，还有几分惊讶，挠了挠头，手足无措的指了指篮球：“那还要······一起玩吗？”小维蹭了蹭脚底的土，看着自己脚下的高跟鞋：“不了吧，我······不方便。”“也是。”夏至那天是一年中最璀璨的日子，也成为了小维心中最耀眼的时光，男孩推着车，女孩抱着球，他们没有像往日那样叽叽喳喳说一路的话，却是真正的岁月静好，路边盛放的花儿映在她的两颊，今天棒极了，小维想着。当夜幕降临，当那一夜第一颗流星滑过天际，他们接吻了，顺理成章的在一起。之后的日子，就像盛夏一样甜蜜，小维的嘴角总是带着笑容，但是偶尔夜深人静，她也会向我讲述她的疲惫。“高跟鞋咯的我脚疼。”“作为一个淑女再也不能高声谈笑了。”“我好想再和月一起打篮球。”我支着头听着她的抱怨，无能为力，这一切刚开始不就是她的选择么？如今除了接受别无他选。夏至已过，白昼也渐渐缩短，当枝头第一片树叶坠落，小维知道秋天来了。“小维，你笑的时候可以更小声一点。”“小维，别人还在穿裙子，你怎么穿上秋裤了？”月皱了皱眉，抚了抚小维的头发。小维张口想为自己辩解两句，却又沉默了，换上了温顺的笑容。这不是我，她的心里有个声音在轻声说着。“如果我可以穿梭时空，站在五岁的自己面前，告诉她：你以后会成为一个淑女，一个不能大声笑，不能大声吃东西的美女，你猜她会怎么说？”小维把我抱在手上，望着夜空，说道：“她会说：奶奶个腿子，你是从哪里冒出来的。然后挥动小粉拳把我赶走。”说完，我们都笑了，也都沉默了。“真冷啊。”许久，小维才挣扎着站起，把窗户“呼”的合上。Doc.4 梦醒时分药水改变的只是外表，内在却很难改变，糙汉子小维的灵魂活在精致的面孔下，每天小心翼翼的说话，脸上的笑容越来越少，而月的眉头却越来越皱。初雪的那一天，积蓄已久的情绪终于爆发。“你不可能要求我成为另一个人啊！我就是我，我就是小维，一点都不温柔！一点也不体贴！我想做的人只有我自己而已啊。”月站在原地，吞了一口口水，试图拉住小维：“我们可以不在这里吵架吗？你看这边······”“什么不在这边！那在哪里啊！我忍够了！我想做我自己，我们做我们自己不好吗？”小维近乎咆哮，头发贴在脸上，周围三三两两的情侣开始时不时向这边投来目光。月的脸不能再冷了，许久，他突然说道：“我以为，你变了，没想到你还是原来的你。”“我一直都是原来的我啊，我是小维，我从来不想成为什么其他人。”小维捂脸蹲下，泪水无助的滑落她的面庞。“我们分手吧。”很多次，女孩以为自己听到这样的话一定会难受，然后死死揪住男孩的袖子说对不起，然而这一刻，她却只感到了如释重负的感觉。后来她告诉我，那个药水，就像是让小美人鱼变出脚来的魔药，虽然让她接近了心仪的王子，可是每一步，都走在刀尖上。小维把长发剪短，她又说回了“奶奶个腿子”，她又肆无忌惮的大笑起来，她又是那个正义感爆棚的假小子了。Doc.5 夏日转角“好冷啊！”她哈着热气搓着手，恨不得把自己全部塞进秋裤里。街口的红绿灯闪烁了一下，她停下了脚步。“站住！”初冬略显寂寥的街上，一个男声划破冷清。小维应声望去，是个小偷抢了一个眼镜男的包正夺路而去。“奶奶个腿子。”在一片凝固的人墙中，小维像一支箭冲了出去。后来很多次，我都想着我的主人为什么偏偏是这种神经大条的个性呢？她完全不考虑后果，只凭着一腔正义和热情做着她认为无比正确的事情。那个眼镜男叫简芋，小维誓死不嫁的文科男，开了一家基本不赚钱的小书店，在店门口养了一排花花草草。因为这件事情，他们认识了，顺理成章的成了一对。“我为什么会和他在一起呢？”每个晚上都是小维的恋爱烦恼时间，我是她唯一的听众。“他不帅，很木讷，绝不是男友的第一选择，甚至是我最不喜欢的文科男，因为总感觉他们磨磨唧唧的，但是——“和他在一起的每一秒钟我都是小维，这些，就足够了。”小维笑了，人真是一种奇怪的动物，他们的人生永远是未知的冒险，永远不知道下一刻的自己是什么样的。不过，她就是她，让每个人做自己，大概就是爱情最美好的样子。简芋看到的是真实的小维，是那个穿着秋裤大叫“奶奶个腿子”的小维，爱上的也是这个小维，是拖着鱼尾巴的美人鱼。“我们结婚吧。”某个夜晚，小维勾上了简芋的脖子，像好哥们一样揽着他的肩。“好。”他们酒杯轻碰，相视一笑。结尾  一起看烟火吧，在夏天小维尤记，那一夜的烟花极美，夏天也很迷人，酒酣梦醉，她的双眼迷离，慢慢失去了意识。“小维，小维。”是谁在叫我？她皱了皱眉，突然有熟悉的温度，从掌心传入，她很安心的又沉沉睡去，不知过了多久，她才缓缓睁开眼睛，面前镜子中的自己，双目浑浊，头发花白，躺在床上略显病容。啊，是这样啊——她突然想起了什么，叹了口气。“小维。”床前的简芋正握住她的手，他背已佝偻，皮肤褶皱，唯一不变的是他温暖的双眸和大眼镜。“简芋，一晃五十年过去了。”“是啊，你说时间为什么过的那么快呢。”“我梦见五十年前的夏天了，就是我们一起过的第一个夏天，我对你说，我们结婚吧，你说好的，于是你就被我祸害了五十年。”房门被穿着白衣的女人推开，她拿着记录表走到了小维的床前：“婆婆，怎么样，爷爷给您定做的这个梦，您还满意么？”“满意，我很满意。”小维笑了。这是她七十四岁的生日礼物，因为一些病症，她的腿在四年前就无法独立行走了，除了床榻，她哪里都不能去，看着妻子渐渐失去精神气的面庞，简芋决定给她定做一个梦，一个只属于她的仲夏夜之梦，让她回到最朝气蓬勃的年华里去。“您都看见了什么呢？”“我看到了，”小维回望丈夫，“穿过无数的可能，梦里梦外都是你。”夏日，烟火，初恋，告白。穿过这所有所有的浪漫，剩下的琐碎与美好都是你，中间或许人来人往，只要最后是你就好。“今年夏天，我们再去看烟火吧。”“好。”十指相扣，方是岁月静好时。
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E5%9C%A8%E6%83%B3&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%99%83&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%9B%B4%E6%92%AD%E5%B1%99%E5%B1%8E%E5%8D%93&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6540791575?pid=130653585107&cid=0#130653585107
+Link:/p/6543912898?pid=130653584217&cid=0#130653584217
+Link:/p/4960682200?pid=103290240705&cid=0#103290240705
+Link:/p/6514519934?pid=130653573043&cid=0#130653573043
+Connect:https://tieba.baidu.com//p/2945653590?pid=47948348037&cid=0#47948348037
+Link:/p/6545457824?pid=130653443556&cid=130653569114#130653569114
+Link:/p/6541972015?pid=130653539174&cid=0#130653539174
+Connect:https://tieba.baidu.com//p/6545475517?pid=130653597411&cid=0#130653597411
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%9C%89%E4%BA%BA%E7%9C%8B%E5%90%97&red_tag=e0313206225
+Web data received !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=lxns%E5%9C%A8%E8%AE%B2%E7%9A%87%E5%B8%9D%E7%9A%84%E6%96%B0%E8%AF%9D&red_tag=e0313206225
+Web data received !
+Web data received !
+Web data received !
+Link:/p/6544341281?pid=130651787873&cid=130653598679#130653598679
+Link:/p/6544492589?pid=130652535214&cid=130653587104#130653587104
+Link:/p/6545095304?pid=130653583979&cid=0#130653583979
+Link:/p/6544935031?pid=130650603991&cid=130653581161#130653581161
+Connect:https://tieba.baidu.com//p/6544341281?pid=130651787873&cid=130653598679#130653598679
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%9E%83%E5%9C%BE&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6541204570?pid=130613992989&cid=130653607562#130653607562
+Link:/p/6545322123?pid=130652195549&cid=130653605573#130653605573
+Link:/p/6545440373?pid=130653469814&cid=130653605268#130653605268
+Link:/p/6539783418?pid=130653602516&cid=0#130653602516
+Link:/p/6537966024?pid=130653600501&cid=0#130653600501
+Connect:https://tieba.baidu.com//p/6539783418?pid=130653602516&cid=0#130653602516
+Web data received !
+Reply:天源都成很多人的黑名单了
+##TIMELINE(18)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-manypr&red_tag=e0313206225
+Web data received !
+Link:/p/5552407398?pid=118056809445&cid=0#118056809445
+Link:/p/5212771632?pid=109132292927&cid=0#109132292927
+Link:/p/5022424228?pid=105190970495&cid=0#105190970495
+Link:/p/4976816824?pid=104585649580&cid=0#104585649580
+Link:/p/4954671682?pid=103058622144&cid=0#103058622144
+Link:/p/4913504887?pid=101770204087&cid=0#101770204087
+Connect:https://tieba.baidu.com//p/4976816824?pid=104585649580&cid=0#104585649580
+Web data received !
+AD:2017年2月22日  星期三self-doubt un. 自我怀疑；不自信manuscript [ˈmænjəˌskrɪpt] n. 手稿；原稿umpteenth [ˌʌmp&#39;tinθ] a. &lt;口&gt;第无数次（个）的 umpteen a. &amp; n. &lt;口&gt;无数（的），许许多多（的）toss [tɔs] v. （轻轻或漫不经心地）扔，抛，掷wastebasket [ˈweɪstbæskɪt] n. 废纸篓retrieve [rɪˈtriv] v. 取回；索回原句：Did you know he too suffered from self-doubt? After his manuscript for The Power of Positive Thinking was rejected for the umpteenth time, he tossed it in a wastebasket, where it was retrieved by his wife Ruth.
+Reply:
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E5%B0%B1%E6%98%AFhololive+%23615(0)%0D%0A%0D%0A%7B-1-%7DDragonForce+-+Cry+Thunder+(Sweet+Tea)+%26%2391%3BOne+Final+Stand%26%2393%3B%0D%0AScore%3A29255786%0D%0A1706x+%7C+S+%7C+NONE+%7C+99.551%25%0D%0AMiss%3A0%0D%0A%0D%0A%7B-2-%7DNanawo+Akari+-+DaDaDaDa+Tenshi+(TetMax)+%26%2391%3BDamAngel%26%2393%3B%0D%0AScore%3A8659685%0D%0A687x+%7C+A+%7C+NONE+%7C+96.062%25%0D%0AMiss%3A10%0D%0A%0D%0A%7B-3-%7DMachico+-+fantastic+dreamer+(Little)+%26%2391%3BBlessing%26%2393%3B%0D%0AScore%3A3832009%0D%0A539x+%7C+S+%7C+NONE+%7C+99.832%25%0D%0AMiss%3A0%0D%0A%0D%0A%7B-4-%7DOomori+Seiko+-+JUSTadICE+(TV+Size)+(None1637)+%26%2391%3BKi+Ki+Ki+CS4%26%2393%3B%0D%0AScore%3A288103%0D%0A158x+%7C+SH+%7C+HD+%7C+95.275%25%0D%0AMiss%3A0%0D%0A%0D%0A%7B-5-%7Dthe+peggies+-+Kimi+no+Sei+(TV+Size)+(Sotarks)+%26%2391%3BExtra%26%2393%3B%0D%0AScore%3A3078153%0D%0A479x+%7C+SH+%7C+HD+%7C+99.25%25%0D%0AMiss%3A0%0D%0A%0D%0A&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%2Fqr+%E6%8B%9C%E6%8B%9C&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%26%2391%3B%E5%8F%A3%E8%AF%AD%26%2393%3B%E5%88%86%E5%88%AB%E6%97%B6%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AF%AD%E8%A8%80%EF%BC%8C%E6%AF%94%E8%BE%83%E9%80%9A%E4%BF%97%EF%BC%8C%E4%B8%8D%E9%80%82%E7%94%A8%E4%BA%8E%E6%AD%A3%E8%A7%84%E5%9C%BA%E5%90%88%EF%BC%8C%E7%9B%B8%E5%BD%93%E4%BA%8E%E2%80%9C%E5%86%8D%E8%A7%81%E2%80%9D%E3%80%82%E5%90%8C%E6%97%B6%E4%B9%9F%E6%98%AF%E5%8F%B0%E6%B9%BE%E9%A3%8E%E4%BF%97%EF%BC%8C%E6%AF%8F%E9%80%A2%E4%BD%B3%E8%8A%82%E6%88%96%E7%A5%AD%E7%A5%9E%E6%97%A5%EF%BC%8C%E5%A4%A7%E5%AE%B4%E5%AE%BE%E5%AE%A2%EF%BC%8C%E4%BF%97%E8%B0%93%E4%B9%8B%E6%8B%9C%E6%8B%9C%E3%80%82&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6524597735?pid=130392341205&cid=130392833221#130392833221
+Connect:https://tieba.baidu.com//p/6524597735?pid=130392341205&cid=130392833221#130392833221
+Web data received !
+Reply:就是两个红点
+##TIMELINE(19)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=233&red_tag=e0313206225
+Web data received !
+Link:/p/6538166719?pid=130606119767&cid=0#130606119767
+Link:/p/6541560130?pid=130604935230&cid=130606112161#130606112161
+Link:/p/6531588782?pid=130606097644&cid=0#130606097644
+Link:/p/6532675827?pid=130606081938&cid=0#130606081938
+Link:/p/6538994619?pid=130577445361&cid=130606076172#130606076172
+Link:/p/6528929010?pid=130606060142&cid=0#130606060142
+Connect:https://tieba.baidu.com//p/6531588782?pid=130606097644&cid=0#130606097644
+Web data received !
+Reply:戳：【1277安歌33安歌6666】安歌156【秀姐220/月】电五唯满侠一代金猪金2金粉白菜黄娃娃粉盒子踏云丝路绿花朝棉袄青盒子衣服黄长安蓝无色16限7芽芽金螺母情人枕2披风琉云珠盏兔团团4w资历脚气马魁首双椅子七秀明教脚印门派踏云九红头像安歌208【秀姐220/月】电五五红4红狐考蝶金5金青盒粉盒二代七夕盒黑端午盒粉人面蓝兰亭六翼白莲花12披风白狐少林脚印6w8资历PVE冰心4w2 安歌259【秀萝280/月】电五剑胆·一代金狐金猴金龙女金18金发猴红8红发/粉公主蓝不期/蓝盒红盒青盒粉盒秃盒歌盒猪盒喵盒刀盒一代七夕盒一代粉中秋盒一代元宵盒二代七夕盒一代重阳衣服猫盒狄仁杰盒三代中秋盒二代重阳盒白腿盒踏云盒二代花朝盒踏云盒四代七夕盒四代中秋粉盒四代中秋蓝盒谪仙黄白盒小白龙盒/舞步薄嗅蓝无色金陵福源蓝兰亭粉九壤梨棠空亭故幽粉风露玉蟒胧粉螺母红寒梅白中宵蓝雪山暮雨白潇湘粉彩云红容与黄天河月寒庭兰蓝侠影红侠影黄长安黑榆塞黄清商绿螺母白白菜66限/6下架金螺母/33成衣/白莲花小蝴蝶仙鹤干兔子火凰金鱼几度春明如雪粉短情人枕玉棠白狐裘黑狐裘38披风/珠盏夜话黑龙/挂宠滚滚大雕丸子弦月斩浪亭亭汤圆/狼烽夜宴双椅子/2脚印/乌金浮屠星雷满600/资历10W安歌266【秀姐650】电五煎蛋珊瑚金飞灵金四代七夕盒子秀姐 万花：
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%AE%97%E4%BA%86%E5%90%A7&red_tag=e0313206225
+Web data received !
+Link:/p/6542321152?pid=130655697414&cid=0#130655697414
+Link:/p/6545270434?pid=130655672581&cid=0#130655672581
+Link:/p/6537976733?pid=130655652113&cid=0#130655652113
+Link:/p/6508627712?pid=130655610026&cid=0#130655610026
+Link:/p/6545197473?pid=130655504937&cid=130655602969#130655602969
+Link:/p/6540981413?pid=130619741322&cid=130655592359#130655592359
+Link:/p/6544418285?pid=130655458820&cid=0#130655458820
+Link:/p/6235981044?pid=130655427473&cid=0#130655427473
+Link:/p/6541475497?pid=130655414791&cid=0#130655414791
+Connect:https://tieba.baidu.com//p/6541475497?pid=130655414791&cid=0#130655414791
+Web data received !
+Reply:有没有四川的挂壁兄弟，成都电子厂大量招人，5000一个月。
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E6%A8%A1%E6%8B%9F%E8%80%83&red_tag=e0313206225
+Web data received !
+Link:/p/6545492502?pid=130653776815&cid=0#130653776815
+Link:/p/6545083163?pid=130649788756&cid=0#130649788756
+Link:/p/6544897192?pid=130647880636&cid=0#130647880636
+Link:/p/6508128318?pid=130632098952&cid=0#130632098952
+Link:/p/6537471130?pid=130629342085&cid=0#130629342085
+Link:/p/6543488695?pid=130628458827&cid=0#130628458827
+Connect:https://tieba.baidu.com//p/6537471130?pid=130629342085&cid=0#130629342085
+Web data received !
+Reply:李文博，我的初中同学，走了十几年了，真是人生无常
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BB%80%E4%B9%88%E6%AE%B5&red_tag=e0313206225
+Web data received !
+Link:/p/6312934495?pid=128070289540&cid=130656776591#130656776591
+Link:/p/6540616949?pid=130611038303&cid=130656776331#130656776331
+Link:/p/6451016832?pid=130573730684&cid=130656776261#130656776261
+Link:/p/6537332324?pid=130656775637&cid=0#130656775637
+Link:/p/6545528345?pid=130656587733&cid=130656765086#130656765086
+Link:/p/6542735421?pid=130645248274&cid=130656752740#130656752740
+Link:/p/6545729230?pid=130656748945&cid=0#130656748945
+Link:/p/6156070071?pid=130656744324&cid=0#130656744324
+Link:/p/6545528345?pid=130656763328&cid=0#130656763328
+Connect:https://tieba.baidu.com//p/6312934495?pid=128070289540&cid=130656776591#130656776591
+Web data received !
+Reply:内容非常的干货，没办法在这里发给大家，有想要的伙伴可以找我
+##TIMELINE(20)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=wey%E4%BD%AC%E6%95%99%E8%82%B2&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%85%A8%E9%83%A8%E4%BA%BA%E7%9B%B4%E6%92%AD%E4%BA%92%E7%9B%B8%E7%9B%91%E7%9D%A3&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BD%86%E6%98%AF%E5%BD%A2%E5%A6%82%E8%99%9A%E8%AE%BE&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6360037053?pid=128518877786&cid=0#128518877786
+Link:/p/6316389538?pid=128101869761&cid=0#128101869761
+Link:/p/6314045456?pid=128081080419&cid=0#128081080419
+Link:/p/6298267124?pid=127927506624&cid=0#127927506624
+Link:/p/6297240583?pid=127917308289&cid=0#127917308289
+Link:/p/6244325970?pid=127380690188&cid=0#127380690188
+Connect:https://tieba.baidu.com//p/6298267124?pid=127927506624&cid=0#127927506624
+Web data received !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%EF%BC%9F&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6511212893?pid=130337361040&cid=130653294241#130653294241
+Link:/p/6542870258?pid=130623523323&cid=130654261875#130654261875
+Connect:https://tieba.baidu.com//p/6511212893?pid=130337361040&cid=130653294241#130653294241
+Web data received !
+Reply:会吞回复的么
+##TIMELINE(21)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BB%80&red_tag=e0313206225
+Web data received !
+Link:/p/6544545964?pid=130644318736&cid=0#130644318736
+Link:/p/6544511653?pid=130643773467&cid=130644318730#130644318730
+Link:/p/6541306367?pid=130607539395&cid=130644318788#130644318788
+Link:/p/6544595438?pid=130644318871&cid=0#130644318871
+Link:/p/6544148512?pid=130644318781&cid=0#130644318781
+Link:/p/6540760791?pid=130625524397&cid=130644318927#130644318927
+Link:/p/6538859316?pid=130644198271&cid=130644318575#130644318575
+Connect:https://tieba.baidu.com//p/6540760791?pid=130625524397&cid=130644318927#130644318927
+Web data received !
+Reply:肯定悬浮的啊，现实都没悬浮的
+##TIMELINE(22)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%A1%9E%E7%8F%AD&red_tag=e0313206225
+Web data received !
+Link:/p/6501048285?pid=130654160862&cid=0#130654160862
+Link:/p/6016128711?pid=130654124695&cid=0#130654124695
+Link:/p/6545359898?pid=130653698397&cid=130653834912#130653834912
+Link:/p/6536103311?pid=130539237283&cid=130653659459#130653659459
+Link:/p/5463188315?pid=127600871513&cid=130653581416#130653581416
+Link:/p/6545471544?pid=130653555298&cid=0#130653555298
+Connect:https://tieba.baidu.com//p/6545359898?pid=130653698397&cid=130653834912#130653834912
+Web data received !
+Reply:腰粗腿短大屁股圆脸
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%EF%BC%9F%EF%BC%9F%EF%BC%9F&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B9%89%E4%B9%8C%E6%97%A0%E7%96%91&red_tag=e0313206225
+Web data received !
+Link:/p/6544899242?pid=130647902248&cid=0#130647902248
+Link:/p/6542873942?pid=130621450511&cid=0#130621450511
+Link:/p/6540642532?pid=130592902944&cid=0#130592902944
+Link:/p/6534745545?pid=130517204998&cid=0#130517204998
+Link:/p/6534631721?pid=130515711352&cid=0#130515711352
+Connect:https://tieba.baidu.com//p/6540642532?pid=130592902944&cid=0#130592902944
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=dy&red_tag=e0313206225
+Web data received !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E5%9C%A8%E5%91%90%EF%BC%81&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6545970746?pid=130660689103&cid=130660925352#130660925352
+Link:/p/6545698226?pid=130656404586&cid=130660900701#130660900701
+Link:/p/6543970350?pid=130660887109&cid=0#130660887109
+Link:/p/6524206329?pid=130660886330&cid=0#130660886330
+Link:/p/6546042913?pid=130660873607&cid=0#130660873607
+Link:/p/6546043475?pid=130660849589&cid=0#130660849589
+Link:/p/6546017867?pid=130660835492&cid=0#130660835492
+Link:/p/6545970746?pid=130660674874&cid=130660911683#130660911683
+Connect:https://tieba.baidu.com//p/6545591089?pid=130658446185&cid=130660944262#130660944262
+Web data received !
+Web data received !
+Reply:白色的几钱出？
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%BB%84%E6%AE%B5%E5%AD%90+&red_tag=e0313206225
+Web data received !
+Link:/p/6543891328?pid=130634364595&cid=130636149743#130636149743
+Link:/p/6527169988?pid=130507841675&cid=130634811065#130634811065
+Link:/p/6118947710?pid=130634451095&cid=0#130634451095
+Link:/p/6543839710?pid=130633892506&cid=0#130633892506
+Link:/p/6538115405?pid=130632856441&cid=0#130632856441
+Link:/p/6541794639?pid=130632196450&cid=0#130632196450
+Link:/p/6540883514?pid=130630795962&cid=0#130630795962
+Connect:https://tieba.baidu.com//p/6118947710?pid=130634451095&cid=0#130634451095
+Web data received !
+Reply:最近跟银河吵架的话题 总是因为我不肯喊他老公 这真的太难了 然后他就觉得我不爱他 就说小时候在他的逼迫下 我会喊他的 但是现在他又不舍得强迫我 可能是恋爱中的男人也是这么作的吧
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%BB%84%E6%AE%B5%E5%AD%90+&red_tag=e0313206225
+Web data received !
+Link:/p/6543891328?pid=130634364595&cid=130636149743#130636149743
+Link:/p/6527169988?pid=130507841675&cid=130634811065#130634811065
+Link:/p/6118947710?pid=130634451095&cid=0#130634451095
+Link:/p/6543839710?pid=130633892506&cid=0#130633892506
+Link:/p/6538115405?pid=130632856441&cid=0#130632856441
+Link:/p/6541794639?pid=130632196450&cid=0#130632196450
+Link:/p/6540883514?pid=130630795962&cid=0#130630795962
+Connect:https://tieba.baidu.com//p/6538115405?pid=130632856441&cid=0#130632856441
+Web data received !
+Reply:这个锅地方不背，拿一个人来摸黑整个地区，他们粉丝脑路奇清啊，如此污言秽语居然还想正当话，可笑至极
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%BB%84%E6%AE%B5%E5%AD%90+&red_tag=e0313206225
+Web data received !
+Link:/p/6543891328?pid=130634364595&cid=130636149743#130636149743
+Link:/p/6527169988?pid=130507841675&cid=130634811065#130634811065
+Link:/p/6118947710?pid=130634451095&cid=0#130634451095
+Link:/p/6543839710?pid=130633892506&cid=0#130633892506
+Link:/p/6538115405?pid=130632856441&cid=0#130632856441
+Link:/p/6541794639?pid=130632196450&cid=0#130632196450
+Link:/p/6540883514?pid=130630795962&cid=0#130630795962
+Connect:https://tieba.baidu.com//p/6538115405?pid=130632856441&cid=0#130632856441
+Web data received !
+Reply:会说这些，因为我身边的男生都不会把我当女生，我说话避讳，他们也不会避讳什么。但是不会说什么充气娃娃，这种东西不会搬上台面上来。说国家层面上的人，更不可能，都是大学生，理性分析。可能我身边的很多都是文科生，但这是我身边的来说的，其他可能会有不同的
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B8%8D%E6%89%93ODNL%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/5523112437?pid=117272718500&cid=0#117272718500
+Link:/p/2354258633?pid=103268048666&cid=0#103268048666
+Connect:https://tieba.baidu.com//p/5523112437?pid=117272718500&cid=0#117272718500
+Web data received !
+Reply:或复制这条信息￥JzTY0lwk81I￥后打开👉手淘👈
+##TIMELINE(23)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E2%80%A6%E2%80%A6&red_tag=e0313206225
+Web data received !
+Link:/p/6544132247?pid=130661831092&cid=130661886116#130661886116
+Link:/p/6546102938?pid=130661885964&cid=0#130661885964
+Link:/p/6542928280?pid=130623905886&cid=130661885625#130661885625
+Link:/p/6546107582?pid=130661885292&cid=0#130661885292
+Connect:https://tieba.baidu.com//p/6546107582?pid=130661885292&cid=0#130661885292
+Web data received !
+Reply:.,
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%B2%A1%E6%87%82&red_tag=e0313206225
+Web data received !
+Link:/p/6535620150?pid=130581784004&cid=0#130581784004
+Connect:https://tieba.baidu.com//p/6535620150?pid=130581784004&cid=0#130581784004
+Web data received !
+Reply:写的真好
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%81%87%E7%9A%84&red_tag=e0313206225
+Web data received !
+Link:/p/6066920218?pid=130651628901&cid=0#130651628901
+Link:/p/6519565547?pid=130651624713&cid=0#130651624713
+Connect:https://tieba.baidu.com//p/6066920218?pid=130651628901&cid=0#130651628901
+Web data received !
+Reply:是不是真的到工商局查一下 企查查也可以的
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%89%80%E4%BB%A5%E5%A6%82%E6%9E%9C%E6%B0%B4%E7%88%B7%E8%AF%B4lxns%E7%89%9B%E9%80%BC%E7%9A%84%E8%AF%9D&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%BF%98%E7%BC%BA%E4%BA%BA%E5%90%97&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E6%98%AF%E7%88%AC%E7%88%AC%E4%BA%BA&red_tag=e0313206225
+Web data received !
+Link:/p/6542699858?pid=130632420096&cid=130661843697#130661843697
+Link:/p/6545884000?pid=130659150435&cid=130660655399#130660655399
+Link:/p/6545976275?pid=130660282774&cid=0#130660282774
+Link:/p/6545851025?pid=130660272626&cid=0#130660272626
+Link:/p/6543464817?pid=130648846749&cid=130660270265#130660270265
+Link:/p/6545372547?pid=130659423207&cid=130660009806#130660009806
+Link:/p/6545663151?pid=130658027797&cid=0#130658027797
+Link:/p/6542699858?pid=130658501989&cid=0#130658501989
+Link:/p/6542699858?pid=130626927175&cid=130657288290#130657288290
+Connect:https://tieba.baidu.com//p/6542699858?pid=130632420096&cid=130661843697#130661843697
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%88%AC%E5%AE%B6%E8%BF%98%E7%BC%BA%E4%BA%BA%E5%90%97&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6253368065?pid=130660130205&cid=0#130660130205
+Link:/p/6545921869?pid=130659152955&cid=0#130659152955
+Link:/p/6542137006?pid=130658513089&cid=0#130658513089
+Connect:https://tieba.baidu.com//p/6542137006?pid=130658513089&cid=0#130658513089
+Web data received !
+Reply:开始更新第二部分~~~
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%A6%81%E5%88%B0%E6%98%8E%E5%A4%A9&red_tag=e0313206225
+Web data received !
+Link:/p/6541823051?pid=130664605881&cid=0#130664605881
+Link:/p/6546247736?pid=130664308175&cid=130664370616#130664370616
+Link:/p/6546244618?pid=130663873959&cid=0#130663873959
+Link:/p/6546134118?pid=130663867498&cid=0#130663867498
+Link:/p/6534167170?pid=130663633907&cid=0#130663633907
+Link:/p/6546097696?pid=130663406514&cid=0#130663406514
+Connect:https://tieba.baidu.com//p/6541823051?pid=130664605881&cid=0#130664605881
+Web data received !
+Reply:简单叙述一下楼主的故事，另外我们刷屏是防止他再次删楼！望谅解楼主辱骂的这个人在一个游戏交流群里给其他萌新做解答，而楼主的“好兄弟”把这个人的回复看成回复他了，并对这个人进行辱骂，在众多玩家解释下，“好兄弟”知道自己骂错了，但是骂出去了收不回来，于是退了群，跑到其他群对刚刚那个群整个群进行攻击。于是被其他玩家追过去骂，“好兄弟”被骂傻了，开始胡言乱语，说了一些外国的好政策，并对国人进行侮辱。惹怒了全服的玩家。于是“好兄弟”找来了他的朋友，也就是楼主这个大傻。楼主不知情，帮助“好兄弟”一起骂我们，“好兄弟”迫于压力，选择了弃坑跑路，留下楼主一人孤军奋战。在连续3天的口水战以后，因为我们抓到了楼主的“把柄”，楼主选择认怂，并加群语音道歉，一下午的语音教育加上楼主亲笔写下的道歉信（道歉信错字连篇，读不通顺，甚至对谁道歉，自己哪里错了都不知道，想看可以私信我），本来打算教育完后放过他了，没想到楼主中途不耐烦了，直接退群，并跑回了自己的小群里开启全员禁言，再次对我们进行了辱骂：“道个歉一点面子都不给我，不道了”。自己辱华做错事，指望谁给你面子呢？道歉本来就应该是不要面子的事，你还想要面子？那就是没有诚意咯。于是我们再次对他发动人生攻击！直到晚上！他再次认怂道歉，并且发誓：“明天再来，天打雷劈”。我寻思事情应该结束了。。没想到啊没想到，一早起来，楼主又发病了T_T，几个小时前才发过的誓，这么快就天打雷劈了。在此期间，他一直找来帮手，实际上只有一个13岁的小孩子愿意帮他骂人，其他人都选择了沉默，还有一名思想成熟一点的人知道这都是楼主的问题，并没选择帮助楼主，于是楼主又跟孤儿一样孤军奋战了。咋们寻思着，反正他在这个游戏也混不下去了，毕竟他只是个未成年人。所以我们都不搭理他了，没想到他晚上突然上游戏辱骂我们，引来了我们的狂喷。第二天才知道，他上线只是勾引我们骂他，方便他截图发到各个贴吧造谣我们。在这期间闹了很多搞笑的事，比如楼主法律意识淡薄，并且对游戏毫不了解说出了很多搞笑的言论，这些就不一一列举了，没玩过的人或许听不懂。希望大家合理战队，别轻易相信楼主的造谣
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=+&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=+&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%80%81%E5%AD%90%E4%B8%8D%E5%BC%80%E5%BF%83&red_tag=e0313206225
+Web data received !
+Link:/p/5290592543?pid=130663755611&cid=0#130663755611
+Link:/p/6546007023?pid=130662019178&cid=130662757452#130662757452
+Link:/p/6546140094?pid=130662605867&cid=0#130662605867
+Link:/p/6546092558?pid=130661582080&cid=0#130661582080
+Link:/p/6542277395?pid=130615911406&cid=130660623816#130660623816
+Link:/p/6545539515?pid=130659644920&cid=0#130659644920
+Link:/p/5116725742?pid=130658440716&cid=0#130658440716
+Link:/p/6545466426?pid=130656418824&cid=130657166940#130657166940
+Link:/p/6457367131?pid=130656108179&cid=0#130656108179
+Connect:https://tieba.baidu.com//p/6546092558?pid=130661582080&cid=0#130661582080
+Web data received !
+Reply:祈祷
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BD%A0%E6%AF%94%E6%AF%94%E5%A5%BD%E5%A4%9A%E6%9C%89%E5%95%A5%E7%94%A8&red_tag=e0313206225
+Web data received !
+Link:/p/6536050744?pid=130534937288&cid=0#130534937288
+Link:/p/6533762042?pid=130506081654&cid=0#130506081654
+Link:/p/6024084677?pid=130477507491&cid=0#130477507491
+Link:/p/6320880092?pid=130451169672&cid=0#130451169672
+Link:/p/6528432098?pid=130438460733&cid=0#130438460733
+Link:/p/6525183270?pid=130399427634&cid=0#130399427634
+Link:/p/6516693577?pid=130344029485&cid=0#130344029485
+Link:/p/6465744675?pid=130330926668&cid=0#130330926668
+Link:/p/6515899575?pid=130284490037&cid=0#130284490037
+Connect:https://tieba.baidu.com//p/6024084677?pid=130477507491&cid=0#130477507491
+Web data received !
+Reply:情人节快乐～
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%95%A5%E7%8E%A9%E6%84%8F&red_tag=e0313206225
+Web data received !
+Link:/p/6530047732?pid=130582896332&cid=0#130582896332
+Link:/p/6537706979?pid=130582779866&cid=0#130582779866
+Link:/p/6539751014?pid=130582775809&cid=0#130582775809
+Link:/p/6539579725?pid=130580156083&cid=130582742149#130582742149
+Link:/p/6539667413?pid=130582652935&cid=0#130582652935
+Link:/p/6536488120?pid=130582648487&cid=0#130582648487
+Connect:https://tieba.baidu.com//p/6539751014?pid=130582775809&cid=0#130582775809
+Web data received !
+Reply:一早起来进游戏就是这个*样，啥玩意，还百人逃亡赛吗
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%B8%A1%E5%85%AB%E6%AF%9B&red_tag=e0313206225
+Web data received !
+Link:/p/6526533465?pid=130664066774&cid=0#130664066774
+Link:/p/6450371995?pid=130601440385&cid=130661605006#130661605006
+Link:/p/6537336190?pid=130659013163&cid=0#130659013163
+Link:/p/6545859041?pid=130658401421&cid=0#130658401421
+Link:/p/6524206329?pid=130657899330&cid=0#130657899330
+Link:/p/6521428224?pid=130657218596&cid=0#130657218596
+Link:/p/6542124680?pid=130644325780&cid=0#130644325780
+Connect:https://tieba.baidu.com//p/6450371995?pid=130601440385&cid=130661605006#130661605006
+Web data received !
+Reply:价格实惠，顶一下
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BD%A0%E7%88%B1%E5%90%83%E5%B1%8E%E5%90%97&red_tag=e0313206225
+Web data received !
+Link:/p/6083070398?pid=130575732666&cid=130659006873#130659006873
+Link:/p/6545885816?pid=130658681661&cid=0#130658681661
+Link:/p/6544389599?pid=130642197092&cid=130654805453#130654805453
+Link:/p/6545411556?pid=130652945663&cid=0#130652945663
+Link:/p/6544542551?pid=130643717549&cid=0#130643717549
+Link:/p/6544173892?pid=130643490696&cid=0#130643490696
+Link:/p/6544389599?pid=130642334772&cid=130651392508#130651392508
+Connect:https://tieba.baidu.com//p/6545885816?pid=130658681661&cid=0#130658681661
+Web data received !
+Reply:曲海富厅长的孩子，大便，奖状是如何一体的？曲海富厅长的孩子，你邱伯伯不让你爹，曲海富厅长给樊荣老师这样的教育败类发奖状，都是处于由衷地，发自肺腑地，不容置疑地，光明磊落地善意。为啥呢？第一，曲海富厅长的孩子，你看你爹曲海富厅长给教育败类樊荣发师德先进个人奖状，让教育败类樊荣教武清孩子思想品德，此举确实充分地表达了你爹曲海富厅长对女性教育败类的热爱，挚爱，关爱，乱爱，发自肺腑地爱，违法乱纪地爱，贼眉鼠眼地爱！但是，你爹曲海富厅长这么干得坑了多少武清的孩子呀！第二，曲海富厅长的孩子，咱就不说你爹曲海富当个厅长，专门干坑未成年人的勾当伤天害理，容易遭到报应，比如你曲海富厅长的孩子被车轧死了，得癌症死了，遭雷劈死了这些话，这些话都是封建迷信，不好说的！咱就说你爹违法乱纪的事情干多了，不怕监狱，手铐，晚上不做恶梦吗？！曲海富厅长的孩子，踏踏实实地，干干净净地活着，很重要！第三，曲海富厅长的孩子，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”真没少给你爹帮倒忙，出你爹的笑话，给你邱伯伯提供你爹的罪证：比如，这个败类在骂你邱伯伯的时候咒骂你爹悉心呵护的，教育败类樊荣是大便，这笑话闹地，多么啼笑皆非的呀！曲海富厅长的孩子，你爹曲海富厅长给教育败类樊荣发师德先进个人奖状，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”说樊荣老师是大便，除了让你爹伤心，心疼，关键多么让你爹情何以堪的呀--好像你爹有热爱大便的嗜好一样的？！曲海富厅长的孩子，你邱伯伯觉得你爹曲海富厅子应该发声名，证实樊荣老师不是大便，同时痛斥下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”的，惨绝人寰的愚蠢。假如你爹曲海富不发这个声明，那你爹就挨了骂了。因为，如果樊荣老师是大便，那你爹不是成了给大便发师德先进个人奖状的厅长败类了嘛！曲海富厅长的孩子，中国有句俗话“傻狗不认识臭”，这话的意思就是在牲口狗圈子里，智商高的牲口狗都不爱大便。你邱伯伯觉得，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”咒骂樊荣老师是大便，是不是绕着弯子骂你爹曲海富是傻狗？！综上所述，曲海富厅长的孩子，你爹曲海富厅长不发这个声明，证实樊荣老师不是大便，同时痛斥下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”的，惨绝人寰的愚蠢，对你爹悉心呵护的樊荣老师不利，对你爹也不利。因为，你爹曲海富沉默，下流地流脓，愚蠢地冒烟的女教育败类，网名网名“hidemm312325”明着骂樊荣老师是大便，暗地里骂你爹是牲口狗，还是牲口狗里边智商偏低的傻狗。曲海富厅长的孩子，如果你爹不在乎名声，你看你爹再乎犯罪，手铐，坐牢吗？！因为，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”正在给你爹凑领导黑社会，图谋杀害举报人的罪恶证据呢！曲海富厅长的孩子，你邱伯伯揭露武清女性教育局长艾玉红犯罪证据的时候，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”就热烈地讴歌艾玉红局长是多么慈祥的女人呀！这是多么急不可耐地讴歌呀，一下子就证明了艾玉红和犯罪有关！曲海富厅长的孩子，你邱伯伯揭露你爹曲海富厅长犯罪证据的时候，下流地流脓，愚蠢地冒烟的女教育败类，网名“hidemm312325”，今化名“wcchekah&quot;，恐吓你邱伯伯得罪政府高官，会被杀人灭口。这是急不可耐地，企图证明你爹曲海富厅长和犯罪组织有关吗？！曲海富厅长的孩子，你爹曲海富厅长需要下流地流脓，愚蠢地冒烟的女教育败类，网名网名“hidemm312325”，现化名“wcchekah&quot;继续证明下去吗？本来，今天打算写曲海富捧臭脚的发言稿，看来没有篇幅了，改天再写了。曲海富厅长的孩子，不是你邱伯伯写作能力太强了，不写不行，写起来就没完。真是你爹曲海富罪恶滔天，想简单点写都做不到不是！曲海富厅长的孩子，你回家问问你爹，那牲口野狗，都知道哺育下一代，而不坑害下一代，为什么你爹曲海富作为一个不是**野狗的人，非要干坑害下一代的事情呢？！曲海富厅长的孩子，武清那些教育败类，可能是和你爹学的，可能撒谎了，就说我孩子学业毁了，这件事好办，你邱伯伯孩子中考在武清，成绩你爹掌握，你爹还有义务出来辟谣，你让你爹拿着考试成绩出来证明，初中你邱伯伯孩子学习好不好，考上一中没有？！曲海富厅长的孩子，高中三年你邱伯伯孩子更精彩，经常考全校第一，现任班长，老师评价你邱伯伯孩子正直。你要是不信，你公布你的学习成绩，让教育败类艾玉红，樊荣公布他们孩子的成绩，你邱伯伯就公布孩子三年来历次考试成绩。曲海富厅长，这几个歹徒败类都知道，泼妇不能骂街，我要问你，败类樊荣能上课教武清孩子思想品德吗？！武则天给高宗写诗道：“看朱成碧思纷纷，憔悴支离为忆君。 不信比来长下泪，开箱验取石榴裙。 ”此诗七言绝句，截取律诗首联尾联，格律工整，押上平声十二文。关键是那谎撒地真叫个第一不要脸，第二不要命。我就怕万一高宗真开箱验取满是武则天相思泪水的石榴裙，结果没有找到石榴裙上的泪水，倒是把武则天的男宠给翻出来了可咋整！哎呀妈呀，好好吓人的呀！曲海富厅长你看到了吗？武则天女盗女娼，都知道台面上要说点仁义道德的话充面子，你看你台面上就谎话连篇，你说你咋就恬不知耻地这么彻底呢！关键是，武则天下场不好！曲海富厅长，曲海富厅长，人不走正道，早晚出事！本举报人热情地，严肃地，急不可耐地，忧心忡忡地，殚精竭虑地，废寝忘食地呼吁武清人，曲海富厅长恬不知耻，没有家教，我们要教育他；曲海富违法犯罪，我们应该举报他，就是不能给他起外号叫“三陪厅长”！曲海富厅长，顺便问下，武清教育败类为什么这么多人起名都和蛋有关？武清教育败类，网名“不碎的蛋壳001”，另一个武清教育败类，网名“爱吃柚子的松花蛋”曲海富厅长，天津武清教育败类，自称2014届雍阳毕业生的，女性，网名“爱吃柚子的松花蛋”批评我没有把来龙去脉写清楚，我看这个批评好！这个批评好在哪里呢？好就好在有利于在全国人民面前揭露你曲海富厅长违法乱纪，恬不知耻的德行。以下是应天津武清教育败类，自称2014届雍阳毕业生的，女性，网名“爱吃柚子的松花蛋”批评我没有把来龙去脉写清楚而每天附录的曲海富违法乱纪的事实经过：2016年，在武清信访办主持的区长接待会上，曲海富副厅长本来应该把一个教育败类，领着两岁的闺女前去上海索贿家长的，天津武清雍阳中学思想品德教师樊荣，依据《教师法》行政开除，避免武清这个地方上演败类教授思想品德的笑话。但是，矮小的曲海富副厅长却来了个高难度的投球，硬是在完全违背人伦，法律，完全不可能的情况下，把一个道德败坏的人间败类樊荣投入了本应开口非常狭小，挑剔，难以进入的，需要百里挑一，反复斟酌，认真取舍的思想品德教师行列，继续以执教的名义毒害天津武清的学生。曲海富厅长，本举报人决定，关于你如何成为超越巨星科比，成为矮子四分投球手的事情的来龙去脉，每天都附录，以便全国人民都能看清楚。要说这科比黑厮着实了得，打得一手好篮球，出神入化！本举报人一直认为，美国鬼子打篮球如同上演艺术体操表演。但是，在天津武清，有个厅长大人，姓曲名海富，虽说身材矮小，与科比身高有泰山与草芥之别，唯独投球技术非科比可以比量。科比投球，最多能得三分，人家曲海富副厅长投球，能得四分。让全国人民看看曲海富厅长投篮如何能得到四分。2016年，曲海富在厅长接待会上拒绝开除樊荣后的一年，也就是2017年樊荣班级四个学生，三个男生，一个女生，自称樊荣学生，跳上百度，对本举报人及其家长破口大骂，下流和愚蠢一样都不输给他们的老师樊荣。第一分是天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之男性学生，网名“我专门来看你”，说他为他老师樊荣不要脸没事。天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之男性学生，网名“我专门来看你”为了完成为他老师樊荣不要脸没事的事业可敬业了，据他本人说，他闲地侍候都睾丸**，这么重的病都不顾，上来帮不要脸的老师樊荣骂人。第二分是天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之男性学生，网名“Tenyjs”，此学生说他咬人是因为牲口兔子急了还咬人。曲海富厅长，网名“Tenyjs”的爹不是牲口公兔子，妈不是牲口母兔子，为什么要学牲口兔子的，咬人的，**的行径呢？！曲海富厅长，牲口兔子急了咬人，人急了得讲理，你保护的败类老师樊荣没有教学生知道，你作为厅长这么大的官，你不管吗？！你做厅长就是让樊荣这样的教育败类毒害学生心灵的吗？第三分是天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之男性学生，网名”kpklto”，这个学生说他吃屎长大，还问本举报人能咋地？！曲海富厅长，在你的领导下，武清学生都以吃屎长大而感到如此骄傲吗？！曲海富，你自己吃屎也感到骄傲吗？！请天津武清人千万不要给天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之男性学生，网名”kpklto”起外号叫“我吃屎，我骄傲”。起外号不好的呀！第四分是天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之女性学生，网名”百战卍倾城”，这个学生咒骂本举报人家是火葬场。曲海富厅长，你保护的教育败类樊荣家在本举报人家楼上，如果本举报人家是火葬场，那樊荣家就是骨灰盒存放处了，你说我说的对吗？！曲海富厅长，天津武清雍阳中学索贿家长，身背党纪处分，教授思想品德的教师樊荣之女性学生，网名”百战卍倾城”还骂你保护教育败类樊荣免受行政开除处分的事情是干了件屁事。你看你也不说话，我帮你平反了，我认为你曲海富不是个屁，是个人，只不过你曲海富是个下流的人而已！大家快来看，科比投球三分，曲海富投球能得四分
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%BF%98%E8%A6%81%E6%90%9E%E4%BB%80%E4%B9%88%E4%BC%98%E5%8C%96%EF%BC%8C%E5%BC%84%E4%B8%AA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91%E5%B0%B1%E6%9B%B4%E5%A4%8D%E6%9D%82%E4%BA%86&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E5%8F%91%E7%8E%B0%E6%88%91%E4%BB%AC%E5%AD%A6%E6%A0%A1%E8%A2%AB%E7%BB%B4%E5%9F%BA%E6%94%B6%E5%BD%95%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6319089475?pid=128132450186&cid=128133564452#128133564452
+Connect:https://tieba.baidu.com//p/6319089475?pid=128132450186&cid=128133564452#128133564452
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%8E%B0%E5%9C%A8%E6%98%AF+2+%E6%97%B6%E6%95%B4&red_tag=e0313206225
+Web data received !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E8%AF%A5lxns%E7%89%9B%E9%80%BC%E4%BA%86&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6546330704?pid=130665276997&cid=0#130665276997
+Link:/p/6546330602?pid=130665275222&cid=0#130665275222
+Link:/p/6546326351?pid=130665200280&cid=0#130665200280
+Link:/p/6541487309?pid=130665113139&cid=0#130665113139
+Link:/p/6510083262?pid=130214638996&cid=130665069000#130665069000
+Link:/p/6541487309?pid=130665079193&cid=0#130665079193
+Connect:https://tieba.baidu.com//p/6546326351?pid=130665200280&cid=0#130665200280
+Web data received !
+Reply:4.他的三言两语，几滴眼泪，就让你认定我是毒妇，你便将我送入敌国受辱，你出征，我吃斋百日为你积善，我跪拜千里只求你平安，我所做的一切不是为了今日让你把我的一颗心扔在地上，用刀割用脚踩，我救不了自己，也杀不死你，如今只愿天涯海角，至此不见.5.你是无妄之灾，却让我爱之有于，我自甘沉溺，皆无药石可医，我用心头血供养了你的心上人这么久，你的恩情，我还清了，这辈子真的好长啊，长到我都厌倦了，我好想我的爹娘，也不知道他们在天上过得可好，我...该去陪他们了
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%90%84%E4%BD%8D&red_tag=e0313206225
+Web data received !
+Link:/p/6541843466?pid=130626416745&cid=0#130626416745
+Link:/p/6533538843?pid=130532321714&cid=130626416157#130626416157
+Link:/p/6541703490?pid=130626415800&cid=0#130626415800
+Link:/p/6543334004?pid=130626415416&cid=0#130626415416
+Link:/p/6520923920?pid=130626415596&cid=0#130626415596
+Link:/p/6157654519?pid=130626415467&cid=0#130626415467
+Link:/p/6541970011?pid=130626415060&cid=0#130626415060
+Connect:https://tieba.baidu.com//p/6157654519?pid=130626415467&cid=0#130626415467
+Web data received !
+Reply:我去招工了，***门狗嫌我年数大了，我实龄才49岁呀，狗眼开人低！

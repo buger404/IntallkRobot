@@ -1,0 +1,4 @@
+##TIMELINE(11)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%5BCQ%3Arich%2Ctext%3D%0A+%E4%B8%BB%E4%BA%BA%E6%95%85%E6%84%8F%E5%AF%B9%E5%AE%A0%E7%89%A9%E7%8B%97%E5%92%B3%E5%97%BD%EF%BC%8C%E7%8B%97%E5%AD%90%E7%9A%84%E5%8F%8D%E5%BA%94%E7%AC%91%E7%BF%BB%E7%BD%91%E5%8F%8B%5D&red_tag=e0313206225
+Web data received !
+Faile to get links !

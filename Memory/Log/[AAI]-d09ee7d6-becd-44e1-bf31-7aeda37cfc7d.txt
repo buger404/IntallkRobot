@@ -1,0 +1,323 @@
+##TIMELINE(20)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B8%8D%E8%A1%8C%EF%BC%8C%E5%BE%97%E4%BB%8E%E4%BD%A0%E7%BE%A4%E6%8B%89%E4%B8%AA%E4%BA%BA%E5%87%BA%E9%81%93&red_tag=e0313206225
+Web data received !
+Link:/p/6508825510?pid=130206331104&cid=0#130206331104
+Link:/p/6498748231?pid=130077855354&cid=0#130077855354
+Link:/p/6491962653?pid=129980803594&cid=0#129980803594
+Link:/p/6472504235?pid=129892931126&cid=0#129892931126
+Link:/p/6479563118?pid=129813319796&cid=0#129813319796
+Link:/p/5055396634?pid=129808440029&cid=0#129808440029
+Link:/p/6443706799?pid=129388306533&cid=0#129388306533
+Link:/p/6397525316?pid=129153070358&cid=0#129153070358
+Connect:https://tieba.baidu.com//p/6472504235?pid=129892931126&cid=0#129892931126
+Web data received !
+Content:56 words
+Content:12 words
+Content:0 words
+Content:11 words
+Content:9 words
+Content:1200 words
+Content:860 words
+Content:12 words
+Content:1512 words
+Content:2 words
+Content:10 words
+Content:1526 words
+Content:4 words
+Content:6 words
+Content:3 words
+Content:8 words
+Content:9 words
+Content:18 words
+Content:1767 words
+Content:233 words
+Content:5 words
+Content:2 words
+Content:11 words
+Content:0 words
+Content:0 words
+Content:0 words
+Content:0 words
+Content:28 words
+Content:15 words
+Content:2 words
+Reply:别断更
+##TIMELINE(22)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%EF%BC%9F&red_tag=e0313206225
+Web data received !
+Link:/p/6522004020?pid=130360188367&cid=130361044139#130361044139
+Link:/p/6520671621?pid=130360476353&cid=0#130360476353
+Link:/p/6520680334?pid=130360476414&cid=0#130360476414
+Connect:https://tieba.baidu.com//p/6520680334?pid=130360476414&cid=0#130360476414
+Web data received !
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Content:81 words
+Content:22 words
+Content:78 words
+Content:81 words
+Reply:邓伦朗月轩最象征着无限的活力是绍芃橙最集聚着人生珍贵的是郝泽宇最汇成最美生命之歌是鹿兆海最妩媚动人拨动心弦是子虚最完美最令人眷恋的是旭凤最机智幽默的开心果是李云凯
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E9%B2%B2%E5%90%9B%E8%B0%83%E7%9A%AE%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6281076756?pid=127746919093&cid=0#127746919093
+Link:/p/6060034565?pid=124465378897&cid=0#124465378897
+Connect:https://tieba.baidu.com//p/6281076756?pid=127746919093&cid=0#127746919093
+Web data received !
+Content:24 words
+Content:24 words
+Content:284 words
+Content:0 words
+Content:2 words
+Content:4 words
+Content:0 words
+Content:4 words
+Content:1732 words
+Content:1357 words
+Content:2591 words
+Content:1239 words
+Content:182 words
+Content:3 words
+Content:43 words
+Content:3 words
+Content:3 words
+Content:0 words
+Content:0 words
+Content:3 words
+Content:2 words
+Content:0 words
+Content:2 words
+Content:1 words
+Content:3 words
+Content:5 words
+Content:25 words
+Content:1 words
+Content:2 words
+Content:13 words
+Reply:d
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E6%98%AF%E8%B0%83%E5%85%AB%E6%9F%9A%E8%89%B2%E6%9C%88%E5%AD%90%E7%89%88%E5%8E%A8&red_tag=e0313206225
+Web data received !
+Faile to get links !
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%95%A5&red_tag=e0313206225
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E4%B8%8D%E7%A2%B0gal%E7%9A%84&red_tag=e0313206225
+Web data received !
+Web data received !
+Link:/p/6522277135?pid=130362575632&cid=0#130362575632
+Link:/p/6521209664?pid=130349817106&cid=0#130349817106
+Link:/p/6512608198?pid=130248617128&cid=130345767499#130345767499
+Link:/p/6520633946?pid=130342694949&cid=0#130342694949
+Link:/p/6518895821?pid=130321182109&cid=0#130321182109
+Link:/p/6518419860?pid=130314479877&cid=0#130314479877
+Link:/p/6514438077?pid=130311630552&cid=0#130311630552
+Link:/p/6522277135?pid=130362429004&cid=0#130362429004
+Connect:https://tieba.baidu.com//p/6518419860?pid=130314479877&cid=0#130314479877
+Web data received !
+Content:175 words
+Content:3559 words
+Content:2247 words
+Content:569 words
+Content:28 words
+Content:25 words
+Content:7 words
+Content:17 words
+Content:1 words
+Content:145 words
+Content:165 words
+Content:0 words
+Content:239 words
+Content:82 words
+Content:69 words
+Content:0 words
+Content:238 words
+Content:8 words
+Content:37 words
+Content:8 words
+Content:39 words
+Content:219 words
+Content:254 words
+Reply:今天樱之刻发售了吗.jpg，推完樱之诗我还是盯着屏幕发呆发了好久，后面推了遍稟线才缓过来，推完才感觉到这真的是个大型序章只能等刻出来补全了
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%B8%8D%E5%AD%98%E5%9C%A8&red_tag=e0313206225
+Web data received !
+Link:/p/6520590052?pid=130365421509&cid=0#130365421509
+Link:/p/6519966808?pid=130345645870&cid=130365418087#130365418087
+Link:/p/6518005700?pid=130365416678&cid=0#130365416678
+Link:/p/6495669464?pid=130365416688&cid=0#130365416688
+Link:/p/6518267668?pid=130356381487&cid=130365409827#130365409827
+Link:/p/6521718647?pid=130365409542&cid=0#130365409542
+Link:/p/6514749860?pid=130365408349&cid=0#130365408349
+Link:/p/6413259218?pid=129049183556&cid=130365407722#130365407722
+Link:/p/6522496563?pid=130365401853&cid=0#130365401853
+Link:/p/6520590052?pid=130365408736&cid=0#130365408736
+Connect:https://tieba.baidu.com//p/6520590052?pid=130365421509&cid=0#130365421509
+Web data received !
+Content:111 words
+Content:113 words
+Content:72 words
+Content:64 words
+Content:105 words
+Content:58 words
+Content:94 words
+Content:72 words
+Content:79 words
+Content:79 words
+Content:106 words
+Content:75 words
+Content:70 words
+Content:85 words
+Content:112 words
+Content:114 words
+Content:88 words
+Content:55 words
+Content:88 words
+Content:105 words
+Content:66 words
+Content:90 words
+Content:79 words
+Content:85 words
+Content:87 words
+Content:82 words
+Content:102 words
+Content:55 words
+Content:74 words
+Content:114 words
+Reply:#王源大主宰#，#王源牧尘#，#演员王源#，#歌手王源#，#王源#。像天使守护着我 不离不弃，像阳光温暖着我 一样的初心，如梦半醒 还没懂盛开的浅喜，舍不去放不下 青春的印记。
+##TIMELINE(23)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%88%91%E5%8F%AF%E4%BB%A5%E5%9C%A8%E9%87%8C%E9%9D%A2%E7%8E%A9&red_tag=e0313206225
+Web data received !
+Link:/p/6505246091?pid=130365771789&cid=0#130365771789
+Link:/p/6521212629?pid=130365677838&cid=0#130365677838
+Link:/p/6480345992?pid=130365435130&cid=0#130365435130
+Link:/p/6522498955?pid=130365417635&cid=0#130365417635
+Link:/p/6492004127?pid=130365338686&cid=0#130365338686
+Link:/p/6511406434?pid=130365325238&cid=0#130365325238
+Link:/p/6519714171?pid=130365322345&cid=0#130365322345
+Connect:https://tieba.baidu.com//p/6521212629?pid=130365677838&cid=0#130365677838
+Web data received !
+Content:22 words
+Content:42 words
+Content:47 words
+Content:19 words
+Content:11 words
+Content:2 words
+Content:4 words
+Content:5 words
+Content:9 words
+Content:13 words
+Content:1103 words
+Content:758 words
+Content:36 words
+Content:8 words
+Content:6 words
+Content:774 words
+Content:15 words
+Content:1095 words
+Content:25 words
+Content:21 words
+Content:4 words
+Content:6 words
+Content:16 words
+Content:9 words
+Content:1158 words
+Content:41 words
+Content:10 words
+Content:821 words
+Reply:火钳刘明
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=2g%E9%9A%BE%E5%8F%97%E4%BA%86%E5%90%A7&red_tag=e0313206225
+Web data received !
+Link:/p/6520362418?pid=130338376005&cid=0#130338376005
+Link:/p/6519892332?pid=130336184818&cid=0#130336184818
+Link:/p/6520123894?pid=130335619513&cid=130335994441#130335994441
+Link:/p/6158689327?pid=126035702545&cid=130337689483#130337689483
+Link:/p/6509609242?pid=130324397909&cid=0#130324397909
+Link:/p/6516141964?pid=130308409727&cid=0#130308409727
+Link:/p/6184871383?pid=130016372850&cid=130252733893#130252733893
+Link:/p/6500691902?pid=130143009078&cid=130143093951#130143093951
+Connect:https://tieba.baidu.com//p/6519892332?pid=130336184818&cid=0#130336184818
+Web data received !
+Content:89 words
+Content:34 words
+Content:25 words
+Content:917 words
+Content:621 words
+Content:254 words
+Content:10 words
+Content:340 words
+Content:12 words
+Content:326 words
+Content:20 words
+Content:14 words
+Content:9 words
+Content:10 words
+Content:442 words
+Content:350 words
+Content:13 words
+Content:42 words
+Content:155 words
+Content:139 words
+Content:0 words
+Content:876 words
+Content:362 words
+Content:7 words
+Content:782 words
+Content:496 words
+Content:552 words
+Content:247 words
+Content:179 words
+Content:703 words
+Reply:我迎着她，我走向她。落日的余晖把我的影子拉的好长，好长。我的心灵得到了净化，我的身体在这一刻好像不累了，我在欣赏她，亦如她也在欣赏我一样。5.30到达皮口镇。141公里10个小时高强度的骑行，半路逆风，半路缓坡，我累到手指都不想动一下，累到渴极了连床头的水都没力气拿，累到洗澡差点瘫软在浴室。这晚我早早的便歇息了，梦很甜，好像太阳再向我招手，她对我说，加油！
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%87%A0%E4%B8%AA%E5%AD%97%E7%AC%A6%E5%8D%B3%E5%8F%AF&red_tag=e0313206225
+Web data received !
+Link:/p/6521800311?pid=130356547564&cid=0#130356547564
+Link:/p/6520221008?pid=130336568617&cid=0#130336568617
+Link:/p/6517832489?pid=130308018740&cid=0#130308018740
+Link:/p/6517601181?pid=130305593267&cid=0#130305593267
+Link:/p/6517354178?pid=130302832192&cid=0#130302832192
+Link:/p/6517193771?pid=130301171901&cid=0#130301171901
+Link:/p/6515850767?pid=130283999439&cid=0#130283999439
+Link:/p/6513129128?pid=130252541414&cid=0#130252541414
+Link:/p/6512109701?pid=130238833137&cid=0#130238833137
+Connect:https://tieba.baidu.com//p/6515850767?pid=130283999439&cid=0#130283999439
+Web data received !
+Content:2448 words
+Content:9 words
+Content:43 words
+Content:31 words
+Content:10 words
+Content:3 words
+Content:19 words
+Content:10 words
+Reply:大🔥们滴进阶球员呢
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%B0%8F+%E5%AD%A6+%E7%AE%97+%E6%9C%AF&red_tag=e0313206225
+Web data received !
+Link:/p/6522657483?pid=130367795728&cid=0#130367795728
+Link:/p/6522646394?pid=130367641999&cid=0#130367641999
+Link:/p/6522640236?pid=130367542932&cid=0#130367542932
+Link:/p/6522352139?pid=130365486477&cid=130367526707#130367526707
+Link:/p/6522240832?pid=130367496249&cid=0#130367496249
+Connect:https://tieba.baidu.com//p/6522640236?pid=130367542932&cid=0#130367542932
+Web data received !
+Content:837 words
+Reply:╋【20`09`8`082`7`】徽，原厂直销质量有保障。做工主要就是看包包的走线，这个就算是外行也可以看的出来好坏的，正品包包的走线非常工整，因为他们的质检是很严格的，一旦这个包出现了一点点的走线偏差，质检这一块就会直接作废这一只包包，而现在的高仿包包也比较注重这一点，做的好的高仿，走线也是非常工整的，也有很多是纯人工制作，这就要看师傅的水平了近年来，应对全球变暖的紧迫性已经超越了以往任何时候，气候变化带给人类的威胁正越来越大。2018年年底，政府间气候变化专门委员会（IPCC）发布的一份报告显示，为了将全球气温升高幅度控制在1.5℃以内（与工业化前水平相比），我们必须确保碳排放在2030年之前降低45%，并且在本世纪中叶以前降低至零。但是，仅靠可再生资源很难做到这一点。100%使用可再生能源是否真的能够帮助人类对抗气候变暖也广受争议。人们争论的核心问题源于风能和太阳能这两种最大的可再生能源是“可变的”。它们每天都会发生变化，是“不可人为调节的”。然而，清洁能源技术的新突破可能会带来希望。美国加州大学洛杉矶分校和斯坦福大学的研究人员发明的新型“反太阳能”装置，能够弥补太阳能的限制，在黑暗中发电，为人类所用。该设备利用了辐射冷却的概念，也就是夜晚天空凉爽时，地球表面的物体将热量辐射到大气中，从而使温度低于环境空气的现象。两所高校的研究人员之前就利用了同样的概念，制造了一种耗能极低的被动冷却系统。在这项研究中，研究人员利用了同样的概念，借助温差在夜间发电。为了打造这种夜间可再生能源的新型装置，研究小组从一个商用热电模块开始着手研究，这个模块可以把温差转换成电能。他们把热电模块的一面固定在一个20厘米宽的铝制圆盘上，该圆盘上涂有一层商用黑色油漆。然后研究人员把它放在一个覆盖聚酯薄膜的塑料附件上，并使用透明盖子遮盖。将遮盖的这一面朝向天空并且向天空辐射热量，保持其温度低于周围空气。该装置的另一面则由未加涂层的20厘米铝盘制成，这一面通过周围空气进行加热

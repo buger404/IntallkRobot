@@ -1,0 +1,325 @@
+##TIMELINE(12)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%A5%B3%E5%AD%90+++++++%E6%B0%B5%E8%88%8C&red_tag=e0313206225
+Web data received !
+Link:/p/6476246709?pid=129779869033&cid=0#129779869033
+Link:/p/6301798429?pid=127962287280&cid=0#127962287280
+Link:/p/6094392148?pid=124999969411&cid=0#124999969411
+Link:/p/6092601896?pid=124969834212&cid=0#124969834212
+Connect:https://tieba.baidu.com//p/6476246709?pid=129779869033&cid=0#129779869033
+Web data received !
+Content:6 words
+Content:1304 words
+Content:10 words
+Content:163 words
+Content:259 words
+Content:11 words
+Content:164 words
+Content:90 words
+Content:16 words
+Content:937 words
+Content:277 words
+Content:705 words
+Content:589 words
+Content:588 words
+Content:566 words
+Content:577 words
+Content:536 words
+Content:39 words
+Content:2006 words
+Content:511 words
+Content:1783 words
+Content:3656 words
+Content:2695 words
+Content:22 words
+Content:17 words
+Content:5 words
+Content:5 words
+Content:12 words
+Content:63 words
+Content:0 words
+Reply:还有一部分
+##TIMELINE(14)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-stat&red_tag=e0313206225
+Web data received !
+Link:/p/6515901536?pid=130348298736&cid=130378120800#130378120800
+Link:/p/6523185811?pid=130374798929&cid=0#130374798929
+Link:/p/6523184409?pid=130374784446&cid=0#130374784446
+Link:/p/6523060234?pid=130373514563&cid=0#130373514563
+Link:/p/6522207222?pid=130372541112&cid=0#130372541112
+Link:/p/6515901536?pid=130284632819&cid=130376652833#130376652833
+Link:/p/6515901536?pid=130365120038&cid=130376250358#130376250358
+Link:/p/6515901536?pid=130284711486&cid=130372935480#130372935480
+Connect:https://tieba.baidu.com//p/6515901536?pid=130348298736&cid=130378120800#130378120800
+Web data received !
+Content:25 words
+Content:4 words
+Content:0 words
+Content:7 words
+Content:5 words
+Content:5 words
+Content:2 words
+Content:1 words
+Content:7 words
+Content:11 words
+Content:6 words
+Content:10 words
+Content:4 words
+Content:0 words
+Content:6 words
+Content:5 words
+Content:0 words
+Content:3 words
+Content:10 words
+Content:6 words
+Content:8 words
+Content:10 words
+Content:7 words
+Content:16 words
+Content:3 words
+Content:3 words
+Content:11 words
+Content:9 words
+Content:10 words
+Content:14 words
+Reply:这是30的渐变
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-pr&red_tag=e0313206225
+Web data received !
+Link:/p/6519733554?pid=130333125440&cid=0#130333125440
+Link:/p/6519941117?pid=130333113834&cid=0#130333113834
+Link:/p/6519868702?pid=130332544932&cid=130333032607#130333032607
+Link:/p/6209407081?pid=130333006781&cid=0#130333006781
+Link:/p/6519928973?pid=130332981240&cid=0#130332981240
+Connect:https://tieba.baidu.com//p/6519733554?pid=130333125440&cid=0#130333125440
+Web data received !
+Content:44 words
+Content:20 words
+Content:31 words
+Content:24 words
+Content:22 words
+Reply:哇优秀可以甩我吗  q1957007975 ,最近正在学，感恩
+##TIMELINE(15)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=bass+bass+kick+kick+&red_tag=e0313206225
+Web data received !
+Link:/p/6286325928?pid=127899845353&cid=130316882259#130316882259
+Link:/p/6515316508?pid=130305723344&cid=0#130305723344
+Link:/p/6515302756?pid=130299186329&cid=0#130299186329
+Link:/p/6310222177?pid=130291734976&cid=0#130291734976
+Link:/p/6511920419?pid=130265584950&cid=0#130265584950
+Link:/p/6508432777?pid=130197083261&cid=0#130197083261
+Link:/p/6502092991?pid=130123367888&cid=0#130123367888
+Link:/p/5994451722?pid=130052747730&cid=0#130052747730
+Link:/p/6310222177?pid=130286805385&cid=0#130286805385
+Link:/p/6310222177?pid=130285890585&cid=0#130285890585
+Connect:https://tieba.baidu.com//p/6310222177?pid=130291734976&cid=0#130291734976
+Web data received !
+Content:19 words
+Content:124 words
+Content:1 words
+Content:125 words
+Content:3 words
+Content:10 words
+Content:14 words
+Content:34 words
+Content:30 words
+Content:7 words
+Content:16 words
+Content:8 words
+Content:16 words
+Content:0 words
+Content:0 words
+Content:124 words
+Content:103 words
+Content:6 words
+Content:154 words
+Content:28 words
+Content:65 words
+Content:0 words
+Content:12 words
+Reply:O-oooooooooo AAAAE-A-A-I-A-U-JO-oooooooooooo-AAE-O-A-A-U-A-E-eee-ee-eee-AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo
+##TIMELINE(16)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%A5%9E%E7%9A%84%E9%AA%82%E4%BD%A0%E9%AA%82%E4%BD%A0&red_tag=e0313206225
+Web data received !
+Link:/p/6523747206?pid=130381426803&cid=0#130381426803
+Link:/p/6523022291?pid=130381390799&cid=0#130381390799
+Link:/p/6523142989?pid=130381332555&cid=0#130381332555
+Connect:https://tieba.baidu.com//p/6523747206?pid=130381426803&cid=0#130381426803
+Web data received !
+Content:111 words
+Content:33 words
+Content:23 words
+Content:26 words
+Content:22 words
+Content:24 words
+Content:17 words
+Content:38 words
+Content:71 words
+Content:12 words
+Content:12 words
+Content:12 words
+Content:3 words
+Content:59 words
+Content:16 words
+Content:11 words
+Content:60 words
+Reply:还挺牛
+##TIMELINE(18)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%BE%88%E6%A3%92%E7%9A%84&red_tag=e0313206225
+Web data received !
+Link:/p/6523190142?pid=130381170882&cid=130383706884#130383706884
+Link:/p/6524013375?pid=130383701742&cid=0#130383701742
+Link:/p/5925763957?pid=130383685967&cid=0#130383685967
+Link:/p/6522462161?pid=130383587175&cid=0#130383587175
+Link:/p/6517528163?pid=130383574477&cid=0#130383574477
+Link:/p/6310698296?pid=130383447146&cid=0#130383447146
+Link:/p/6523190142?pid=130383635551&cid=0#130383635551
+Connect:https://tieba.baidu.com//p/6310698296?pid=130383447146&cid=0#130383447146
+Web data received !
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Content:33 words
+Reply:&#25105;&#21483;伏&#24517;&#25104;
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E6%9C%80%E5%90%8E%E6%80%9D%E5%BF%85%E5%BE%97%E5%A4%AA%E5%BF%AB%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6213887438?pid=127421463364&cid=0#127421463364
+Link:/p/5505138992?pid=116791186950&cid=0#116791186950
+Connect:https://tieba.baidu.com//p/5505138992?pid=116791186950&cid=0#116791186950
+Web data received !
+Content:243 words
+Content:48 words
+Content:28 words
+Content:3 words
+Content:9 words
+Content:37 words
+Content:56 words
+Content:8 words
+Content:18 words
+Content:15 words
+Content:69 words
+Content:81 words
+Content:60 words
+Content:104 words
+Content:10 words
+Content:1 words
+Content:9 words
+Content:15 words
+Content:9 words
+Content:11 words
+Content:17 words
+Content:70 words
+Content:0 words
+Content:12 words
+Content:73 words
+Content:123 words
+Content:28 words
+Content:63 words
+Content:10 words
+Content:29 words
+Reply:啊
+##TIMELINE(21)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BD%A0%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%8B%E5%9B%BE%E5%99%A8&red_tag=e0313206225
+Web data received !
+Link:/p/6522355429?pid=130363469275&cid=0#130363469275
+Link:/p/6516513430?pid=130361794403&cid=0#130361794403
+Link:/p/6521779219?pid=130356307922&cid=0#130356307922
+Link:/p/6521216116?pid=130349889336&cid=0#130349889336
+Link:/p/6520936457?pid=130346614684&cid=0#130346614684
+Link:/p/6520456868?pid=130339619187&cid=0#130339619187
+Link:/p/6520254193?pid=130336990860&cid=0#130336990860
+Link:/p/6518453410?pid=130314857937&cid=0#130314857937
+Connect:https://tieba.baidu.com//p/6520254193?pid=130336990860&cid=0#130336990860
+Web data received !
+Content:182 words
+Reply:美国浏览器没有充值入口，只输入数字，基本2秒0.1美元，看你手速了， 每输入1次0.1美元也就是0.7元一天无限撸，第一次提现要150美元起，我一小时搞定150美元就是1050元，过后就是5美元提现， 操作简单，看下图操作，不要问我真不真，不试你就不知道什么叫做 最好用QQ浏览器有翻译系统https://arymoney.xyz/490131684113294/
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E7%B2%9F%E7%B1%B3&red_tag=e0313206225
+Web data received !
+Link:/p/6522201688?pid=130364861621&cid=0#130364861621
+Link:/p/6429392584?pid=130362462194&cid=0#130362462194
+Link:/p/6208343208?pid=130362304726&cid=0#130362304726
+Link:/p/6519868330?pid=130346995647&cid=130361289111#130361289111
+Link:/p/6501428274?pid=130141891252&cid=130361212706#130361212706
+Link:/p/6521862897?pid=130360891638&cid=0#130360891638
+Link:/p/6522082392?pid=130359900330&cid=0#130359900330
+Link:/p/6521714055?pid=130355620073&cid=0#130355620073
+Connect:https://tieba.baidu.com//p/6208343208?pid=130362304726&cid=0#130362304726
+Web data received !
+Content:11 words
+Content:473 words
+Content:670 words
+Content:376 words
+Content:218 words
+Content:8 words
+Content:284 words
+Content:814 words
+Content:223 words
+Content:845 words
+Content:447 words
+Content:462 words
+Content:424 words
+Content:328 words
+Content:382 words
+Content:500 words
+Content:546 words
+Content:369 words
+Content:390 words
+Content:351 words
+Content:223 words
+Content:557 words
+Content:302 words
+Content:451 words
+Content:460 words
+Content:736 words
+Content:518 words
+Content:466 words
+Content:551 words
+Content:471 words
+Reply:[穿越重生] 《BE之后，我穿越了》作者：岁既晏兮【完结+番外】晋江VIP2020-02-27完结总书评数：1277 当前被收藏数：2275 营养液数：342 文章积分：42,725,636文案：玩个恋爱游戏，想要个一心一意、完美无缺的纸片人男友，有错吗？！萧祁嘉：没有！（大声　　既肝又氪，好不容易刷满了好感度，却发现心心念念的男友有一抹白月光，心态崩溃，激情辱骂游戏策划十分钟，有错吗？！！萧祁家：没有！！（超大声　　在卸载游戏、怒摔手机之前，憋着一股气连刷四个BE结局，有错吗？！！！萧祁嘉：没有！！！（声嘶力竭　　*一觉醒来，眼前站了个古装帅哥，脸上带笑，但就是让人背后嗖嗖发冷，“祁儿，你怎么就是学不乖呢？”　　萧祁嘉：……？！这场景，怎么这么像那个垃圾游戏“笼中鸟“结局？！*系统：亲亲努力呀，集齐四样神器，就可以回家了哟 &gt; v &lt;　　萧祁嘉：……　　系统：存档还给亲亲保留着，主要人物满好感度的哟 =3=　　萧·打出一众BE结局·祁嘉：……我有一句mmp，不知道当不当讲。Ps.1. 万人迷女主。2. 只建议站女主，女主最后要回家的。内容标签： 穿越时空 爽文搜索关键字：主角：萧祁嘉 ┃ 配角： ┃ 其它：
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E4%BD%A0%E7%AB%9F%E7%84%B6%E7%9C%9F%E4%BF%A1%E4%BA%86&red_tag=e0313206225
+Web data received !
+Link:/p/6518886698?pid=130388320980&cid=0#130388320980
+Link:/p/6524381201?pid=130388287031&cid=0#130388287031
+Link:/p/6520829560?pid=130388181960&cid=0#130388181960
+Link:/p/6524293284?pid=130388232638&cid=0#130388232638
+Connect:https://tieba.baidu.com//p/6524381201?pid=130388287031&cid=0#130388287031
+Web data received !
+Content:1079 words
+Reply:刘凯顿时吓得满脸汗水啊，后背都发凉了，他立刻感觉到今天这事情不对劲啊，这胡氏集团的水有点深啊，自己老大都打电话过来了，而且发这么大的火。他好不容易才混到大队长职务，他不想就这么被撸下去啊！否则也太亏了啊！而且胡华天还没有给他们好处呢？此刻他老大直接打电话过来，让刘凯知道问题严重了。“撤退，撤退。”刘凯立刻朝着自己手下的人喊道。“啊，就这么撤退了，怎么跟胡董交代啊？”刘凯手下的人急忙诧异的问道。“跟胡董交代个屁，他估计自己都自身难保了，刚才老大来电话了，让我们赶快撤回去。”刘凯顿时就火了，愤怒的喝道。“我的天啊，老大打电话了？”这些人顿时就怂了，急忙跟着刘凯撤退着。而二楼的会议室内。胡华天的脸上一脸不屑，虽然叶城跟胡善平带了这么多保镖，而且叶城也能打，但是那又如何？在刘凯面前，胡华天不相信叶城还敢动手。而胡航宇的脸上也浮现出一丝冷笑从，朝着叶城喊道着，“小子，你得意的时间可不多了，还有你，胡善平，稍后你就得在大牢里面了，来，提前说下你的感想！”胡善平不由讪笑了一下，直接忽略了胡航宇，而是朝着胡华天喊道，“叔叔，看在你是我长辈的份上，我奉劝你一句，现在跪下来道个歉，岂是也没什么，至少能保住你和你儿子的小命，否则稍后叶少发怒了，你们真的完蛋。”“胡善平，不要太猖狂了，刘凯他们马上就到，我看你还能......”结果胡华天的话还没有说完，就听到胡航宇惊讶的说道，“不对，不对，董事长，刘凯他们怎么带人撤退了啊！”胡航宇的这句话传来后，所有的人都朝着窗外望去，就看到刘凯带着人急速的跑了回去，很快，众人就看到两辆警车离开了他们的视野之中。一瞬间，胡华天，胡航宇，还有胡杨风都傻眼了，根本就没有想到，会发生这样的事情。刘凯竟然撤退了？明明已经是到了这里啊，怎么会撤退呢？“难道刚才这小子说的算真的？”胡华天脑海里突然想到了刚才叶城的话，叶城告诉他，没有他的容许，任何人不能上来。可是对方是执法队啊，这不科学啊？“董事长，这，怎么回事啊？刘凯怎么走了啊？”胡航宇一头雾水的说道。而胡杨风也是茫然的望着自己的父亲，不相信这是真的，倒是胡善平不由的心中一阵好笑，叶少爷亲自过来了，谁敢动他胡善平？“别急，可能是有什么事情，需要回去处理。”胡华天不由的深吸了一口气，安慰自己道。“对，对，刘队长应该是有紧急事情要处理了，董事长，你先打个电话问问。”胡航宇急忙提醒的说道。胡华天这才摸出手机，准备打电话给刘凯，叶城淡淡笑道，“胡华天，你就别打了，我早就说过了，他上不来的，这种事情，他刘凯参合不了，他还不够资格。”“哼？我不信，你就是运气好而已，我这就打电话问问！
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=-pr&red_tag=e0313206225
+Web data received !
+Link:/p/6519733554?pid=130333125440&cid=0#130333125440
+Link:/p/6519941117?pid=130333113834&cid=0#130333113834
+Link:/p/6519868702?pid=130332544932&cid=130333032607#130333032607
+Link:/p/6209407081?pid=130333006781&cid=0#130333006781
+Link:/p/6519928973?pid=130332981240&cid=0#130332981240
+Connect:https://tieba.baidu.com//p/6209407081?pid=130333006781&cid=0#130333006781
+Web data received !
+Content:63 words
+Content:48 words
+Content:20 words
+Reply:有没有人和我一样觉得me队列输出的速度比pr直接处理慢很多，pr用10分钟就能完成的东西导入me就需要20多分钟，其中原因是啥
+##TIMELINE(23)####################################################
+Connect:http://tieba.baidu.com/f/search/res?ie=utf-8&qw=%E5%85%B6%E5%AE%9E%E4%B9%9F%E6%9C%89%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%9A%84&red_tag=e0313206225
+Web data received !
+Link:/p/6523480045?pid=130378078537&cid=0#130378078537
+Link:/p/6518286174?pid=130312780917&cid=0#130312780917
+Link:/p/6496788048?pid=130050679222&cid=0#130050679222
+Link:/p/6496084085?pid=130042045215&cid=0#130042045215
+Link:/p/6484141657?pid=129874166398&cid=0#129874166398
+Link:/p/6476934388?pid=129776656957&cid=0#129776656957
+Link:/p/6473573350?pid=129731128760&cid=0#129731128760
+Link:/p/6470463336?pid=129688856960&cid=0#129688856960
+Connect:https://tieba.baidu.com//p/6476934388?pid=129776656957&cid=0#129776656957
+Web data received !
+Content:1665 words
+Reply:无锡也有很多阿里巴巴商家做了很多年的运营，但是自己做又没有多大效果，所以很多人也找了无锡阿里巴巴代运营网络托管公司，那么企优托以这么多年的运营经验来告诉你一些技巧。1、给店铺定位。阿里巴巴上除了你，还有你的同行。别做杂货店，什么都想卖，你又不是人民币，满足不了所有人。店铺卖什么？卖给谁？怎么卖？这些都要考虑清楚。只做你有优势的产品，定位成这个品类的专家，让客户看了过目不忘，需要时能想到你。2、向的同行学习。很多人做阿里巴巴平台不知道如何下手，其实简单的办法，就是向的同行学习。搜索你的产品，看排在前面的10个同行，他们是如何做的。取其精华，去其糟粕。3、注册个简短易记的会员名。会员名不仅是用来登录，在阿里巴巴的其他产品如博客专栏圈子都会显示，所以为了后面的推广，会员名不能随便取，建议用中文名。4、公司信息很重要，别敷衍。注册后要完善公司信息才能开通店铺的，我看了不少公司的公司简介都不合格。有的用系统默认的，有的为了凑字数，复制几段重复的内容。公司简介的内容建议静下心来撰写，把公司的基本情况，发展历程和优势都写出来，500字左右为宜。5、联系信息要翔实。你的目的是什么？让客户方便找到你。座机丶手机丶400电话丶邮箱地址丶在线即时洽谈工具（QQ/旺旺），准备无误的填上去，由于网络面向全球用户，所以一定记得要填写好电话区号。6、认证信息，建立信任。有条件的话建议尽量开通诚信通会员，一年三千多块钱很多功能可以用。如果是初创企业或者个人不想花钱的话，阿里巴巴也有免费的实名认证服务，个人提供身份证，企业提供营业执照。网上做生意就要光明正大，因为客户信任你才会跟你成交。7、产品分类要清楚。产品分类要方便客户查找，如果供应产品比较多，建议设置二级分类，促销丶新品或者热卖的分类尽量放在前面。8、发布供应产品注意要选择正确的类目，否则会影响搜索排名。9、产品信息标题有讲究。标题是广告中的广告，好的标题除了能让搜索引擎优先收录外，还要确保目标客户看到有点击欲望。比如岳量写这篇文章，标题也花了很多心思的。标题要包含需要推广的关键词，关于选择关键词的技巧，我在后面会讲到。10、供应信息参数要完整。发布供应信息时，不同产品会有很多参数，建议尽量填完整，详细的信息除了让客户觉得专业，搜索排名也是会加分的哦。11、产品图片要统一风格。没有专业的美工不要紧，产品拍摄时用统一浅色背景，突出产品。尺寸按阿里的规则750*750像素以上，建议批量加上透明水印。12、产品详细页要重视。我看了很多店铺的产品详细页就写了一段公司简介，这是来捣乱的吗？要知道超过八成的客户是通过搜索来到产品详细页的，所以，这个才是重点啊。产品的参数丶细节图片丶卖点，交易流程，售后服务都尽管展示出来吧。13、为店铺选择一个好的二级域名。店铺开通后系统会默认一个二级域名，为了便于传播和记忆，可以修改成简短易记的英文或拼音。14、网上店铺也是店，店招不能少。店招是好的广告位，不过被很多人忽略了。LOGO丶Slogan（就是你的广告口号啦）都要设置好，要让客户点击进来能记住你。15、店铺装修要实用。切记设计都是为营销服务的，有些店铺装修得确实大气上档次，不过就是不接地气，客户看了半天根本不知道这是卖什么的有什么优势。特别是做工业品的，简洁大方为宜。16、公司动态要经常更新。有规律的更新动态，让客户知道这是一家在正常经营的公司。17、鼓励客户收藏店铺。万一下次客户需要购买又搜索不到你的店铺呢？18、产品相册要利用好。产品相册的作用不可小视，把相册做好可以当电子画册用。有一个做服装的朋友，就用一个免费的博客相册，一年流水过百万。19、保持在线。建议把千牛（现在还有很多商友用的是阿里旺旺）设成自动登录，每天上班开电脑就挂着。在线客服可以添加多个在线客服人员，这样显得公司人强马壮嘛。在线客服用实名，让客户知道联系谁，不要用业务一部业务二部之类的。20、用商机助理管理方便多。有些新手商友可能还不知道，下载个商机助理来管理产品会方便很多，可以批量管理产品。
