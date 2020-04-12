@@ -30,6 +30,7 @@ namespace io.github.buger404.intallk.Code
 
         public void PrivateMessage(object sender, CQPrivateMessageEventArgs e)
         {
+            return;
             try
             {
                 Log("(" + e.FromQQ.Id + ")Private: " + e.Message.Text, ConsoleColor.Green);
