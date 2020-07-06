@@ -69,6 +69,8 @@ namespace MainThread
         public static List<delaymsg> delays = new List<delaymsg>();
         public static List<string> ptList;
         public static List<flowlibrary> flibrary = new List<flowlibrary>();
+        public static long ReportBUGTime = 0;
+
         public static void SimSay(string Comments, long Group, long delay, bool Voice = false)
         {
 
@@ -80,13 +82,22 @@ namespace MainThread
             d.group = Group;
             delays.Add(d);
         }
-        public static void LetSay(string Comments, long Group,int k = 0,bool Voice = false)
+        public static void LetSay(string Comments, long Group,int k = 0,bool Voice = false,bool JustCrlf = false)
         {
 
-            string[] w = Comments.Replace(',', '，').Replace('.', '，').Replace('。', '，')
+            string[] w;
+            if (JustCrlf)
+            {
+                w = Comments.Split('\n');
+            }
+            else
+            {
+                w = Comments.Replace(',', '，').Replace('.', '，').Replace('。', '，')
                                      .Replace('！', '，').Replace('!', '，')
                                      .Replace('\"', ' ').Replace('“', ' ').Replace('”', ' ')
                                      .Replace('？', '，').Replace('?', '，').Split('，');
+            }
+            
 
             Random r = new Random(Guid.NewGuid().GetHashCode());
             long now = GetTickCount();
@@ -98,9 +109,9 @@ namespace MainThread
                     delaymsg d = new delaymsg();
                     d.msg = w[j]; d.kind = k; d.voice = Voice;
                     d.time = now + 
-                            (w[j].Length * 
-                            (long)(300 * (Convert.ToDouble(r.Next(70, 120)) / 100f)
-                            * (Voice ? 1.5 : 1))
+                            Convert.ToInt32(Convert.ToDouble(w[j].Length) * 
+                            (300d * (Convert.ToDouble(r.Next(70, 120)) / 100d)
+                            * (Voice ? 1.5d : 1d) * (JustCrlf ? 0.3d : 1d))
                             );
                     d.group = Group;
                     delays.Add(d);
@@ -228,6 +239,33 @@ namespace MainThread
             Random r = new Random(Guid.NewGuid().GetHashCode());
             try
             {
+                if(Event_GroupMessage.ProtectCount >= 3)
+                {
+                    Log($"trapped in bug:{ReportBUGTime},{GetTickCount()}");
+                    if(ReportBUGTime > 0)
+                    {
+                        if(GetTickCount() >= ReportBUGTime)
+                        {
+                            Log($"Unlimited network:{Event_GroupMessage.ProtectCount}/ ms", ConsoleColor.Red);
+                            ReportBUGTime = 0;
+                            string bugr = $"{DateTime.Now.ToString()}\n"+
+                                          "机器人在处理消息时发现消息流量异常，可能机器人进程被长时间挂起。"+
+                                          "为了避免机器人继续处理消息导致暴走，已经切断消息处理。"+
+                                          "请持有32766级别以上权限的用户发送.bugclose解除切断。" +
+                                          $"\n异常消息流量：{Event_GroupMessage.ProtectCount}条/毫秒\n\n若无人协助，则切断将在{Event_GroupMessage.ProtectCount * 10}秒后解除。";
+                            new QQ(pCQ, 1361778219).SendPrivateMessage(bugr);
+                            List<GroupInfo> gi = pCQ.GetGroupList();
+                            foreach (GroupInfo gii in gi)
+                            {
+                                //gii.Group.SendGroupMessage(bugr);
+                            }
+                        }
+                    }
+                    Event_GroupMessage.ProtectCount--;
+                    Thread.Sleep(10000);
+                    goto posthead;
+                }
+
                 if (r.Next(0,1000) == 88)
                 {
                     if(DateTime.Now.Hour >= 7 && DateTime.Now.Hour < 24)
