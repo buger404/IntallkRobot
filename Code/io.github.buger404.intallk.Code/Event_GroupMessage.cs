@@ -34,6 +34,8 @@ namespace io.github.buger404.intallk.Code
         public static Storage info = new Storage("userinfo");
         public static Storage ignore = new Storage("ignore");
         public static Storage board = new Storage("board");
+        public static Storage achive = new Storage("achivement");
+        public static Group Current;
         public bool force = false;
         public SystemInfo sysinfo = new SystemInfo();
         public enum ShowCommands : int
@@ -146,6 +148,23 @@ namespace io.github.buger404.intallk.Code
                 UT.ps.Add(utplay);
             }
         }
+        public static void Achive(long qq,string goal,Group group)
+        {
+            string lsa = achive.getkey(qq.ToString(), "achivements");
+            if (lsa == null) lsa = "";
+            if (lsa.IndexOf(goal + "\n") >= 0) return;
+            achive.putkey(qq.ToString(), "achivements", lsa + DateTime.Today.ToShortDateString() + "  " + goal + "\n");
+            group.SendGroupMessage(CQApi.CQCode_Record("goal.mp3"));
+            group.SendGroupMessage(CQApi.CQCode_At(qq) + " 获得了成就『" + goal + "』！");
+        }
+        public void PutRepeat(string name, string text)
+        {
+            int Count = Convert.ToInt32(Manager.wordcollect.getkey("repeat", "count"));
+            Manager.wordcollect.putkey("repeat", "item" + Count, text);
+            Manager.wordcollect.putkey("owner" + Count, "name", name);
+            Count++;
+            Manager.wordcollect.putkey("repeat", "count", Count.ToString());
+        }
         public int PutRepeat(string name,string text, Group FromGroup,CQApi CQApi,bool SkipCheck = true)
         {
             if (SkipCheck) { goto DontCheck; }
@@ -191,6 +210,8 @@ namespace io.github.buger404.intallk.Code
         {
             public long Group;
             public long Tick;
+            public long LastQQ;
+            public long SingleTicks;
         }
         public static List<GroupBUGCheck> bugs = new List<GroupBUGCheck>();
         public static int ProtectCount = 0;
@@ -357,7 +378,16 @@ namespace io.github.buger404.intallk.Code
         // 接收事件
         public void GroupMessage(object sender, CQGroupMessageEventArgs e)
         {
+            Current = e.FromGroup;
             ExcuteCmd(e.FromGroup, e.FromQQ, e.Message, e.CQApi, e.Message.Text);
+            if(DateTime.Now.Hour == 4)
+            {
+                Achive(e.FromQQ.Id, "深夜霸王", e.FromGroup);
+            }
+            if (DateTime.Now.Hour == 0 && DateTime.Now.Second == 0)
+            {
+                Achive(e.FromQQ.Id, "时间操纵", e.FromGroup);
+            }
             e.Handler = true;
         }
         public long LongTime()
@@ -437,6 +467,7 @@ namespace io.github.buger404.intallk.Code
                     }
                     if (ProtectCount >= 3) 
                     {
+                        Achive(FromQQ.Id, "黑嘴杀手", FromGroup);
                         MessagePoster.ReportBUGTime = GetTickCount()+3000;
                         Log("!!!!!!!!!\nBUG , STOPPED WORKING.\n!!!!!!", ConsoleColor.Red);
                     }
@@ -445,7 +476,20 @@ namespace io.github.buger404.intallk.Code
                         Log("Close protection");
                         ProtectCount = 0; 
                     }
-                    gbc = bugs[bi];gbc.Tick = GetTickCount();bugs[bi] = gbc;
+                    gbc = bugs[bi];gbc.Tick = GetTickCount();
+                    if (gbc.LastQQ != FromQQ.Id)
+                    {
+                        gbc.LastQQ = FromQQ.Id;
+                        gbc.SingleTicks = 0;
+                    }
+                    else
+                    {
+                        gbc.SingleTicks++;
+                        if (gbc.SingleTicks == 5) { Achive(FromQQ.Id, "自言自语", FromGroup); }
+                        if (gbc.SingleTicks == 10) { Achive(FromQQ.Id, "盛夏飘雪", FromGroup); }
+                        if (gbc.SingleTicks == 20) { Achive(FromQQ.Id, "赤道暴风雪", FromGroup); }
+                    }
+                    bugs[bi] = gbc;
                 }
 
                 if (ignore.getkey(FromGroup.Id.ToString(), "group") == "√" && force == false) { return; }
@@ -1381,6 +1425,16 @@ namespace io.github.buger404.intallk.Code
                                                              + (int)(meminfo.bacount / meminfo.wcount * 10000) / 100.0f + "%)\n"
                                                              );
                                 break;
+                            case ("wex"):
+                                if (!JudgePermission(FromQQ.Id, PermissionName.LOVEPermission)) { return; }
+                                string[] words = cmd.Split('\n');
+                                string oname = p[2].Split('\n')[0].Replace("\r","").Replace("\n","");
+                                for(int i = 1;i < words.Length; i++)
+                                {
+                                    PutRepeat(oname, words[i]);
+                                }
+                                FromGroup.SendGroupMessage("成功为" + oname + "导入" + (words.Length - 1) + "条语录。");
+                                break;
                             case ("wreport"):
                                 if (!JudgePermission(FromQQ.Id, PermissionName.LOVEPermission)) { return; }
                                 ProtectCount = 404;
@@ -1990,6 +2044,16 @@ namespace io.github.buger404.intallk.Code
                                     FromGroup.SendGroupMessage(FromQQ.CQCode_At(), " 无查询结果");
                                 }
                                 break;
+                            case ("ach"):
+                                if (!JudgePermission(FromQQ.Id, PermissionName.AirPermission))
+                                {
+                                    FromGroup.SendGroupMessage(CQApi.CQCode_At(FromQQ), "\n非常抱歉，您被机器人封禁，无法使用任何指令。\n为什么会这样？\n您可能滥用指令或指令刷屏，或由开发者亲自封禁。\n怎么恢复？\n联系开发者。");
+                                    return;
+                                }
+                                user = FromQQ.Id.ToString();
+                                if (p.Length > 2) { user = p[2]; }
+                                FromGroup.SendGroupMessage(CQApi.CQCode_At(long.Parse(user)) + " 获得的成就：\n" + achive.getkey(user, "achivements"));
+                                break;
                             case ("info"):
                                 if (!JudgePermission(FromQQ.Id, PermissionName.AirPermission))
                                 {
@@ -2090,6 +2154,7 @@ namespace io.github.buger404.intallk.Code
                                 cmdtabs.Add(new DrawTable.tabs("用途", Color.Black, Color.Transparent));
 
                                 AddCmdTab(PermissionName.AirPermission, ".info [QQ]", "查看个人资料卡", cmdtabs, FromQQ, FromGroup);
+                                AddCmdTab(PermissionName.AirPermission, ".ach [QQ]", "查看个人成就", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.AirPermission, ".wall", "获取一张随即壁纸", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.AirPermission, ".sx <内容>", "查询中文缩写原文", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.LOVEPermission, ".fsleep", "命令机器人所在服务器立即重启[关键操作]", cmdtabs, FromQQ, FromGroup);
@@ -2128,6 +2193,7 @@ namespace io.github.buger404.intallk.Code
                                 AddCmdTab(PermissionName.LOVEPermission, ".wfetchs <内容>", "列出以指定内容开头的数据序号", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.Error404, ".wclear <序号，用' '隔开>", "删除对应的语录数据（创建备份）", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.LOVEPermission, ".wreport", "分析语录集数据库状态", cmdtabs, FromQQ, FromGroup);
+                                AddCmdTab(PermissionName.LOVEPermission, ".wex", "批量导入语录集", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.AirPermission, ".msginfo", "显示你的水群记录", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.AirPermission, ".msgrk msg [all]", "按照发言条数排序", cmdtabs, FromQQ, FromGroup);
                                 AddCmdTab(PermissionName.AirPermission, ".msgrk zerore [all]", "按照复读发起率排序", cmdtabs, FromQQ, FromGroup);

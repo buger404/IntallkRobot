@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Json;
 using System.IO;
 using System.Threading;
+using io.github.buger404.intallk.Code;
 
 namespace Repeater
 {
@@ -75,6 +76,10 @@ namespace Repeater
             if (i == -1) { List.data.Add(new member(qq,group));i = List.data.Count - 1; }
             member me = List.data[i];
             me.wcount++; List.data[i] = me;
+            if (me.wcount == 1) Event_GroupMessage.Achive(qq, "Hello World", Event_GroupMessage.Current);
+            if (me.wcount == 1000) Event_GroupMessage.Achive(qq, "聊得火热", Event_GroupMessage.Current);
+            if (me.wcount == 10000) Event_GroupMessage.Achive(qq, "水群大湿", Event_GroupMessage.Current);
+            if (me.wcount == 100000) Event_GroupMessage.Achive(qq, "远古居民", Event_GroupMessage.Current);
         }
         public static void FirstRepeat(long qq, long group)
         {
@@ -82,6 +87,9 @@ namespace Repeater
             if (i == -1) { List.data.Add(new member(qq, group)); i = List.data.Count - 1; }
             member me = List.data[i];
             me.frcount++; List.data[i] = me;
+            if (me.wcount == 100) Event_GroupMessage.Achive(qq, "最受欢迎群员", Event_GroupMessage.Current);
+            if (me.wcount == 233) Event_GroupMessage.Achive(qq, "鲁迅", Event_GroupMessage.Current);
+            if (me.wcount == 666) Event_GroupMessage.Achive(qq, "精髓", Event_GroupMessage.Current);
         }
         public static void ZeroRepeat(long qq, long group)
         {
@@ -89,6 +97,8 @@ namespace Repeater
             if (i == -1) { List.data.Add(new member(qq, group)); i = List.data.Count - 1; }
             member me = List.data[i];
             me.zfcount++; List.data[i] = me;
+            if (me.wcount == 200) Event_GroupMessage.Achive(qq, "鼓舞者", Event_GroupMessage.Current);
+            if (me.wcount == 400) Event_GroupMessage.Achive(qq, "热度风暴", Event_GroupMessage.Current);
         }
         public static void BoringRepeat(long qq, long group)
         {
@@ -96,6 +106,9 @@ namespace Repeater
             if (i == -1) { List.data.Add(new member(qq, group)); i = List.data.Count - 1; }
             member me = List.data[i];
             me.bacount++; List.data[i] = me;
+            if (me.wcount == 30) Event_GroupMessage.Achive(qq, "刷屏带师", Event_GroupMessage.Current);
+            if (me.wcount == 60) Event_GroupMessage.Achive(qq, "垃圾制造者", Event_GroupMessage.Current);
+            if (me.wcount == 100) Event_GroupMessage.Achive(qq, "无语", Event_GroupMessage.Current);
         }
         public static void EndRepeat(long qq, long group)
         {
@@ -103,6 +116,9 @@ namespace Repeater
             if (i == -1) { List.data.Add(new member(qq, group)); i = List.data.Count - 1; }
             member me = List.data[i];
             me.encount++; List.data[i] = me;
+            if (me.wcount == 10) Event_GroupMessage.Achive(qq, "寒冷气息", Event_GroupMessage.Current);
+            if (me.wcount == 30) Event_GroupMessage.Achive(qq, "绝对零度", Event_GroupMessage.Current);
+            if (me.wcount == 60) Event_GroupMessage.Achive(qq, "-273.15℃", Event_GroupMessage.Current);
         }
 
     }
