@@ -379,12 +379,35 @@ namespace io.github.buger404.intallk.Code
         public void GroupMessage(object sender, CQGroupMessageEventArgs e)
         {
             Current = e.FromGroup;
+            if(e.FromQQ.Id == 2487411076)
+            {
+                try
+                {
+                    if((DateTime.Now - DreamYCheater.FightTime).TotalMilliseconds <= 1250)
+                    {
+                        if(e.Message.Text.IndexOf("活力不足") >= 0)
+                        {
+                            DreamYCheater.PauseFight = true;
+                            e.FromGroup.SendGroupMessage("本机器人已悉知活力不足，暂停刷怪。");
+                        }
+                    }
+                    if(e.Message.Text.IndexOf("dy 挑战1/") >= 0)
+                    {
+                        string[] dys = e.Message.Text.Split(new string[] { "dy 挑战" }, StringSplitOptions.None)[1].Split('：')[0].Split('/');
+                        DreamYCheater.LastestFight = dys[dys.Length - 1];
+                    }
+                }
+                catch
+                {
+                    DreamYCheater.LastestFight = "5";
+                }
+            }
             ExcuteCmd(e.FromGroup, e.FromQQ, e.Message, e.CQApi, e.Message.Text);
             if(DateTime.Now.Hour == 4)
             {
                 Achive(e.FromQQ.Id, "深夜霸王", e.FromGroup);
             }
-            if (DateTime.Now.Hour == 0 && DateTime.Now.Second == 0)
+            if (DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
             {
                 Achive(e.FromQQ.Id, "时间操纵", e.FromGroup);
             }
@@ -1245,6 +1268,22 @@ namespace io.github.buger404.intallk.Code
                         if (ignore.getkey(FromGroup.Id.ToString(), p[1]) == "√" && force == false) { return; }
                         switch (p[1])
                         {
+                            case ("dycheat"):
+                                int dyr = r.Next(0, 5);
+                                if (dyr == 0) FromGroup.SendGroupMessage("什么...游戏作弊啊，好恶心哦...");
+                                if (dyr == 1) FromGroup.SendGroupMessage("你真的信了？");
+                                if (dyr == 2) FromGroup.SendGroupMessage("可是你能给黑嘴什么呢？你在期待着什么呢？");
+                                if (dyr == 3) FromGroup.SendGroupMessage("你在想peach吧...");
+                                if (dyr == 4) FromGroup.SendGroupMessage("痴心妄想！");
+                                break;
+                            case ("dyn"):
+                                //偷偷读取DreamY存档
+                                Storage dy = new Storage("dreamy");
+                                FromGroup.SendGroupMessage("您的DreamY数据：\n等级：" + dy.getkey(FromQQ.Id.ToString(), "level")
+                                                            , "，天赋：" + dy.getkey(FromQQ.Id.ToString(), "talent")
+                                                            , "，VIP等级：" + dy.getkey(FromQQ.Id.ToString(), "VIPrank"));
+                                FromGroup.SendGroupMessage("嘘！回复.dycheat可以让黑嘴偷偷帮你把DreamY天赋值和等级和VIP等级提升10倍！");
+                                break;
                             case ("state"):
                                 FromGroup.SendGroupMessage("服务器运行参数\nCPU利用率：" + sysinfo.CpuLoad + "%(x" + sysinfo.ProcessorCount + ")\n" +
                                                             "空闲内存：" + Math.Floor(sysinfo.MemoryAvailable / 1024f / 1024f) + "MB/" + 
@@ -1592,6 +1631,7 @@ namespace io.github.buger404.intallk.Code
                                     );
                                 break;
                             case ("utf"):
+                                if (!JudgePermission(FromQQ.Id, PermissionName.AirPermission)) { return; }
                                 if (UT.targetg == 0)
                                 {
                                     FromGroup.SendGroupMessage("a new game: 'undertale guessing' has been on");
@@ -1614,6 +1654,7 @@ namespace io.github.buger404.intallk.Code
                                 }
                                 break;
                             case ("ut"):
+                                if (!JudgePermission(FromQQ.Id, PermissionName.AirPermission)) { return; }
                                 if (UT.targetg == 0)
                                 {
                                     FromGroup.SendGroupMessage("a new game: 'undertale guessing characters' has been on");

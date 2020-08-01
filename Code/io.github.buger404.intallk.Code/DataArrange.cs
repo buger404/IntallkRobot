@@ -412,7 +412,7 @@ namespace MainThread
                         g = new Native.Csharp.Sdk.Cqp.Model.Group(pCQ, UT.targetg);
                         if (UT.winstr == "")
                         {
-                            g.SendGroupMessage("nobody past round" + UT.round + ",answer:" + UT.role);
+                            g.SendGroupMessage("nobody passed round" + UT.round + ",answer:" + UT.role);
                         }
                         else
                         {
@@ -432,7 +432,7 @@ namespace MainThread
                         else
                         {
                             UT.nextRound(); UT.tick = GetTickCount();
-                            g.SendGroupMessage("round " + UT.round + "（result:20s laters）：" + UT.dialog);
+                            g.SendGroupMessage("round " + UT.round + "（result:20s later）：" + UT.dialog);
                         }
                     }
                 }
